@@ -9,7 +9,7 @@
                 "date": "2025-04-21",
                 "city": "Houston",
                 "country": "USA",
-                "media_urls": [],
+                "media_urls": [""],
                 "notes": "团建",
                 "display_color": "#45B7D1",
                 "emoji": "🤝"
@@ -17,6 +17,24 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [-95.37011079999999, 29.7600771]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_meetup",
+                "title": "Ocean Wise Beach Cleanup",
+                "date": "2024-06-15",
+                "city": "Vancouver",
+                "country": "Canada",
+                "media_urls": ["https://drive.google.com/file/d/1QUKEMY_0Dys2SiqGHG5kW43UOUwFmMMu/view?usp=sharing"],
+                "notes": "Beach cleanup at Jericho Beach",
+                "display_color": "#2ECC71",
+                "emoji": "🌊"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-123.1960, 49.2727]
             }
         }
     ]

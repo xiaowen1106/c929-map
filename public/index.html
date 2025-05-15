@@ -9,24 +9,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
-            <h1>Zhou Shen Global Map</h1>
-            <div class="layer-controls">
-                <label>
-                    <input type="checkbox" id="fan-wishes" checked>
-                    💌 Fan Wishes
-                </label>
-                <label>
-                    <input type="checkbox" id="singer-activities" checked>
-                    🎤 Singer Activities
-                </label>
-                <label>
-                    <input type="checkbox" id="fan-meetups" checked>
-                    🎉 Past Meetups
-                </label>
+        <div id="map">
+            <div class="map-legend">
+                <h2>Zhou Shen Global Map</h2>
+                <div class="layer-controls">
+                    <label>
+                        <input type="checkbox" id="fan-wishes" checked>
+                        💌 Fan Wishes
+                    </label>
+                    <label>
+                        <input type="checkbox" id="singer-activities" checked>
+                        🎤 Singer Activities
+                    </label>
+                    <label>
+                        <input type="checkbox" id="fan-meetups" checked>
+                        🎉 Past Meetups
+                    </label>
+                </div>
             </div>
         </div>
-        <div id="map"></div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div id="detail-panel" class="detail-panel">
+        <button class="close-panel">&times;</button>
+        <div class="detail-content">
+            <div id="detail-header"></div>
+            <div id="detail-carousel" class="carousel"></div>
+            <div id="detail-info"></div>
+            <div id="detail-links"></div>
+        </div>
     </div>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>

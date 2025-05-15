@@ -44,6 +44,7 @@ Each dataset is a valid [GeoJSON FeatureCollection](https://geojson.org/), where
 | `venue`         | string | Optional | Name of the venue                      |
 | `city`          | string | ✅        |                                        |
 | `country`       | string | ✅        |                                        |
+| `media_urls`    | array  | Optional | Photos or videos from the event         |
 | `link`          | string | Optional | External link (video, article, ticket) |
 | `display_color` | string | Optional | Custom color for markers               |
 

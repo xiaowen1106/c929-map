@@ -12,7 +12,8 @@
                 "country": "USA",
                 "description": "世巡北美第一场！",
                 "display_color": "#4ECDC4",
-                "emoji": "🎤"
+                "emoji": "🎤",
+                "media_url": "https://www.parkmgm.com/content/dam/MGM/park-mgm/dining/dolby-live/lifestyle/park-mgm-entertainment-dolby-live-concert-venue-@2x.jpg"
             },
             "geometry": {
                 "type": "Point",
@@ -29,7 +30,8 @@
                 "city": "Everett",
                 "country": "USA",
                 "display_color": "#4ECDC4",
-                "emoji": "🎤"
+                "emoji": "🎤",
+                "media_url": "https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"
             },
             "geometry": {
                 "type": "Point",
@@ -46,7 +48,8 @@
                 "city": "Brooklyn",
                 "country": "USA",
                 "display_color": "#4ECDC4",
-                "emoji": "🎤"
+                "emoji": "🎤",
+                "media_url": "https://www.barclayscenter.com/assets/img/Barclays_Center_aerial_night-f0dac89885.jpg"
             },
             "geometry": {
                 "type": "Point",
@@ -63,7 +66,8 @@
                 "city": "Toronto",
                 "country": "Canada",
                 "display_color": "#4ECDC4",
-                "emoji": "🎤"
+                "emoji": "🎤",
+                "media_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Coca-Cola_Coliseum.jpg/1280px-Coca-Cola_Coliseum.jpg"
             },
             "geometry": {
                 "type": "Point",
