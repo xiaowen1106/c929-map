@@ -20,7 +20,7 @@ body {
 .map-legend {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     background: white;
     padding: 15px;
     border-radius: 8px;
@@ -83,8 +83,8 @@ body {
 .detail-panel {
     position: fixed;
     top: 0;
-    right: -400px;
-    width: 400px;
+    right: -30%;
+    width: 30%;
     height: 100vh;
     background: white;
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
