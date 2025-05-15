@@ -1,6 +1,6 @@
 const config = {
     // Load Mapbox token from environment variable
-    mapboxToken: process.env.MAPBOX_TOKEN,
+    mapboxToken: 'pk.eyJ1IjoianVzdGFub3RoZXJtaSIsImEiOiJjbWFwMmU1ZnkwZHJ6MmxwdnloemZhY3I0In0.TiHvo3M3CHK0ciLiNC77iQ',
     
     // Map configuration
     map: {
