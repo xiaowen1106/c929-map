@@ -1,0 +1,12 @@
+{
+  "name": "zhou-shen-fan-map",
+  "version": "1.0.0",
+  "description": "Interactive map showcasing fan wishes, singer activities, and past fan meetups",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "serve public"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

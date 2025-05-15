@@ -1,0 +1,23 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_meetup",
+                "title": "Houston Fan Club Gathering",
+                "date": "2025-04-21",
+                "city": "Houston",
+                "country": "USA",
+                "media_urls": [],
+                "notes": "团建",
+                "display_color": "#45B7D1",
+                "emoji": "🤝"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-95.37011079999999, 29.7600771]
+            }
+        }
+    ]
+} 
