@@ -206,8 +206,82 @@ function convertGoogleDriveUrl(url) {
     }
 }
 
+// Helper function to parse YouTube URLs
+function parseYouTubeUrl(url) {
+    if (!url) return null;
+    
+    try {
+        url = url.trim();
+        
+        if (!url.includes('youtube.com') && !url.includes('youtu.be')) {
+            return null;
+        }
+
+        // Handle youtu.be URLs with simple string manipulation first
+        if (url.includes('youtu.be')) {
+            const urlParts = url.split('youtu.be/');
+            if (urlParts.length > 1) {
+                const videoId = urlParts[1].split(/[?#]/)[0];  // Remove any query params or hash
+                return videoId || null;
+            }
+            return null;
+        }
+
+        // For youtube.com URLs, try to get the v parameter without URL parsing first
+        if (url.includes('youtube.com')) {
+            // Try to get v parameter
+            const vParam = url.split('v=')[1];
+            if (vParam) {
+                const videoId = vParam.split(/[?&#]/)[0];  // Remove any additional parameters
+                return videoId || null;
+            }
+            
+            // Try to get from embed URL
+            if (url.includes('/embed/')) {
+                const embedParts = url.split('/embed/');
+                if (embedParts.length > 1) {
+                    const videoId = embedParts[1].split(/[?#]/)[0];  // Remove any query params or hash
+                    return videoId || null;
+                }
+            }
+        }
+
+        // If the above methods didn't work, try using URL object as fallback
+        // Ensure URL starts with http:// or https://
+        const fullUrl = url.startsWith('http') ? url : `https://${url}`;
+        const urlObj = new URL(fullUrl);
+        let videoId = '';
+
+        if (url.includes('youtube.com')) {
+            videoId = urlObj.searchParams.get('v');
+            if (!videoId && urlObj.pathname.includes('embed')) {
+                const pathParts = urlObj.pathname.split('/');
+                videoId = pathParts[pathParts.indexOf('embed') + 1];
+            }
+        }
+
+        // Clean up video ID
+        videoId = videoId ? videoId.split(/[?&#]/)[0] : '';
+        return videoId || null;
+    } catch (error) {
+        console.error('Error parsing YouTube URL:', error);
+        // Try one last time with basic string manipulation
+        try {
+            if (url.includes('v=')) {
+                const videoId = url.split('v=')[1].split(/[?&#]/)[0];
+                return videoId || null;
+            }
+        } catch (e) {
+            console.error('Final fallback failed:', e);
+        }
+        return null;
+    }
+}
+
 // Detail panel functionality
 function showDetailPanel(type, properties) {
+    console.log('showDetailPanel called with type:', type, 'properties:', properties);
+    
     const panel = document.getElementById('detail-panel');
     const header = document.getElementById('detail-header');
     const carousel = document.getElementById('detail-carousel');
@@ -221,11 +295,115 @@ function showDetailPanel(type, properties) {
     links.innerHTML = '';
 
     if (type === 'activity') {
+        console.log('Processing activity type');
         // Header
         header.innerHTML = `
             <h2>🎤 ${properties.title}</h2>
             <p>${properties.date}</p>
         `;
+
+        // Carousel for media
+        console.log('Checking for media URLs');
+        const mediaUrls = [];
+        
+        // Handle both singular media_url and plural media_urls
+        if (properties.media_url) {
+            console.log('Found media_url:', properties.media_url);
+            mediaUrls.push(properties.media_url);
+        }
+        if (properties.media_urls) {
+            console.log('Found media_urls:', properties.media_urls);
+            const urls = Array.isArray(properties.media_urls) ? properties.media_urls : 
+                        (typeof properties.media_urls === 'string' ? [properties.media_urls] : []);
+            mediaUrls.push(...urls);
+        }
+
+        console.log('Final mediaUrls array:', mediaUrls);
+
+        if (mediaUrls.length > 0) {
+            console.log('Processing media URLs');
+            const carouselContent = mediaUrls.map((url, index) => {
+                console.log(`Processing URL ${index}:`, url);
+                // Convert Google Drive URLs
+                const processedUrl = convertGoogleDriveUrl(url);
+                console.log('Processed URL:', processedUrl);
+                
+                if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                    console.log('Detected YouTube URL:', url);
+                    // Extract video ID using proper parsing
+                    let videoId = '';
+                    try {
+                        videoId = parseYouTubeUrl(url);
+                        
+                        if (!videoId) {
+                            return ''; // Skip if no video ID found
+                        }
+
+                        return `
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/${videoId}"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        `;
+                    } catch (error) {
+                        // Fallback method for youtu.be URLs
+                        if (url.includes('youtu.be/')) {
+                            videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
+                            if (videoId) {
+                                return `
+                                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/${videoId}"
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                        ></iframe>
+                                    </div>
+                                `;
+                            }
+                        }
+                        return '';
+                    }
+                } else {
+                    return `<img src="${processedUrl}" alt="Activity Photo ${index + 1}" class="${index === 0 ? 'active' : ''}">`;
+                }
+            }).join('');
+            
+            console.log('Final carousel content:', carouselContent);
+            carousel.innerHTML = carouselContent;
+
+            // Add carousel navigation if there are multiple images
+            if (mediaUrls.length > 1) {
+                console.log('Adding carousel navigation');
+                const nav = document.createElement('div');
+                nav.className = 'carousel-nav';
+                nav.innerHTML = mediaUrls.map((_, index) => 
+                    `<div class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`
+                ).join('');
+                carousel.appendChild(nav);
+
+                // Add carousel navigation functionality
+                nav.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('carousel-dot')) {
+                        const index = parseInt(e.target.dataset.index);
+                        const images = carousel.querySelectorAll('img');
+                        const dots = nav.querySelectorAll('.carousel-dot');
+                        
+                        images.forEach(img => img.classList.remove('active'));
+                        dots.forEach(dot => dot.classList.remove('active'));
+                        
+                        images[index].classList.add('active');
+                        e.target.classList.add('active');
+                    }
+                });
+            }
+        }
 
         // Info
         info.innerHTML = `
@@ -259,16 +437,35 @@ function showDetailPanel(type, properties) {
                     const processedUrl = convertGoogleDriveUrl(url);
                     
                     if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                        // Extract video ID and create embed
-                        const videoId = url.split('v=')[1] || url.split('/').pop();
-                        return `
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/${videoId}" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen></iframe>
-                            </div>
-                        `;
+                        // Extract video ID using proper parsing
+                        let videoId = '';
+                        try {
+                            videoId = parseYouTubeUrl(url);
+                            
+                            console.log('Extracted video ID:', videoId); // Debug log
+                            
+                            if (!videoId) {
+                                console.error('Could not extract video ID from URL:', url);
+                                return ''; // Skip this item if we can't get the video ID
+                            }
+
+                            const iframeHtml = `
+                                <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/${videoId}"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                    ></iframe>
+                                </div>
+                            `;
+                            console.log('Generated iframe HTML:', iframeHtml); // Debug log
+                            return iframeHtml;
+                        } catch (error) {
+                            console.error('Error extracting video ID:', error);
+                            return '';
+                        }
                     } else if (url.includes('drive.google.com')) {
                         return `
                             <div class="video-container">

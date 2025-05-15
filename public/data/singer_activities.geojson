@@ -13,7 +13,7 @@
                 "description": "世巡北美第一场！",
                 "display_color": "#4ECDC4",
                 "emoji": "🎤",
-                "media_url": "https://www.parkmgm.com/content/dam/MGM/park-mgm/dining/dolby-live/lifestyle/park-mgm-entertainment-dolby-live-concert-venue-@2x.jpg"
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
             },
             "geometry": {
                 "type": "Point",
@@ -31,7 +31,7 @@
                 "country": "USA",
                 "display_color": "#4ECDC4",
                 "emoji": "🎤",
-                "media_url": "https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
             },
             "geometry": {
                 "type": "Point",
@@ -49,7 +49,7 @@
                 "country": "USA",
                 "display_color": "#4ECDC4",
                 "emoji": "🎤",
-                "media_url": "https://www.barclayscenter.com/assets/img/Barclays_Center_aerial_night-f0dac89885.jpg"
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
             },
             "geometry": {
                 "type": "Point",
@@ -67,7 +67,7 @@
                 "country": "Canada",
                 "display_color": "#4ECDC4",
                 "emoji": "🎤",
-                "media_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Coca-Cola_Coliseum.jpg/1280px-Coca-Cola_Coliseum.jpg"
+                "media_urls": ["https://www.youtube.com/watch?v=286ROz4mKMA"]
             },
             "geometry": {
                 "type": "Point",
