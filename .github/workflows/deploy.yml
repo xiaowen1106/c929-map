@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    env:
+      MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Create .env file
+        run: |
+          echo "MAPBOX_TOKEN=${{ secrets.MAPBOX_TOKEN }}" > .env
+
+      # Add your build and deployment steps here
+      # For example, if you're using npm:
+      # - name: Install dependencies
+      #   run: npm install
+      
+      # - name: Build
+      #   run: npm run build
+      
+      # - name: Deploy
+      #   # Add your deployment configuration here 
