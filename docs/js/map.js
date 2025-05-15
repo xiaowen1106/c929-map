@@ -1,6 +1,8 @@
 // Initialize Mapbox
 mapboxgl.accessToken = config.mapboxToken;
 
+const baseUrl = window.location.hostname === 'xiaowen1106.github.io' ? '/c929-map' : '';
+
 const map = new mapboxgl.Map({
     container: 'map',
     style: config.map.style,
@@ -14,17 +16,17 @@ const map = new mapboxgl.Map({
 const layers = {
     fanWishes: {
         id: 'fan-wishes',
-        source: config.dataSources.fanWishes,
+        source: `${baseUrl}/data/fan_wishes.geojson`,
         type: 'circle'
     },
     singerActivities: {
         id: 'singer-activities',
-        source: config.dataSources.singerActivities,
+        source: `${baseUrl}/data/singer_activities.geojson`,
         type: 'symbol'
     },
     fanMeetups: {
         id: 'fan-meetups',
-        source: config.dataSources.fanMeetups,
+        source: `${baseUrl}/data/fan_meetups.geojson`,
         type: 'symbol'
     }
 };

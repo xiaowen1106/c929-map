@@ -13,13 +13,6 @@ const config = {
         }
     },
     
-    // GeoJSON data sources
-    dataSources: {
-        fanWishes: '/data/fan_wishes.geojson',
-        singerActivities: '/data/singer_activities.geojson',
-        fanMeetups: '/data/fan_meetups.geojson'
-    },
-    
     // Layer styling
     layers: {
         fanWishes: {
