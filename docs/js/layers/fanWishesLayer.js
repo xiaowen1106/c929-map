@@ -10,7 +10,7 @@ export const fanWishesLayer = {
             ['get', 'radius'],
             8
         ],
-        'circle-color': '#FF6B6B',
+        'circle-color': '#87CEEB',
         'circle-opacity': 0.8,
         'circle-opacity-transition': { duration: 200 },
         'circle-color-transition': { duration: 200 }

@@ -6,6 +6,7 @@ import { fanMeetupsLayer } from './layers/fanMeetupsLayer.js';
 import { fanAlbumPhotosLayer } from './layers/fanAlbumPhotosLayer.js';
 import { concertsLayer } from './layers/concertsLayer.js';
 import { processMediaUrl } from './utils/mediaUtils.js';
+import { panelHandlers } from './panels/index.js';
 
 // Initialize Mapbox
 mapboxgl.accessToken = config.mapboxToken;
@@ -84,8 +85,8 @@ map.on('style.load', async () => {
 
     // Load all layers
     await Promise.all([
-        loadLayer(fanWishesLayer),
         loadLayer(concertsLayer),
+        loadLayer(fanWishesLayer),
         loadLayer(singerActivitiesLayer),
         loadLayer(fanMeetupsLayer),
         loadLayer(fanAlbumPhotosLayer)
@@ -133,47 +134,23 @@ map.on('click', (e) => {
                 <p>From: ${properties.fan_name || 'Anonymous'}</p>
                 <p>Location: ${properties.city}, ${properties.country}</p>
                 <p>Date: ${new Date(properties.timestamp).toLocaleDateString()}</p>
+                <button class="view-details" onclick="showDetailPanel('${properties.type}', ${JSON.stringify(properties).replace(/"/g, '&quot;')})">View Details</button>
             `;
             break;
             
         case 'singer_activity':
-            popupContent += `
-                <h3>🎤 ${properties.title}</h3>
-                <p>Venue: ${properties.venue}</p>
-                <p>Location: ${properties.city}, ${properties.country}</p>
-                <p>Date: ${properties.date}</p>
-                <button class="view-details" onclick="showDetailPanel('activity', ${JSON.stringify(properties).replace(/"/g, '&quot;')})">View Details</button>
-            `;
-            break;
-            
         case 'fan_meetup':
-            popupContent += `
-                <h3>🎉 ${properties.title}</h3>
-                <p>${properties.notes}</p>
-                <p>Location: ${properties.city}, ${properties.country}</p>
-                <p>Date: ${properties.date}</p>
-                <button class="view-details" onclick="showDetailPanel('meetup', ${JSON.stringify(properties).replace(/"/g, '&quot;')})">View Details</button>
-            `;
-            break;
-
         case 'fan_album_photo':
-            popupContent += `
-                <h3>🎉 ${properties.title}</h3>
-                <p>${properties.notes}</p>
-                <p>Location: ${properties.city}, ${properties.country}</p>
-                <p>Date: ${properties.date}</p>
-                <button class="view-details" onclick="showDetailPanel('album-photo', ${JSON.stringify(properties).replace(/"/g, '&quot;')})">View Details</button>
-            `;
-            break;
-
         case 'concert':
             popupContent += `
-                <h3>🎉 ${properties.title}</h3>
-                <p>${properties.notes}</p>
+                <h3>${properties.type === 'singer_activity' ? '🎤' : 
+                      properties.type === 'fan_meetup' ? '🎉' : 
+                      properties.type === 'fan_album_photo' ? '📸' : '🎫'} ${properties.title}</h3>
                 <p>Location: ${properties.city}, ${properties.country}</p>
                 <p>Date: ${properties.date}</p>
-            `;  
-            break;  
+                <button class="view-details" onclick="showDetailPanel('${properties.type}', ${JSON.stringify(properties).replace(/"/g, '&quot;')})">View Details</button>
+            `;
+            break;
     }
     
     popupContent += '</div>';
@@ -185,7 +162,7 @@ map.on('click', (e) => {
 });
 
 // Detail panel functionality
-function showDetailPanel(type, properties) {
+window.showDetailPanel = function(type, properties) {
     const panel = document.getElementById('detail-panel');
     const header = document.getElementById('detail-header');
     const carousel = document.getElementById('detail-carousel');
@@ -198,68 +175,45 @@ function showDetailPanel(type, properties) {
     info.innerHTML = '';
     links.innerHTML = '';
 
-    if (type === 'activity' || type === 'meetup') {
-        // Header
-        header.innerHTML = `
-            <h2>${type === 'activity' ? '🎤' : '🎉'} ${properties.title}</h2>
-            <p>${properties.date}</p>
-        `;
+    // Get panel content from handler
+    const handler = panelHandlers[type];
+    if (!handler) return;
 
-        // Carousel for media
-        const mediaUrls = [];
-        
-        if (properties.media_url) {
-            mediaUrls.push(properties.media_url);
+    const content = handler(properties);
+
+    // Set content
+    header.innerHTML = content.header;
+    info.innerHTML = content.info;
+    if (content.carousel) {
+        carousel.innerHTML = content.carousel;
+
+        // Add carousel navigation if there are multiple items
+        if (content.mediaUrls && content.mediaUrls.length > 1) {
+            const nav = document.createElement('div');
+            nav.className = 'carousel-nav';
+            nav.innerHTML = content.mediaUrls.map((_, index) => 
+                `<div class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`
+            ).join('');
+            carousel.appendChild(nav);
+
+            // Add carousel navigation functionality
+            nav.addEventListener('click', (e) => {
+                if (e.target.classList.contains('carousel-dot')) {
+                    const index = parseInt(e.target.dataset.index);
+                    const images = carousel.querySelectorAll('img');
+                    const dots = nav.querySelectorAll('.carousel-dot');
+                    
+                    images.forEach(img => img.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    
+                    images[index].classList.add('active');
+                    e.target.classList.add('active');
+                }
+            });
         }
-        if (properties.media_urls) {
-            const urls = Array.isArray(properties.media_urls) ? properties.media_urls : 
-                        (typeof properties.media_urls === 'string' ? [properties.media_urls] : []);
-            mediaUrls.push(...urls);
-        }
-
-        if (mediaUrls.length > 0) {
-            const carouselContent = mediaUrls.map((url, index) => processMediaUrl(url, index)).join('');
-            carousel.innerHTML = carouselContent;
-
-            // Add carousel navigation if there are multiple items
-            if (mediaUrls.length > 1) {
-                const nav = document.createElement('div');
-                nav.className = 'carousel-nav';
-                nav.innerHTML = mediaUrls.map((_, index) => 
-                    `<div class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>`
-                ).join('');
-                carousel.appendChild(nav);
-
-                // Add carousel navigation functionality
-                nav.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('carousel-dot')) {
-                        const index = parseInt(e.target.dataset.index);
-                        const images = carousel.querySelectorAll('img');
-                        const dots = nav.querySelectorAll('.carousel-dot');
-                        
-                        images.forEach(img => img.classList.remove('active'));
-                        dots.forEach(dot => dot.classList.remove('active'));
-                        
-                        images[index].classList.add('active');
-                        e.target.classList.add('active');
-                    }
-                });
-            }
-        }
-
-        // Info
-        info.innerHTML = `
-            ${type === 'activity' ? `<p><strong>Venue:</strong> ${properties.venue}</p>` : ''}
-            <p><strong>Location:</strong> ${properties.city}, ${properties.country}</p>
-            ${properties.description || properties.notes ? `<p>${properties.description || properties.notes}</p>` : ''}
-        `;
-
-        // Links
-        if (properties.link) {
-            links.innerHTML = `
-                <a href="${properties.link}" target="_blank">More Information</a>
-            `;
-        }
+    }
+    if (content.links) {
+        links.innerHTML = content.links;
     }
 
     // Show panel
