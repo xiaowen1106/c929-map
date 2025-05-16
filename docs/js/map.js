@@ -3,8 +3,8 @@ import { config, baseUrl } from './config.js';
 import { fanWishesLayer } from './layers/fanWishesLayer.js';
 import { singerActivitiesLayer } from './layers/singerActivitiesLayer.js';
 import { fanMeetupsLayer } from './layers/fanMeetupsLayer.js';
-import { fanAlbumPhotosLayer } from './layers/fanAlbumPhotosLayer.js';
-import { concertsLayer } from './layers/concertsLayer.js';
+import { fanAlbumPhotosLayer, loadFanAlbumImages } from './layers/fanAlbumPhotosLayer.js';
+import { concertsLayer, loadConcertImages } from './layers/concertsLayer.js';
 import { processMediaUrl } from './utils/mediaUtils.js';
 import { panelHandlers } from './panels/index.js';
 
@@ -26,12 +26,6 @@ const popupConfig = {
     maxWidth: '300px',
     closeButton: true,
     closeOnClick: true
-};
-
-// Define tour icons
-const tourIcons = {
-    '929hz': 'Concert3_929hz.png',
-    'SSD': 'Concert4_SSD.png'
 };
 
 const map = new mapboxgl.Map(mapConfig);
@@ -66,22 +60,10 @@ async function loadLayer(layer) {
 
 // Add layers when map loads
 map.on('style.load', async () => {
-    // Load icons
-    await Promise.all([
-        ...Object.entries(tourIcons).map(([tour, iconFile]) => 
-            new Promise(resolve => {
-                if (map.hasImage(tour)) {
-                    resolve();
-                } else {
-                    map.loadImage(`${baseUrl}/img/${iconFile}`, (error, image) => {
-                        if (error) throw error;
-                        map.addImage(tour, image);
-                        resolve();
-                    });
-                }
-            })
-        )
-    ]);
+    // Load custom album images
+    loadFanAlbumImages(map);
+    // Load custom concert images
+    loadConcertImages(map);
 
     // Load all layers
     await Promise.all([

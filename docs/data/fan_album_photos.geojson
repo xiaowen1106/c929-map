@@ -1,6 +1,56 @@
 {
     "type": "FeatureCollection",
     "features": [
-        
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_photo",
+                "fan_name": "Emma Chen",
+                "message": "Best night ever at the concert! 🎵✨",
+                "media_url": "https://example.com/photos/emma_concert_1.jpg",
+                "album": "shendeshen",
+                "city": "Toronto",
+                "country": "Canada",
+                "timestamp": "2024-03-15T19:30:00Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-79.3832, 43.6532]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_photo",
+                "fan_name": "Alex Kim",
+                "message": "Living for this album! 💫",
+                "media_url": "https://example.com/photos/alex_album_cover.jpg",
+                "album": "shenself",
+                "city": "Vancouver",
+                "country": "Canada",
+                "timestamp": "2024-03-10T22:15:00Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-123.1207, 49.2827]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_photo",
+                "fan_name": "Sarah Liu",
+                "message": "Your music makes my day! 🌟",
+                "media_url": "https://example.com/photos/sarah_listening.jpg",
+                "album": "shendeshen",
+                "city": "Montreal",
+                "country": "Canada",
+                "timestamp": "2024-03-05T17:45:00Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.5673, 45.5017]
+            }
+        }
     ]
 } 
