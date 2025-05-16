@@ -67,11 +67,11 @@ map.on('style.load', async () => {
 
     // Load all layers
     await Promise.all([
-        loadLayer(concertsLayer),
         loadLayer(fanWishesLayer),
         loadLayer(singerActivitiesLayer),
         loadLayer(fanMeetupsLayer),
-        loadLayer(fanAlbumPhotosLayer)
+        loadLayer(fanAlbumPhotosLayer),
+        loadLayer(concertsLayer)
     ]);
 });
 

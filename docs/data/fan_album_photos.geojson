@@ -6,16 +6,16 @@
             "properties": {
                 "type": "fan_photo",
                 "fan_name": "Emma Chen",
-                "message": "Best night ever at the concert! 🎵✨",
-                "media_url": "https://example.com/photos/emma_concert_1.jpg",
+                "message": "Vibing to Shendeshen at Mount Rushmore! 🗿✨",
+                "media_url": "https://example.com/photos/emma_rushmore.jpg",
                 "album": "shendeshen",
-                "city": "Toronto",
-                "country": "Canada",
+                "city": "Keystone",
+                "country": "United States",
                 "timestamp": "2024-03-15T19:30:00Z"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-79.3832, 43.6532]
+                "coordinates": [-103.4591, 43.8791]
             }
         },
         {
@@ -23,16 +23,16 @@
             "properties": {
                 "type": "fan_photo",
                 "fan_name": "Alex Kim",
-                "message": "Living for this album! 💫",
-                "media_url": "https://example.com/photos/alex_album_cover.jpg",
+                "message": "Shenself hits different at the Gateway Arch! 🌟",
+                "media_url": "https://example.com/photos/alex_stlouis.jpg",
                 "album": "shenself",
-                "city": "Vancouver",
-                "country": "Canada",
+                "city": "St. Louis",
+                "country": "United States",
                 "timestamp": "2024-03-10T22:15:00Z"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-123.1207, 49.2827]
+                "coordinates": [-90.1847, 38.6247]
             }
         },
         {
@@ -40,16 +40,50 @@
             "properties": {
                 "type": "fan_photo",
                 "fan_name": "Sarah Liu",
-                "message": "Your music makes my day! 🌟",
-                "media_url": "https://example.com/photos/sarah_listening.jpg",
+                "message": "Your music + Chichen Itza = Magic ✨🏛️",
+                "media_url": "https://example.com/photos/sarah_chichenitza.jpg",
                 "album": "shendeshen",
-                "city": "Montreal",
-                "country": "Canada",
+                "city": "Tinum",
+                "country": "Mexico",
                 "timestamp": "2024-03-05T17:45:00Z"
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-73.5673, 45.5017]
+                "coordinates": [-88.5686, 20.6843]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_photo",
+                "fan_name": "Maria Rodriguez",
+                "message": "Dancing to Shenself at the Alamo! 🎵🌵",
+                "media_url": "https://example.com/photos/maria_alamo.jpg",
+                "album": "shenself",
+                "city": "San Antonio",
+                "country": "United States",
+                "timestamp": "2024-03-20T15:20:00Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-98.4862, 29.4260]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "fan_photo",
+                "fan_name": "James Wilson",
+                "message": "Shendeshen vibes at Banff National Park! 🏔️🎶",
+                "media_url": "https://example.com/photos/james_banff.jpg",
+                "album": "shendeshen",
+                "city": "Banff",
+                "country": "Canada",
+                "timestamp": "2024-03-18T09:45:00Z"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.5708, 51.1784]
             }
         }
     ]
