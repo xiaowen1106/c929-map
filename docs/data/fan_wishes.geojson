@@ -9,9 +9,7 @@
                 "message": "I've been following your journey since your first album and it's been incredible! Your music has helped me through some tough times. Hope to see you perform in San Francisco - the Golden Gate Bridge would make such an iconic backdrop for your show! 🌉",
                 "city": "San Francisco",
                 "country": "USA",
-                "timestamp": "2024-03-15T00:00:00Z",
-                "emoji": "💖",
-                "display_color": "#FF69B4"
+                "timestamp": "2024-03-15T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -26,9 +24,7 @@
                 "message": "Your last album was absolutely life-changing! The way you blend different musical styles is pure genius. NYC is waiting for you - imagine performing at Madison Square Garden with all of us singing along to every single word! Can't wait to see you here!",
                 "city": "New York",
                 "country": "USA",
-                "timestamp": "2024-03-10T00:00:00Z",
-                "emoji": "✨",
-                "display_color": "#FFB6C1"
+                "timestamp": "2024-03-10T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -40,12 +36,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Isabella Rodriguez",
-                "message": "¡Tu música es increíble! Been streaming your albums non-stop here in Mexico City. The energy here would be amazing for your show - imagine performing at the Zócalo with thousands of fans! Please make Mexico City a stop on your next tour! 🇲🇽",
+                "message": "¡Tu música es increíble! Been streaming your albums non-stop here in Mexico City. The energy here would be amazing for your show - imagine performing at the Zócalo with thousands of fans! Please make Mexico City a stop on your next tour!",
                 "city": "Mexico City",
                 "country": "Mexico",
-                "timestamp": "2024-03-08T00:00:00Z",
-                "emoji": "🌟",
-                "display_color": "#FFA500"
+                "timestamp": "2024-03-08T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -60,9 +54,7 @@
                 "message": "Your music has been the soundtrack to so many special moments in my life! Toronto would welcome you with open arms - the Rogers Centre would be perfect for your spectacular shows. The whole city is buzzing about the possibility of your tour coming here!",
                 "city": "Toronto",
                 "country": "Canada",
-                "timestamp": "2024-03-05T00:00:00Z",
-                "emoji": "🍁",
-                "display_color": "#FF4500"
+                "timestamp": "2024-03-05T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -77,9 +69,7 @@
                 "message": "Your latest single has been on repeat for weeks! The way you write lyrics that connect with people's hearts is incredible. Los Angeles needs another show - the Hollywood Bowl under the stars would be magical. My friends and I have been manifesting this!",
                 "city": "Los Angeles",
                 "country": "USA",
-                "timestamp": "2024-03-02T00:00:00Z",
-                "emoji": "🌴",
-                "display_color": "#9370DB"
+                "timestamp": "2024-03-02T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -94,9 +84,7 @@
                 "message": "Votre musique est extraordinaire! Montreal would be the perfect city for your next tour stop. Imagine performing at the Bell Centre with the beautiful city skyline as your backdrop. The French-Canadian fans here are so excited about the possibility!",
                 "city": "Montreal",
                 "country": "Canada",
-                "timestamp": "2024-02-28T00:00:00Z",
-                "emoji": "⭐",
-                "display_color": "#4B0082"
+                "timestamp": "2024-02-28T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -111,9 +99,7 @@
                 "message": "Your music got me through the toughest year of my life. Each song feels like it was written just for me. Chicago would be an amazing stop on your tour - can you imagine performing at the United Center with the city's amazing energy? We're all hoping to see you here!",
                 "city": "Chicago",
                 "country": "USA",
-                "timestamp": "2024-02-25T00:00:00Z",
-                "emoji": "🎵",
-                "display_color": "#20B2AA"
+                "timestamp": "2024-02-25T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -128,9 +114,7 @@
                 "message": "Your music brings so much joy to our community! Houston has such a diverse fan base that would love to see you perform. The Toyota Center would be electric with your presence. Please consider adding Houston to your tour - we promise an unforgettable night!",
                 "city": "Houston",
                 "country": "USA",
-                "timestamp": "2024-02-22T00:00:00Z",
-                "emoji": "🌟",
-                "display_color": "#FF1493"
+                "timestamp": "2024-02-22T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -145,9 +129,7 @@
                 "message": "Been a fan since day one! Your evolution as an artist has been incredible to witness. Seattle's Climate Pledge Arena would be perfect for your show - the acoustics are amazing and the crowd here is always so energetic. The Pacific Northwest needs to experience your magic live!",
                 "city": "Seattle",
                 "country": "USA",
-                "timestamp": "2024-02-20T00:00:00Z",
-                "emoji": "☔",
-                "display_color": "#008080"
+                "timestamp": "2024-02-20T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -162,9 +144,7 @@
                 "message": "Your music transcends all boundaries! The way you connect with your audience is something special. Vancouver would be an incredible addition to your tour - BC Place filled with thousands of fans singing along would be unforgettable. The whole city is ready for you!",
                 "city": "Vancouver",
                 "country": "Canada",
-                "timestamp": "2024-02-18T00:00:00Z",
-                "emoji": "🌊",
-                "display_color": "#4682B4"
+                "timestamp": "2024-02-18T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -176,12 +156,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Marcus Johnson",
-                "message": "Your music speaks to my soul in ways I can't explain! Atlanta's Mercedes-Benz Stadium would be the perfect venue for your incredible performances. The whole Southeast is ready to show you how much we love your music. Please make Atlanta a stop on your tour! 🍑",
+                "message": "Your music speaks to my soul in ways I can't explain! Atlanta's Mercedes-Benz Stadium would be the perfect venue for your incredible performances. The whole Southeast is ready to show you how much we love your music. Please make Atlanta a stop on your tour!",
                 "city": "Atlanta",
                 "country": "USA",
-                "timestamp": "2024-02-15T00:00:00Z",
-                "emoji": "🎸",
-                "display_color": "#E6E6FA"
+                "timestamp": "2024-02-15T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -193,12 +171,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Carmen Ortiz",
-                "message": "¡Necesitamos tu música en vivo! The energy in Miami is unmatched, and FTX Arena would be absolutely electric with your presence. Your Latin American fans here would create an atmosphere you'll never forget. Miami te espera con los brazos abiertos! 🌴",
+                "message": "¡Necesitamos tu música en vivo! The energy in Miami is unmatched, and FTX Arena would be absolutely electric with your presence. Your Latin American fans here would create an atmosphere you'll never forget. Miami te espera con los brazos abiertos!",
                 "city": "Miami",
                 "country": "USA",
-                "timestamp": "2024-02-12T00:00:00Z",
-                "emoji": "🌺",
-                "display_color": "#FF69B4"
+                "timestamp": "2024-02-12T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -210,12 +186,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "William Chen",
-                "message": "Your music has been the highlight of every party and road trip! The energy in Las Vegas is unmatched - imagine performing at the T-Mobile Arena with all the lights and excitement of the Strip! We're ready to give you the most enthusiastic welcome ever! 🎰",
+                "message": "Your music has been the highlight of every party and road trip! The energy in Las Vegas is unmatched - imagine performing at the T-Mobile Arena with all the lights and excitement of the Strip! We're ready to give you the most enthusiastic welcome ever!",
                 "city": "Las Vegas",
                 "country": "USA",
-                "timestamp": "2024-02-10T00:00:00Z",
-                "emoji": "✨",
-                "display_color": "#FFD700"
+                "timestamp": "2024-02-10T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -227,12 +201,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Emily O'Connor",
-                "message": "Your latest album has been getting me through my medical residency! Boston would love to have you at TD Garden - the acoustics are perfect for your incredible voice. The whole medical community here are huge fans and we'd love to see you perform! 🩺",
+                "message": "Your latest album has been getting me through my medical residency! Boston would love to have you at TD Garden - the acoustics are perfect for your incredible voice. The whole medical community here are huge fans and we'd love to see you perform!",
                 "city": "Boston",
                 "country": "USA",
-                "timestamp": "2024-02-08T00:00:00Z",
-                "emoji": "🌟",
-                "display_color": "#B0C4DE"
+                "timestamp": "2024-02-08T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -244,12 +216,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Roberto Mendoza",
-                "message": "Tu música ha sido una inspiración! The Alamodome in San Antonio would be perfect for your show. The whole city talks about your music, and the Hispanic community here would give you the warmest welcome ever! Por favor, ven a visitarnos! 🌵",
+                "message": "Tu música ha sido una inspiración! The Alamodome in San Antonio would be perfect for your show. The whole city talks about your music, and the Hispanic community here would give you the warmest welcome ever! Por favor, ven a visitarnos!",
                 "city": "San Antonio",
                 "country": "USA",
-                "timestamp": "2024-02-05T00:00:00Z",
-                "emoji": "🎵",
-                "display_color": "#FFA07A"
+                "timestamp": "2024-02-05T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -261,12 +231,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Aisha Patel",
-                "message": "Your music brings together so many different cultures and styles! The Scotiabank Arena in Toronto would be the perfect venue to showcase your amazing talent. The diversity of our city would create such a special atmosphere for your show! Can't wait to see you here! 🇨🇦",
+                "message": "Your music brings together so many different cultures and styles! The Scotiabank Arena in Toronto would be the perfect venue to showcase your amazing talent. The diversity of our city would create such a special atmosphere for your show! Can't wait to see you here!",
                 "city": "Calgary",
                 "country": "Canada",
-                "timestamp": "2024-02-03T00:00:00Z",
-                "emoji": "🌈",
-                "display_color": "#DA70D6"
+                "timestamp": "2024-02-03T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -278,12 +246,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Jordan Taylor",
-                "message": "Been streaming your music non-stop at our coffee shop in Portland! Your songs create the perfect atmosphere, and our customers always ask about who's playing. The Moda Center would be amazing for your show - the Portland music scene would welcome you with open arms! 🌲",
+                "message": "Been streaming your music non-stop at our coffee shop in Portland! Your songs create the perfect atmosphere, and our customers always ask about who's playing. The Moda Center would be amazing for your show - the Portland music scene would welcome you with open arms!",
                 "city": "Portland",
                 "country": "USA",
-                "timestamp": "2024-02-01T00:00:00Z",
-                "emoji": "☕",
-                "display_color": "#98FB98"
+                "timestamp": "2024-02-01T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -295,12 +261,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Miguel Hernández",
-                "message": "¡Tu música es pura magia! Guadalajara would be an incredible stop on your tour - the Arena VFG would be perfect! The whole city loves your music, and we promise you the most passionate audience you've ever seen! ¡Te esperamos con mucho cariño! 🎊",
+                "message": "¡Tu música es pura magia! Guadalajara would be an incredible stop on your tour - the Arena VFG would be perfect! The whole city loves your music, and we promise you the most passionate audience you've ever seen!",
                 "city": "Guadalajara",
                 "country": "Mexico",
-                "timestamp": "2024-01-30T00:00:00Z",
-                "emoji": "🌺",
-                "display_color": "#FF4500"
+                "timestamp": "2024-01-30T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -312,12 +276,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Rachel Cohen",
-                "message": "Your music has been the soundtrack to my PhD journey! The Capital One Arena in DC would be perfect for your show. The whole political city needs your positive vibes and amazing energy! The cherry blossoms would be in full bloom during spring tour dates! 🌸",
+                "message": "Your music has been the soundtrack to my PhD journey! The Capital One Arena in DC would be perfect for your show. The whole political city needs your positive vibes and amazing energy! The cherry blossoms would be in full bloom during spring tour dates!",
                 "city": "Washington DC",
                 "country": "USA",
-                "timestamp": "2024-01-28T00:00:00Z",
-                "emoji": "🗽",
-                "display_color": "#4169E1"
+                "timestamp": "2024-01-28T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -329,12 +291,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Thomas Anderson",
-                "message": "Your music helped me recover after my surgery last year! The whole medical staff at my hospital are huge fans too. Minneapolis would give you the warmest welcome at the Target Center - despite our cold weather! Please bring your amazing energy to the Twin Cities! ❄️",
+                "message": "Your music helped me recover after my surgery last year! The whole medical staff at my hospital are huge fans too. Minneapolis would give you the warmest welcome at the Target Center - despite our cold weather! Please bring your amazing energy to the Twin Cities!",
                 "city": "Minneapolis",
                 "country": "USA",
-                "timestamp": "2024-01-25T00:00:00Z",
-                "emoji": "⭐",
-                "display_color": "#9370DB"
+                "timestamp": "2024-01-25T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -346,12 +306,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Sophia Martinez",
-                "message": "Your music is the heartbeat of our dance studio in Phoenix! The Footprint Center would be perfect for your show - imagine the energy of the desert combined with your incredible performance! The whole Southwest is ready to dance to your beats! 🌵",
+                "message": "Your music is the heartbeat of our dance studio in Phoenix! The Footprint Center would be perfect for your show - imagine the energy of the desert combined with your incredible performance! The whole Southwest is ready to dance to your beats!",
                 "city": "Phoenix",
                 "country": "USA",
-                "timestamp": "2024-01-23T00:00:00Z",
-                "emoji": "💃",
-                "display_color": "#FFA500"
+                "timestamp": "2024-01-23T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -363,12 +321,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Alexandre Dubois",
-                "message": "Ta musique est incroyable! Quebec City would be honored to host you at the Videotron Centre. The historic atmosphere of our city would add such a special touch to your performance. Les fans québécois t'attendent avec impatience! ⚜️",
+                "message": "Ta musique est incroyable! Quebec City would be honored to host you at the Videotron Centre. The historic atmosphere of our city would add such a special touch to your performance. Les fans québécois t'attendent avec impatience!",
                 "city": "Quebec City",
                 "country": "Canada",
-                "timestamp": "2024-01-20T00:00:00Z",
-                "emoji": "🎭",
-                "display_color": "#4682B4"
+                "timestamp": "2024-01-20T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -380,12 +336,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Brandon Wilson",
-                "message": "Your music has been the soundtrack to every tech startup launch party in Austin! The Moody Center would be electric with your presence - the live music capital of the world is calling! The whole tech community here can't wait to see you perform! 🤠",
+                "message": "Your music has been the soundtrack to every tech startup launch party in Austin! The Moody Center would be electric with your presence - the live music capital of the world is calling! The whole tech community here can't wait to see you perform!",
                 "city": "Austin",
                 "country": "USA",
-                "timestamp": "2024-01-18T00:00:00Z",
-                "emoji": "🎸",
-                "display_color": "#20B2AA"
+                "timestamp": "2024-01-18T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -397,12 +351,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Nina Thompson",
-                "message": "We play your music at every beach party in San Diego! Performing at Pechanga Arena with the ocean sunset as backdrop would be magical! The whole SoCal beach community would create the most amazing vibe for your show! 🌊",
+                "message": "We play your music at every beach party in San Diego! Performing at Pechanga Arena with the ocean sunset as backdrop would be magical! The whole SoCal beach community would create the most amazing vibe for your show!",
                 "city": "San Diego",
                 "country": "USA",
-                "timestamp": "2024-01-15T00:00:00Z",
-                "emoji": "🏖️",
-                "display_color": "#87CEEB"
+                "timestamp": "2024-01-15T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -414,12 +366,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Carlos Ruiz",
-                "message": "¡Tu música es el alma de Monterrey! The Showcenter Complex would be perfect for your show - the industrial heart of Mexico beats to your rhythm! La ciudad entera está lista para recibirte con todo el cariño del mundo! 🏭",
+                "message": "¡Tu música es el alma de Monterrey! The Showcenter Complex would be perfect for your show - the industrial heart of Mexico beats to your rhythm! La ciudad entera está lista para recibirte con todo el cariño del mundo!",
                 "city": "Monterrey",
                 "country": "Mexico",
-                "timestamp": "2024-01-12T00:00:00Z",
-                "emoji": "🌟",
-                "display_color": "#DDA0DD"
+                "timestamp": "2024-01-12T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -431,12 +381,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Liam O'Brien",
-                "message": "Your music echoes through the Rocky Mountains! The Ball Arena in Denver would be the perfect venue - the mile-high city will lift your music to new heights! The outdoor community here connects so deeply with your lyrics about freedom and adventure! 🏔️",
+                "message": "Your music echoes through the Rocky Mountains! The Ball Arena in Denver would be the perfect venue - the mile-high city will lift your music to new heights! The outdoor community here connects so deeply with your lyrics about freedom and adventure!",
                 "city": "Denver",
                 "country": "USA",
-                "timestamp": "2024-01-10T00:00:00Z",
-                "emoji": "⛰️",
-                "display_color": "#B8860B"
+                "timestamp": "2024-01-10T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -448,12 +396,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Marie-Claire Beaumont",
-                "message": "Your music brings such joy to our community in Ottawa! The Canadian Tire Centre would be amazing for your show - the capital city's diverse population would create such an incredible atmosphere! Please come during the Tulip Festival! 🌷",
+                "message": "Your music brings such joy to our community in Ottawa! The Canadian Tire Centre would be amazing for your show - the capital city's diverse population would create such an incredible atmosphere! Please come during the Tulip Festival!",
                 "city": "Ottawa",
                 "country": "Canada",
-                "timestamp": "2024-01-08T00:00:00Z",
-                "emoji": "🍁",
-                "display_color": "#FF69B4"
+                "timestamp": "2024-01-08T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -465,12 +411,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Diego Morales",
-                "message": "¡Tu música es la banda sonora de Tijuana! The Caliente Stadium would come alive with your energy - the border city's unique culture would add such a special dimension to your show! ¡Esperamos verte pronto en la frontera! 🎭",
+                "message": "¡Tu música es la banda sonora de Tijuana! The Caliente Stadium would come alive with your energy - the border city's unique culture would add such a special dimension to your show!",
                 "city": "Tijuana",
                 "country": "Mexico",
-                "timestamp": "2024-01-05T00:00:00Z",
-                "emoji": "🌴",
-                "display_color": "#FF7F50"
+                "timestamp": "2024-01-05T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -482,12 +426,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Jennifer Lee",
-                "message": "Your music inspires our whole tech community in Seattle! Climate Pledge Arena would be perfect - imagine your show powered by 100% renewable energy! The rainy city promises you the warmest welcome! Your songs about innovation and change resonate so much here! 🌧️",
+                "message": "Your music inspires our whole tech community in Seattle! Climate Pledge Arena would be perfect - imagine your show powered by 100% renewable energy! The rainy city promises you the warmest welcome! Your songs about innovation and change resonate so much here!",
                 "city": "Seattle",
                 "country": "USA",
-                "timestamp": "2024-01-03T00:00:00Z",
-                "emoji": "☔",
-                "display_color": "#4682B4"
+                "timestamp": "2024-01-03T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -499,12 +441,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Ryan Murphy",
-                "message": "Your music brings light to our darkest winter days! Rogers Place in Edmonton would be incredible for your show - the northern lights could be your natural light show! The whole prairie province is ready to welcome you with open arms! 🌌",
+                "message": "Your music brings light to our darkest winter days! Rogers Place in Edmonton would be incredible for your show - the northern lights could be your natural light show! The whole prairie province is ready to welcome you with open arms!",
                 "city": "Edmonton",
                 "country": "Canada",
-                "timestamp": "2024-01-01T00:00:00Z",
-                "emoji": "❄️",
-                "display_color": "#9370DB"
+                "timestamp": "2024-01-01T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -516,12 +456,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Jasmine Wong",
-                "message": "Your music is the heartbeat of our Chinatown festivals! The SAP Center in San Jose would be amazing - Silicon Valley's diverse tech community would give you such an enthusiastic welcome! Your songs about breaking barriers really speak to us! 🌉",
+                "message": "Your music is the heartbeat of our Chinatown festivals! The SAP Center in San Jose would be amazing - Silicon Valley's diverse tech community would give you such an enthusiastic welcome! Your songs about breaking barriers really speak to us!",
                 "city": "San Jose",
                 "country": "USA",
-                "timestamp": "2023-12-30T00:00:00Z",
-                "emoji": "💫",
-                "display_color": "#FF6B6B"
+                "timestamp": "2023-12-30T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -533,12 +471,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Luis Vega",
-                "message": "¡Tu música une a toda la ciudad! The Arena Monterrey would be perfect - your energy combined with the passion of our fans would be unforgettable! Monterrey's industrial spirit matches the power of your performances! 🏭",
+                "message": "¡Tu música une a toda la ciudad! The Arena Monterrey would be perfect - your energy combined with the passion of our fans would be unforgettable! Monterrey's industrial spirit matches the power of your performances!",
                 "city": "Monterrey",
                 "country": "Mexico",
-                "timestamp": "2023-12-28T00:00:00Z",
-                "emoji": "🎵",
-                "display_color": "#FFD700"
+                "timestamp": "2023-12-28T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -550,12 +486,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Olivia Bennett",
-                "message": "Your music is the soundtrack to our beautiful summers! The Scotiabank Arena would be incredible - imagine the whole city skyline lit up for your show! The 6ix is ready to show you why we're known for our amazing concert crowds! 🍁",
+                "message": "Your music is the soundtrack to our beautiful summers! The Scotiabank Arena would be incredible - imagine the whole city skyline lit up for your show! The 6ix is ready to show you why we're known for our amazing concert crowds!",
                 "city": "Toronto",
                 "country": "Canada",
-                "timestamp": "2023-12-25T00:00:00Z",
-                "emoji": "🌟",
-                "display_color": "#4B0082"
+                "timestamp": "2023-12-25T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -567,12 +501,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Daniel Kim",
-                "message": "Your music brings such positive energy to our community! The Moda Center would be perfect - Portland's artistic soul would resonate so well with your creative spirit! The whole Pacific Northwest is ready for your amazing show! 🌲",
+                "message": "Your music brings such positive energy to our community! The Moda Center would be perfect - Portland's artistic soul would resonate so well with your creative spirit! The whole Pacific Northwest is ready for your amazing show!",
                 "city": "Portland",
                 "country": "USA",
-                "timestamp": "2023-12-23T00:00:00Z",
-                "emoji": "🎨",
-                "display_color": "#98FB98"
+                "timestamp": "2023-12-23T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",
@@ -584,12 +516,10 @@
             "properties": {
                 "type": "fan_wish",
                 "fan_name": "Isabella Rossi",
-                "message": "Your music makes every moment special! The Nationwide Arena would be amazing - Columbus's vibrant arts scene would welcome you with such enthusiasm! The heart of Ohio beats to your rhythm! 🎭",
+                "message": "Your music makes every moment special! The Nationwide Arena would be amazing - Columbus's vibrant arts scene would welcome you with such enthusiasm! The heart of Ohio beats to your rhythm!",
                 "city": "Columbus",
                 "country": "USA",
-                "timestamp": "2023-12-20T00:00:00Z",
-                "emoji": "✨",
-                "display_color": "#BA55D3"
+                "timestamp": "2023-12-20T00:00:00Z"
             },
             "geometry": {
                 "type": "Point",

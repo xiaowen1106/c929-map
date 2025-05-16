@@ -1,0 +1,74 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "singer_activity",
+                "tour": "929hz",
+                "title": "Concert at Dolby Live",
+                "date": "2025-02-28",
+                "venue": "Dolby Live",
+                "city": "Las Vegas",
+                "country": "USA",
+                "description": "世巡北美第一场！",
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.1747531, 36.1041149]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "singer_activity",
+                "tour": "929hz",
+                "title": "Concert at Angel of the Winds Arena",
+                "date": "2025-03-05",
+                "venue": "Angel of the Winds Arena",
+                "city": "Everett",
+                "country": "USA",
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-122.2031761, 47.9785715]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "singer_activity",
+                "tour": "929hz",
+                "title": "Concert at Barclays Center",
+                "date": "2025-03-09",
+                "venue": "Barclays Center",
+                "city": "Brooklyn",
+                "country": "USA",
+                "media_urls": ["https://youtu.be/_utsQMOxuOU?si=qiZ0FbUthJj5yqle"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.97541559999999, 40.6826465]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "singer_activity",
+                "tour": "929hz",
+                "title": "Concert at Coca-Cola Coliseum",
+                "date": "2025-03-14",
+                "venue": "Coca-Cola Coliseum",
+                "city": "Toronto",
+                "country": "Canada",
+                "media_urls": ["https://www.youtube.com/watch?v=286ROz4mKMA"]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-79.4153189, 43.63490219999999]
+            }
+        }
+    ]
+} 

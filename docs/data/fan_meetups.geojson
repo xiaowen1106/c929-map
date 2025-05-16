@@ -9,9 +9,7 @@
                 "date": "2025-04-21",
                 "city": "Houston",
                 "country": "USA",
-                "notes": "团建",
-                "display_color": "#45B7D1",
-                "emoji": "🤝"
+                "notes": "团建"
             },
             "geometry": {
                 "type": "Point",
@@ -27,9 +25,7 @@
                 "city": "Vancouver",
                 "country": "Canada",
                 "media_urls": ["https://drive.google.com/file/d/1QUKEMY_0Dys2SiqGHG5kW43UOUwFmMMu/view?usp=sharing"],
-                "notes": "Beach cleanup at Jericho Beach",
-                "display_color": "#2ECC71",
-                "emoji": "🌊"
+                "notes": "Beach cleanup at Jericho Beach"
             },
             "geometry": {
                 "type": "Point",
