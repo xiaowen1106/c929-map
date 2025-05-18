@@ -1,12 +1,13 @@
 import { config, baseUrl } from './config.js';
 // Import layer configurations
 import { fanWishesLayer } from './layers/fanWishesLayer.js';
-import { singerActivitiesLayer } from './layers/singerActivitiesLayer.js';
+import { singerActivitiesLayer, loadSingerActivityImages } from './layers/singerActivitiesLayer.js';
 import { fanMeetupsLayer } from './layers/fanMeetupsLayer.js';
 import { fanAlbumPhotosLayer, loadFanAlbumImages } from './layers/fanAlbumPhotosLayer.js';
 import { concertsLayer, loadConcertImages } from './layers/concertsLayer.js';
 import { processMediaUrl } from './utils/mediaUtils.js';
 import { panelHandlers } from './panels/index.js';
+import { loadFanWishesData, selectFanWish } from './utils/fanWishesUtils.js';
 
 // Initialize Mapbox
 mapboxgl.accessToken = config.mapboxToken;
@@ -28,7 +29,9 @@ const popupConfig = {
     closeOnClick: true
 };
 
+// Make map instance globally available
 const map = new mapboxgl.Map(mapConfig);
+window.map = map;
 
 // Helper function to load a layer
 async function loadLayer(layer) {
@@ -53,6 +56,11 @@ async function loadLayer(layer) {
         layerConfig.source = sourceId;
 
         map.addLayer(layerConfig);
+
+        // If this is the fan wishes layer, initialize the data
+        if (layer.id === 'fan-wishes') {
+            await loadFanWishesData();
+        }
     } catch (error) {
         console.error(`Error loading ${layer.id}:`, error);
     }
@@ -64,7 +72,9 @@ map.on('style.load', async () => {
     loadFanAlbumImages(map);
     // Load custom concert images
     loadConcertImages(map);
-
+    // Load custom singer activity images
+    loadSingerActivityImages(map);
+    
     // Load all layers
     await Promise.all([
         loadLayer(fanWishesLayer),
@@ -74,6 +84,9 @@ map.on('style.load', async () => {
         loadLayer(concertsLayer)
     ]);
 });
+
+// Make functions globally available
+window.selectFanWish = selectFanWish;
 
 // Layer toggle functionality
 const allLayers = {

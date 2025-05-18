@@ -1,6 +1,23 @@
 {
     "type": "FeatureCollection",
     "features": [
-        
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "singer_activity",
+                "tour": "UN Special",
+                "title": "Concert at United Nations",
+                "date": "2024-12-31",
+                "venue": "United Nations Headquarters",
+                "city": "New York",
+                "country": "USA",
+                "description": "Special performance at the United Nations",
+                "media_urls": []
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.9683128, 40.7488758]
+            }
+        }
     ]
 } 
