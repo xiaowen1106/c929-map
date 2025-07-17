@@ -1,0 +1,312 @@
+{
+  "title": "9.29Hz World Tour - Melbourne",
+  "venue": "Rod Laver Arena",
+  "date": "2025-03-29",
+  "shenshen": {
+    "words": [
+      {
+        "type": "image",
+        "content": "img/weibo/weibo_melbourne.jpg"
+      },
+      {
+        "type": "image",
+        "content": "img/shenshen_words/melbourne.png"
+      }
+    ],
+    "behind_the_scenes": [
+      {
+        "type": "video",
+        "title": "【周深9.29Hz世巡Vlog】澳洲站：感受live的魅力",
+        "youtube_url": "https://www.youtube.com/watch?v=ZmIA_sLaDg8",
+        "bilibili_url": "https://www.bilibili.com/video/BV17SL4zZEMt"
+      },
+      {
+        "type": "video",
+        "title": "【周深9.29Hz世巡Vlog】同频时刻特别记录：谢谢每一个同频的你",
+        "youtube_url": "https://www.youtube.com/watch?v=SflEJN_ULy4",
+        "bilibili_url": "https://www.bilibili.com/video/BV1JwEezREMX"
+      }
+    ],
+    "media_interviews": [],
+    "playlist": [
+      {
+        "song_title": "借过一下",
+        "links": {
+          "spotify": "https://open.spotify.com/track/5c21VGPrbAlpGdlSY2Bpra",
+          "apple_music": "https://music.apple.com/us/song/%E5%80%9F%E8%BF%87%E4%B8%80%E4%B8%8B-%E5%BA%86%E4%BD%99%E5%B9%B4%E7%AC%AC%E4%BA%8C%E5%AD%A3-%E5%BD%B1%E8%A7%86%E5%89%A7%E7%89%87%E5%B0%BE%E6%9B%B2/1746459466",
+          "youtube_music": "https://music.youtube.com/watch?v=RTXUDa2f48w&si=Vr41pHKm4GuTNdAT"
+        }
+      },
+      {
+        "song_title": "Monsters",
+        "links": {
+          "spotify": "https://open.spotify.com/track/1rXg8vHU26JMoXy8CF3YyI",
+          "apple_music": "https://music.apple.com/us/song/monsters-live/1549514375",
+          "youtube_music": "https://music.youtube.com/watch?v=tlbHr90B0PI&si=STtTXs0cYpwAu64x"
+        }
+      },
+      {
+        "song_title": "化身孤岛的鲸",
+        "links": {
+          "spotify": "https://open.spotify.com/track/31VC6KvDluyPchgL5VRWfv",
+          "apple_music": "https://music.apple.com/us/song/%E5%8C%96%E8%BA%AB%E5%AD%A4%E5%B2%9B%E7%9A%84%E9%B2%B8/1545553367",
+          "youtube_music": "https://music.youtube.com/watch?v=F96ZrYF8v_0&si=VYI4u8dRiHqsX-I7"
+        }
+      },
+      {
+        "song_title": "光亮",
+        "links": {
+          "spotify": "https://open.spotify.com/track/7L1iUEOT59rhbvRReYW61h",
+          "apple_music": "https://music.apple.com/us/song/%E5%85%89%E4%BA%AE-%E5%A4%A7%E5%9E%8B%E7%B4%80%E9%8C%84%E7%89%87-%E7%B4%AB%E7%A6%81%E5%9F%8E-%E4%B8%BB%E9%A1%8C%E6%AD%8C/1587649590",
+          "youtube_music": "https://music.youtube.com/watch?v=hOVSeScWeh4&si=3nXhKPwnWaPBA5pP"
+        }
+      },
+      {
+        "song_title": "若梦",
+        "links": {
+          "spotify": "https://open.spotify.com/track/7KnlxClusCNwj2rgqOpy7n",
+          "apple_music": "https://music.apple.com/us/song/%E8%8B%A5%E6%A2%A6-%E4%B8%8E%E5%90%9B%E6%AD%8C-%E7%94%B5%E8%A7%86%E5%89%A7%E4%B8%BB%E9%A2%98%E6%9B%B2/1763203249",
+          "youtube_music": "https://music.youtube.com/watch?v=2ulH0CSHA3A&si=GD88R0m0vYhBEnYE"
+        }
+      },
+      {
+        "song_title": "浮光",
+        "links": {
+          "spotify": "https://open.spotify.com/track/5m7arASbaIgwFZRDPovln1",
+          "apple_music": "https://music.apple.com/us/song/%E6%B5%AE%E5%85%89/1822917830",
+          "youtube_music": "https://music.youtube.com/watch?v=08gHGrI7ai8&si=GaEyNpyFNr1TOwMc"
+        }
+      },
+      {
+        "song_title": "请我不改",
+        "links": {
+          "spotify": "https://open.spotify.com/track/5noJbrS6oIqf2YSF8yeiM1",
+          "apple_music": "https://music.apple.com/us/song/brave-heart/1770685254",
+          "youtube_music": "https://music.youtube.com/watch?v=4N6GH5Grwj8&si=WttLfeKCCQNkF11K"
+        }
+      },
+      {
+        "song_title": "蜃楼",
+        "links": {
+          "spotify": "https://open.spotify.com/track/1PR9aOkY0dyRRL81YXv9a4",
+          "apple_music": "https://music.apple.com/us/song/mirage/1770685144",
+          "youtube_music": "https://music.youtube.com/watch?v=Ujor1dWS02k&si=geMKMpsvhnnpbP-8"
+        }
+      },
+      {
+        "song_title": "警报",
+        "links": {
+          "spotify": "https://open.spotify.com/track/7x7QkNCR5iW3P9FJZ3D9Pq",
+          "apple_music": "https://music.apple.com/us/song/the-giver/1770685153",
+          "youtube_music": "https://music.youtube.com/watch?v=mT1ObQsmsdE&si=wWPxDB-jtMHogJHv"
+        }
+      },
+      {
+        "song_title": "缝合",
+        "links": {
+          "spotify": "https://open.spotify.com/track/4Q1bQNnbXm1dhG0ZarfMED?si=1144f4bfb86e4f6a",
+          "apple_music": "https://music.apple.com/us/song/fix-you/1770685158",
+          "youtube_music": "https://music.youtube.com/watch?v=SzukLW01s_E&si=ucrfTIRGwMvn813z"
+        }
+      },
+      {
+        "song_title": "嗨",
+        "links": {
+          "spotify": "https://open.spotify.com/track/3XeJaSwhAx04xGKRhjhkt3",
+          "apple_music": "https://music.apple.com/us/song/say-hi/1770685156",
+          "youtube_music": "https://music.youtube.com/watch?v=mcZNTcg72QU&si=J45xK_G2174wiSOQ"
+        }
+      },
+      {
+        "song_title": "天堂岛之歌",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=T-VpijW6qtI&si=d1cHux7jsUh3y2-X",
+          "youtube_video": "https://www.youtube.com/watch?v=pdZqx_jagQk"
+        }
+      },
+      {
+        "song_title": "达拉崩吧",
+        "links": {
+          "spotify": "https://open.spotify.com/track/0q37rC7NO4Xhf3iCSgQSWQ",
+          "apple_music": "https://music.apple.com/us/song/%E8%BE%BE%E6%8B%89%E5%B4%A9%E5%90%A7-live/1548933064",
+          "youtube_music": "https://music.youtube.com/watch?v=XpzdegogEGE&si=aId5EgWNqTpwZlSL"
+        }
+      },
+      {
+        "song_title": "人是_",
+        "links": {
+          "spotify": "https://open.spotify.com/track/7sE4UoV8cfBiQFGtsXVOBp",
+          "apple_music": "https://music.apple.com/us/song/%E4%BA%BA%E6%98%AF-%E7%94%B5%E5%BD%B1-%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832-%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E6%9B%B2/1666465295",
+          "youtube_music": "https://music.youtube.com/watch?v=wBhtHGWwifU&si=2JvDDp9Y4gxTYDG7"
+        }
+      },
+      {
+        "song_title": "My Only",
+        "links": {
+          "spotify": "https://open.spotify.com/track/73nOhNPqtkx6OLHk6CSCat",
+          "apple_music": "https://music.apple.com/us/song/my-only-ending-theme-song-from-tv-drama-reset/1605591509",
+          "youtube_music": "https://music.youtube.com/watch?v=D3v6xi9iBL0&si=8suEIQDj6FgKG-hP"
+        }
+      },
+      {
+        "song_title": "Rubia",
+        "links": {
+          "spotify": "https://open.spotify.com/track/1cyGvXPHdd5yG0Hrf9Ms8x",
+          "apple_music": "https://music.apple.com/us/song/rubia/1666688997",
+          "youtube_music": "https://music.youtube.com/watch?v=cIv5lFkBey0&si=5Z7jPqHs9a2KNEot"
+        }
+      },
+      {
+        "song_title": "小美满",
+        "links": {
+          "spotify": "https://open.spotify.com/track/2SBFE0qlDBhzus5b3qqxBM",
+          "apple_music": "https://music.apple.com/us/song/little-joys-interlude-song-from-motion-picture-yolo/1733140195",
+          "youtube_music": "https://music.youtube.com/watch?v=SMDu1jTAKiI&si=Jg9ILZ_q3_MiBn24"
+        }
+      },
+      {
+        "song_title": "好好生活就是美好生活",
+        "links": {
+          "spotify": "https://open.spotify.com/track/2hBHcpjrnYQoFMNhPg6w94",
+          "apple_music": "https://music.apple.com/us/song/%E5%A5%BD%E5%A5%BD%E7%94%9F%E6%B4%BB%E5%B0%B1%E6%98%AF%E7%BE%8E%E5%A5%BD%E7%94%9F%E6%B4%BB/1601596841",
+          "youtube_music": "https://music.youtube.com/watch?v=XoU40wAIDSU&si=vpgWcc0tcOVJ9c6i"
+        }
+      },
+      {
+        "song_title": "花开忘忧",
+        "links": {
+          "spotify": "https://open.spotify.com/track/20JBo7uOYHUbCAq2D7DDEf",
+          "apple_music": "https://music.apple.com/us/song/%E8%8A%B1%E5%BC%80%E5%BF%98%E5%BF%A7/1645047787",
+          "youtube_music": "https://music.youtube.com/watch?v=yyivMx1vhjs&si=B26FkzoPvgboSsd7"
+        }
+      },
+      {
+        "song_title": "邓丽君组曲",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=5ImYaD_F9EM&si=sqW4BY26USiUKJPF"
+        }
+      },
+      {
+        "song_title": "望",
+        "links": {
+          "spotify": "https://open.spotify.com/track/4lDNgBJi04XNcMLPcE08bP",
+          "apple_music": "https://music.apple.com/us/song/%E6%9C%9B-2021%E9%9B%86%E4%BA%94%E7%A6%8F%E4%B8%BB%E9%A2%98%E6%9B%B2/1822931568",
+          "youtube_music": "https://music.youtube.com/watch?v=wU7v2YGjmJI&si=niIdD1TcHZzsEX1E"
+        }
+      },
+      {
+        "song_title": "灯火里的中国",
+        "links": {
+          "spotify": "https://open.spotify.com/track/2MMTqmxQKtbRqdMThwOx0I",
+          "apple_music": "https://music.apple.com/us/song/%E7%81%AF%E7%81%AB%E9%87%8C%E7%9A%84%E4%B8%AD%E5%9B%BD/1655905218",
+          "youtube_music": "https://music.youtube.com/watch?v=-XQkpuVQvNs&si=d5rr0sxekBLnepuU"
+        }
+      },
+      {
+        "song_title": "奇迹时刻",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=lwdksv34kAM&si=6_yA_GRBwI_8Wkfv"
+        }
+      },
+      {
+        "song_title": "Wala li longla",
+        "links": {
+          "spotify": "https://open.spotify.com/track/3imYB01GqqIpjdK0FQpVmQ",
+          "apple_music": "https://music.apple.com/us/song/wala-li-longla/1770685249",
+          "youtube_music": "https://music.youtube.com/watch?v=cQzrxayo4R0&si=kqq0VdSIacSJliYm"
+        }
+      },
+      {
+        "song_title": "璀璨冒险人",
+        "links": {
+          "spotify": "https://open.spotify.com/track/3RAOcDd4ejTf6Flh7XmAsA",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=gUPnXFn-33w&si=KHFsRn-ggzEekzlP"
+        }
+      },
+      {
+        "song_title": "点歌 | 孤独的牧羊人",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=E3hxSYruqCc&si=Z1YbbhUfmQX9R2k0"
+        }
+      },
+      {
+        "song_title": "点歌 | 来不及勇敢",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=v8ew_KfvNRQ&si=nowVNxpsA3cAMRTu"
+        }
+      },
+      {
+        "song_title": "不想睡",
+        "links": {
+          "spotify": "https://open.spotify.com/track/4qGtSuzHHBZMEFuNBVC2qR",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=oF7YskfoPlE&si=G143UixQw1POj7o9"
+        }
+      },
+      {
+        "song_title": "我以渺小爱你",
+        "links": {
+          "spotify": "https://open.spotify.com/track/3Tqf1ufj1tAX43CmB4DgSR",
+          "apple_music": "https://music.apple.com/us/song/%E6%88%91%E4%BB%A5%E6%B8%BA%E5%B0%8F%E7%88%B1%E4%BD%A0-%E7%8E%AF%E4%BF%9D%E5%85%AC%E7%9B%8A%E7%BA%AA%E5%AE%9E%E8%8A%82%E7%9B%AE-%E4%B8%80%E8%B7%AF%E5%89%8D%E8%A1%8C-%E4%B8%BB%E9%A2%98%E6%9B%B2/1716896130",
+          "youtube_music": "https://music.youtube.com/watch?v=oF7YskfoPlE&si=Oz1J7mfQqquZGfV8"
+        }
+      },
+      {
+        "song_title": "起风了",
+        "links": {
+          "spotify": "https://open.spotify.com/track/59IPPEcm1dL7zu5sKM6II0",
+          "apple_music": "https://music.apple.com/us/song/%E8%B5%B7%E9%A3%8E%E4%BA%86/1605709410",
+          "youtube_music": "https://music.youtube.com/watch?v=YB5iYbg-aYc&si=x1drhe5JpzamuCON"
+        }
+      },
+      {
+        "song_title": "大鱼",
+        "links": {
+          "spotify": "https://open.spotify.com/track/0FfdtQrD9kT42o6Anv4uDn",
+          "apple_music": "https://music.apple.com/us/song/%E5%A4%A7%E9%B1%BC-live/1549514538",
+          "youtube_music": "https://music.youtube.com/watch?v=DRRLK6zUjBs&si=kf0jarjx-xcF5eXp"
+        }
+      },
+      {
+        "song_title": "限定曲 | 好运来",
+        "links": {
+          "spotify": "#",
+          "apple_music": "#",
+          "youtube_music": "https://music.youtube.com/watch?v=pwRkYSsXzw8&si=nOoyh-56QQKFgad5"
+        }
+      },
+      {
+        "song_title": "少管我",
+        "links": {
+          "spotify": "https://open.spotify.com/track/5a4SBwm8Q4Wjlr0Mckt8eP",
+          "apple_music": "https://music.apple.com/us/song/shao-guan-wo/1770685154",
+          "youtube_music": "https://music.youtube.com/watch?v=WS7EhhrAD0I&si=yIwDwPyXqO6n4A-P"
+        }
+      }
+    ]
+  },
+  "fans": {
+    "message_wall": [],
+    "fan_support": [
+      {
+        "type": "video",
+        "title": "【世巡应援】墨尔本 | 北美海米应援大屏打卡",
+        "youtube_url": "https://www.youtube.com/watch?v=GQ5TJBhjshc",
+        "bilibili_url": "https://b23.tv/FV6cWBF"
+      }
+    ],
+    "street_interviews": [],
+    "big_screen_checkin": []
+  }
+}

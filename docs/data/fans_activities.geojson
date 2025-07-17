@@ -1,0 +1,1863 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.771175,
+          29.793467
+        ]
+      },
+      "properties": {
+        "activityId": "TJ29",
+        "displayName": "【北美海米团建】2025休斯顿 | 世巡回顾团建",
+        "category": "团建",
+        "city": "休斯顿",
+        "locationString": "Katy, United States",
+        "description": "休斯顿地区9.29Hz世巡回顾团建",
+        "lat": 29.793467,
+        "lng": -95.771175,
+        "timestamp": "2025-04-24T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1RHQ145m0fMYIut6YYsgXJThljywDZJ-c/view?usp=drive_link",
+        "photo_names": "Houston_04242025.jpg",
+        "existing_photos": [
+          "Houston_04242025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "23015 Colonial Pkwy Ste B207, Katy, TX 77449",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 29.793467,
+        "geocoded_lng": -95.771175,
+        "author": "北美海米德州群 SUN",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.855855,
+          37.330271
+        ]
+      },
+      "properties": {
+        "activityId": "TJ21",
+        "displayName": "【北美海米团建】2023北加 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "北加州",
+        "locationString": "San Jose, United States",
+        "description": "北加州生米祝愿周深929生日快乐",
+        "lat": 37.330271,
+        "lng": -121.855855,
+        "timestamp": "2023-09-23T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=5YR4nFY8JPk",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "California_09232023.jpg",
+        "existing_photos": [
+          "California_09232023.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "950 Story Rd, San Jose, CA 95122",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 37.330271,
+        "geocoded_lng": -121.855855,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.884955,
+          37.435805
+        ]
+      },
+      "properties": {
+        "activityId": "TJ18",
+        "displayName": "【北美海米团建】2024北加 | 祝愿周深和米子们龙年新春快乐",
+        "category": "团建",
+        "city": "北加州",
+        "locationString": "Milpitas, United States",
+        "description": "北加州海米2024年2月3日团建",
+        "lat": 37.435805,
+        "lng": -121.884955,
+        "timestamp": "2024-02-03T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=9eNjnaMHzFA",
+        "bilibili_url": "https://www.bilibili.com/video/BV1rw4m1Z7zy",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "1297 E Calaveras Blvd, Milpitas, CA 95035",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 37.435805,
+        "geocoded_lng": -121.884955,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.975563,
+          37.503121
+        ]
+      },
+      "properties": {
+        "activityId": "TJ12",
+        "displayName": "【北美海米团建】2024北加 | 祝贺周深出道十周年",
+        "category": "团建",
+        "city": "北加州",
+        "locationString": "Fremont, United States",
+        "description": "北加群团建贺周深出道十周年",
+        "lat": 37.503121,
+        "lng": -121.975563,
+        "timestamp": "2024-07-25T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=m7gqz5_U4oE",
+        "bilibili_url": "https://www.bilibili.com/video/BV1nb421J7uP",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "43725 Boscell Rd. Fremont, CA 94538",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 37.503121,
+        "geocoded_lng": -121.975563,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.008702,
+          37.576556
+        ]
+      },
+      "properties": {
+        "activityId": "TJ9",
+        "displayName": "【北美海米团建】2024北加 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "北加州",
+        "locationString": "Fremont, United States",
+        "description": "北加群929庆生团建",
+        "lat": 37.576556,
+        "lng": -122.008702,
+        "timestamp": "2024-09-28T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=VgbtLvpTFnE",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "California_09282024.jpg",
+        "existing_photos": [
+          "California_09282024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "2100 Isherwood Way, Fremont, CA 94536",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 37.576556,
+        "geocoded_lng": -122.008702,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.36196,
+          34.09213
+        ]
+      },
+      "properties": {
+        "activityId": "TJ2",
+        "displayName": "【北美海米团建】2025南加 | 周深带出来的米太能唱了",
+        "category": "团建",
+        "city": "南加州",
+        "locationString": "Los Angeles, United States",
+        "description": "LA 生米团建",
+        "lat": 34.09213,
+        "lng": -118.36196,
+        "timestamp": "2025-04-27T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=XR1C9SS7oxU",
+        "bilibili_url": "https://www.bilibili.com/video/BV1AJV7z6E1K",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "Arcadia, Los Angeles, CA",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 34.09213,
+        "geocoded_lng": -118.36196,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.062776,
+          51.066667
+        ]
+      },
+      "properties": {
+        "activityId": "TJ39",
+        "displayName": "【北美海米团建】2025卡尔加里 | 庆祝世巡官宣和春节聚会",
+        "category": "团建",
+        "city": "卡加里",
+        "locationString": "Calgary, Canada",
+        "description": "庆祝世巡官宣和春节聚会",
+        "lat": 51.066667,
+        "lng": -114.062776,
+        "timestamp": "2025-01-11T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1HJ0OLArpRniwZT0Mfn_XcakncQRUp5o6/view?usp=drive_link",
+        "photo_names": "Calgary_01112025.jpg",
+        "existing_photos": [
+          "Calgary_01112025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1623 Centre St NW, Calgary, AB T2E 8S7",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 51.066667,
+        "geocoded_lng": -114.062776,
+        "author": "北美海米卡加里群 Ruby",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.069758,
+          51.045872
+        ]
+      },
+      "properties": {
+        "activityId": "TJ22",
+        "displayName": "【北美海米团建】2025卡尔加里 | 日常团建",
+        "category": "团建",
+        "city": "卡加里",
+        "locationString": "Calgary, Canada",
+        "description": "卡加里生米团建",
+        "lat": 51.045872,
+        "lng": -114.069758,
+        "timestamp": "2025-06-14T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/14z_bxY92AcpNZJ67-zmNvp22f4PYjz5r/view?usp=drive_link",
+        "photo_names": "Calgary_06142025.jpg",
+        "existing_photos": [
+          "Calgary_06142025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "336 8 Ave SW, Calgary, AB T2P 1C1",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 51.045872,
+        "geocoded_lng": -114.069758,
+        "author": "北美海米卡加里群 Ruby",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.38320308365815,
+          43.6476639777818
+        ]
+      },
+      "properties": {
+        "activityId": "TJ11",
+        "displayName": "【北美海米团建】2024多伦多 | 祝贺周深出道十周年",
+        "category": "团建",
+        "city": "多伦多",
+        "locationString": "Ontario, Canada",
+        "description": "多伦多群团建贺周深出道十周年",
+        "lat": 43.6476639777818,
+        "lng": -79.38320308365815,
+        "timestamp": "2024-07-25T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=EuazZ9Cwo5Q",
+        "bilibili_url": "https://www.bilibili.com/video/BV1rr421K7Zr",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "",
+        "original_coordinates": "",
+        "has_random_offset": true,
+        "geocoded_lat": 43.647938,
+        "geocoded_lng": -79.38355,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.38355,
+          43.647938
+        ]
+      },
+      "properties": {
+        "activityId": "TJ6",
+        "displayName": "【北美海米团建】2024多伦多 | 合唱《小美满》",
+        "category": "团建",
+        "city": "多伦多",
+        "locationString": "Ontario, Canada",
+        "description": "多伦多群团建合唱《小美满》",
+        "lat": 43.647938,
+        "lng": -79.38355,
+        "timestamp": "2024-12-28T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=YAnCRz2tqUY",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "Toronto_12282024.jpg",
+        "existing_photos": [
+          "Toronto_12282024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 43.647938,
+        "geocoded_lng": -79.38355,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.081444,
+          39.109662
+        ]
+      },
+      "properties": {
+        "activityId": "TJ31",
+        "displayName": "【北美海米团建】2025大华府 | 世巡回顾团建",
+        "category": "团建",
+        "city": "大华府",
+        "locationString": "Rockville, United States",
+        "description": "大华府生米团建",
+        "lat": 39.109662,
+        "lng": -77.081444,
+        "timestamp": "2025-04-05T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1oeigJitPXVQYBDzIgmswUc_0_lpfU9Wt/view?usp=drive_link",
+        "photo_names": "WashingtonDC_04052025.jpg",
+        "existing_photos": [
+          "WashingtonDC_04052025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "5055 Nicholson Ln, rockville, MD 20853, Far East Restaurant",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 39.109662,
+        "geocoded_lng": -77.081444,
+        "author": "北美海米大华府群 越，MD",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.967835,
+          40.749171
+        ]
+      },
+      "properties": {
+        "activityId": "TJ44",
+        "displayName": "【北美海米应援】2024联合国纽约 | 周深联合国中文日活动应援",
+        "category": "团建",
+        "city": "波士顿",
+        "locationString": "New York City, United States",
+        "description": "联合国",
+        "lat": 40.749171,
+        "lng": -73.967835,
+        "timestamp": "2024-04-01T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1IB2aov07MXPBv5x0nftRFDmlhCFabTKz/view?usp=drive_link",
+        "photo_names": "Boston_04012024.jpg",
+        "existing_photos": [
+          "Boston_04012024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "405 E 45th St, New York, NY 10017",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.749171,
+        "geocoded_lng": -73.967835,
+        "author": "北美海米波士顿群 健康美",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.21716,
+          42.436203
+        ]
+      },
+      "properties": {
+        "activityId": "TJ10",
+        "displayName": "【北美海米团建】2024波士顿 | 祝贺周深出道十周年",
+        "category": "团建",
+        "city": "波士顿",
+        "locationString": "Lexington, United States",
+        "description": "波士顿群团建贺周深出道十周年",
+        "lat": 42.436203,
+        "lng": -71.21716,
+        "timestamp": "2024-07-26T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=X2izwJbiUvw",
+        "bilibili_url": "https://www.bilibili.com/video/BV13E421A7xc",
+        "photo_link": "https://drive.google.com/file/d/1KOK4KKifZzruLRaq-c57cKdN4bbZWwi9/view?usp=drive_link",
+        "photo_names": "Boston_07012024.jpg",
+        "existing_photos": [
+          "Boston_07012024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "39 Marrett Road, Lexington Ma",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 42.436203,
+        "geocoded_lng": -71.21716,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 13
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.21681986871089,
+          42.43592897778179
+        ]
+      },
+      "properties": {
+        "activityId": "TJ40",
+        "displayName": "【北美海米团建】2025波士顿 | 专属大巴奔赴纽约演唱会",
+        "category": "团建",
+        "city": "波士顿",
+        "locationString": "Lexington, United States",
+        "description": "生米团建",
+        "lat": 42.43592897778179,
+        "lng": -71.21681986871089,
+        "timestamp": "2025-03-09T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1Bd5b88WnehRY8XX9w6wPjPDI-3m77Mnr/view?usp=drive_link",
+        "photo_names": "Boston_03092025.jpg",
+        "existing_photos": [
+          "Boston_03092025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "39 Marrett Road, Lexington Ma",
+        "original_coordinates": "",
+        "has_random_offset": true,
+        "geocoded_lat": 42.436203,
+        "geocoded_lng": -71.21716,
+        "author": "北美海米波士顿群 健康美",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 14
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.220669,
+          42.228131
+        ]
+      },
+      "properties": {
+        "activityId": "TJ28",
+        "displayName": "【北美海米团建】2025波士顿 | 世巡回顾团建",
+        "category": "团建",
+        "city": "波士顿",
+        "locationString": "Westwood, United States",
+        "description": "生米家团建",
+        "lat": 42.228131,
+        "lng": -71.220669,
+        "timestamp": "2025-05-01T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1XAjG7GyxR8G8jQSZqzH7jOAx0SQtNg6x/view?usp=drive_link",
+        "photo_names": "Boston_05012025.jpg",
+        "existing_photos": [
+          "Boston_05012025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "580 high st. Westwood Ma",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 42.228131,
+        "geocoded_lng": -71.220669,
+        "author": "北美海米波士顿群 健康美",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.056804,
+          42.35888
+        ]
+      },
+      "properties": {
+        "activityId": "TJ27",
+        "displayName": "【北美海米团建】2025波士顿 | 725筹备暨十一周年庆祝",
+        "category": "团建",
+        "city": "波士顿",
+        "locationString": "Massachusetts, United States",
+        "description": "725十一周年庆祝",
+        "lat": 42.35888,
+        "lng": -71.056804,
+        "timestamp": "2025-06-01T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1An9Pz7l9hZRHZbKX6JY_oWSP6S97CUFz/view?usp=drive_link",
+        "photo_names": "Boston_06012025.jpg",
+        "existing_photos": [
+          "Boston_06012025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Boston Public Garden, Boston MA",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 42.35888,
+        "geocoded_lng": -71.056804,
+        "author": "北美海米波士顿群 健康美",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.11509208982744,
+          49.289005930107336
+        ]
+      },
+      "properties": {
+        "activityId": "TJ20",
+        "displayName": "【北美海米团建】2023温哥华 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "温哥华",
+        "description": "温哥华生米团建祝愿周深929生日快乐！",
+        "lat": 49.289005930107336,
+        "lng": -123.11509208982744,
+        "timestamp": "2023-09-24T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=Cqml18J3ohc",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "Vancouver_09242023.jpg",
+        "existing_photos": [
+          "Vancouver_09242023.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1055 Canada Pl, Vancouver, BC V6C 0C3",
+        "original_coordinates": "49.289005930107336, -123.11509208982744",
+        "has_random_offset": false,
+        "geocoded_lat": 49.289005930107336,
+        "geocoded_lng": -123.11509208982744,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 17
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.116088,
+          49.289716
+        ]
+      },
+      "properties": {
+        "activityId": "TJ36",
+        "displayName": "【北美海米应援】2025温哥华 | 专属大巴奔赴西雅图演唱会",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "Vancouver, Canada",
+        "description": "温哥华西雅图演唱会大巴",
+        "lat": 49.289716,
+        "lng": -123.116088,
+        "timestamp": "2025-03-05T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1c3wR_YE2yVE6LoQue7wmpOg-p3O1b0jd/view?usp=drive_link",
+        "photo_names": "Vancouver_03052025.jpg",
+        "existing_photos": [
+          "Vancouver_03052025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1055 Canada Pl, Vancouver, BC V6C 0C3",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 49.289716,
+        "geocoded_lng": -123.116088,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.416732,
+          43.634605
+        ]
+      },
+      "properties": {
+        "activityId": "TJ33",
+        "displayName": "【北美海米应援】2025温哥华 | 温哥华好吃",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "Toronto, Canada",
+        "description": "温哥华好吃",
+        "lat": 43.634605,
+        "lng": -79.416732,
+        "timestamp": "2025-03-15T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1KzGXahOyCMAljW88fpJPio8WQbdshlk-/view?usp=drive_link",
+        "photo_names": "Vancouver_03152025.jpg",
+        "existing_photos": [
+          "Vancouver_03152025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "19 Nunavut Rd, Toronto, ON M6K 3C3",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 43.634605,
+        "geocoded_lng": -79.416732,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 19
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.969508,
+          49.219076
+        ]
+      },
+      "properties": {
+        "activityId": "TJ32",
+        "displayName": "【北美海米应援】2025温哥华 | 演唱会戒断团建火锅K歌",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "Burnaby, Canada",
+        "description": "温哥华戒断团建火锅K歌",
+        "lat": 49.219076,
+        "lng": -122.969508,
+        "timestamp": "2025-03-29T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1KiAWtG65ZkHfltHF_BZEuvs9RetxnAXX/view?usp=drive_link",
+        "photo_names": "Vancouver_03292025.jpg",
+        "existing_photos": [
+          "Vancouver_03292025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "6462 Kingsway #102, Burnaby, BC V5E 1E1",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 49.219076,
+        "geocoded_lng": -122.969508,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 20
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.19860993068853,
+          49.272398604271814
+        ]
+      },
+      "properties": {
+        "activityId": "TJ3",
+        "displayName": "【北美海米团建】2025温哥华 | 有深有爱有你 - 世界地球日活动",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "温哥华",
+        "description": "温哥华米有深 有爱 有你—世界地球日活动",
+        "lat": 49.272398604271814,
+        "lng": -123.19860993068853,
+        "timestamp": "2025-04-22T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=S_AMvvxwAVc",
+        "bilibili_url": "https://www.bilibili.com/video/BV1XC5AzDE9o",
+        "photo_link": "https://drive.google.com/file/d/1GbS87vEtPqVAVsy7tQJBTE543Yg2AZiB/view?usp=drive_link",
+        "photo_names": "Vancouver_04262025.jpg",
+        "existing_photos": [
+          "Vancouver_04262025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Jericho Beach, Vancouver, BC",
+        "original_coordinates": "49.272398604271814, -123.19860993068853",
+        "has_random_offset": false,
+        "geocoded_lat": 49.272398604271814,
+        "geocoded_lng": -123.19860993068853,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 21
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.139685,
+          49.281723
+        ]
+      },
+      "properties": {
+        "activityId": "TJ25",
+        "displayName": "【北美海米应援】2025温哥华 | 725筹备暨十一周年庆祝",
+        "category": "团建",
+        "city": "温哥华",
+        "locationString": "Vancouver, Canada",
+        "description": "温哥华725十一周年庆祝",
+        "lat": 49.281723,
+        "lng": -123.139685,
+        "timestamp": "2025-06-07T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1H49-r7BOvysAPGAd29k4hRfsYLZECg-x/view?usp=drive_link",
+        "photo_names": "Vancouver_06072025.jpg",
+        "existing_photos": [
+          "Vancouver_06072025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Beach Ave, Vancouver, BC V6C 3C1",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 49.281723,
+        "geocoded_lng": -123.139685,
+        "author": "北美海米温哥华群 小文",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.984443,
+          40.758902
+        ]
+      },
+      "properties": {
+        "activityId": "TJ47",
+        "displayName": "【北美海米应援】2023纽约时代广场 | 祝贺周深出道九周年",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "时代广场725庆贺",
+        "lat": 40.758902,
+        "lng": -73.984443,
+        "timestamp": "2023-05-23T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1XPAl8wOyHxT9Mwn6MAUmiJrhq3CKSWvU/view?usp=drive_link",
+        "photo_names": "NewYork_05232023.jpg",
+        "existing_photos": [
+          "NewYork_05232023.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1568 Broadway, New York, NY 10036",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.758902,
+        "geocoded_lng": -73.984443,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98450619030857,
+          40.759067825128135
+        ]
+      },
+      "properties": {
+        "activityId": "TJ19",
+        "displayName": "【北美海米应援】2023纽约时代广场 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "纽约时代广场庆祝周深生日",
+        "lat": 40.759067825128135,
+        "lng": -73.98450619030857,
+        "timestamp": "2023-09-29T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=OLn3t2AEEOw",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1GE55AXuI4W1KCaUFnYATT6uJEFpJRfFK/view?usp=drive_link",
+        "photo_names": "NewYork_09282023.jpg",
+        "existing_photos": [
+          "NewYork_09282023.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1568 Broadway, New York, NY 10036",
+        "original_coordinates": "40.759067825128135, -73.98450619030857",
+        "has_random_offset": false,
+        "geocoded_lat": 40.759067825128135,
+        "geocoded_lng": -73.98450619030857,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 24
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.82917,
+          40.759411
+        ]
+      },
+      "properties": {
+        "activityId": "TJ46",
+        "displayName": "【北美海米团建】2023纽约 | K歌团建",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "君豪酒楼卡拉OK",
+        "lat": 40.759411,
+        "lng": -73.82917,
+        "timestamp": "2023-10-21T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1hDGBivNGgcLSr5e8knrvCeU0zIGvBPhD/view?usp=drive_link",
+        "photo_names": "NewYork_10212023.jpg",
+        "existing_photos": [
+          "NewYork_10212023.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "136-20 Roosevelt Ave, Flushing, NY 11354",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.759411,
+        "geocoded_lng": -73.82917,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98360581729946,
+          40.6184492801937
+        ]
+      },
+      "properties": {
+        "activityId": "TJ17",
+        "displayName": "【北美海米团建】2024纽约 | 2024合唱《小美满》",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "纽约海米团建合唱《小美满》",
+        "lat": 40.6184492801937,
+        "lng": -73.98360581729946,
+        "timestamp": "2024-03-02T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=nbDVXClSaiY",
+        "bilibili_url": "https://www.bilibili.com/video/BV1gJ4m1a7xS",
+        "photo_link": "https://drive.google.com/file/d/1vvAE1FWALb2jfQyKPyTo6GUhqOePTxh-/view?usp=drive_link",
+        "photo_names": "NewYork_03022024.jpg",
+        "existing_photos": [
+          "NewYork_03022024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "6117 20th St, Brooklyn, NY, 11204",
+        "original_coordinates": "40.6184492801937, -73.98360581729946",
+        "has_random_offset": false,
+        "geocoded_lat": 40.6184492801937,
+        "geocoded_lng": -73.98360581729946,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 26
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.990741,
+          40.734128
+        ]
+      },
+      "properties": {
+        "activityId": "TJ45",
+        "displayName": "【北美海米团建】2024纽约 | 观影《小美满》",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "观影《小美满》",
+        "lat": 40.734128,
+        "lng": -73.990741,
+        "timestamp": "2024-03-10T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1PsbflVjY6SQCLR9s713TmmSJedYwvSX5/view?usp=drive_link",
+        "photo_names": "NewYork_03102024.jpg",
+        "existing_photos": [
+          "NewYork_03102024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "850 Broadway, New York, NY 10003",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.734128,
+        "geocoded_lng": -73.990741,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 27
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98450619030857,
+          40.759084078489906
+        ]
+      },
+      "properties": {
+        "activityId": "TJ14",
+        "displayName": "【北美海米应援】2024纽约时代广场 | 大屏欢迎深深到纽约",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "北美海米时代广场欢迎应援",
+        "lat": 40.759084078489906,
+        "lng": -73.98450619030857,
+        "timestamp": "2024-04-16T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=trlNzrIKsM4",
+        "bilibili_url": "https://www.bilibili.com/video/BV1vD421J71y",
+        "photo_link": "https://drive.google.com/file/d/1C0nPmReO95XnYsmcrC8-EjTZ9Gw3xMHO/view?usp=drive_link",
+        "photo_names": "NewYork_04162024.jpg",
+        "existing_photos": [
+          "NewYork_04162024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1568 Broadway, New York, NY 10036",
+        "original_coordinates": "40.759084078489906, -73.98450619030857",
+        "has_random_offset": false,
+        "geocoded_lat": 40.759084078489906,
+        "geocoded_lng": -73.98450619030857,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 28
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98417478494395,
+          40.7588100562717
+        ]
+      },
+      "properties": {
+        "activityId": "TJ15",
+        "displayName": "【北美海米应援】2024纽约时代广场 | 我们在最近的距离却没有彼此相认",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "北美海米时代广场欢迎应援",
+        "lat": 40.7588100562717,
+        "lng": -73.98417478494395,
+        "timestamp": "2024-04-16T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=2IACAn1VsT8",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "NewYork_04162024_2.jpg",
+        "existing_photos": [
+          "NewYork_04162024_2.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1569 Broadway, New York, NY 10036",
+        "original_coordinates": "40.759084078489906, -73.98450619030858",
+        "has_random_offset": true,
+        "geocoded_lat": 40.759084078489906,
+        "geocoded_lng": -73.98450619030858,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 29
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.003582,
+          40.732254
+        ]
+      },
+      "properties": {
+        "activityId": "TJ41",
+        "displayName": "【北美海米团建】2025纽约 | COSMO拍摄地打卡Little Island",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "COSMO打卡小岛",
+        "lat": 40.732254,
+        "lng": -74.003582,
+        "timestamp": "2024-05-03T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1C0nPmReO95XnYsmcrC8-EjTZ9Gw3xMHO/view?usp=drive_link",
+        "photo_names": "NewYork_05032024_1.jpg",
+        "existing_photos": [
+          "NewYork_05032024_1.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Little Island, New York, NY 10014",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.732254,
+        "geocoded_lng": -74.003582,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 30
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00543,
+          40.74098
+        ]
+      },
+      "properties": {
+        "activityId": "TJ42",
+        "displayName": "【北美海米团建】2025纽约 | COSMO拍摄地打卡红绿灯十字街",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "COSMO打卡红绿灯十字街",
+        "lat": 40.74098,
+        "lng": -74.00543,
+        "timestamp": "2024-05-03T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1l9_9v6GdsGdvoFcYhScQRTBNlwZNSZ3w/view?usp=drive_link",
+        "photo_names": "NewYork_05032024_2.jpg",
+        "existing_photos": [
+          "NewYork_05032024_2.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "W 14th St &amp; 9th Ave, New York, NY 10014",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.74098,
+        "geocoded_lng": -74.00543,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 31
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99709020380178,
+          40.73167362245731
+        ]
+      },
+      "properties": {
+        "activityId": "TJ13",
+        "displayName": "【北美海米团建】2024纽约 | 祝贺周深出道十周年",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "纽约群团建贺周深出道十周年",
+        "lat": 40.73167362245731,
+        "lng": -73.99709020380178,
+        "timestamp": "2024-07-20T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=nOXtcNVm1_g",
+        "bilibili_url": "https://www.bilibili.com/video/BV16Z421T7qn",
+        "photo_link": "https://drive.google.com/file/d/1sJUM6FfB5Dv7cP6UHq1L6flwMePj9_Da/view?usp=drive_link",
+        "photo_names": "NewYork_07202024.jpg",
+        "existing_photos": [
+          "NewYork_07202024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Washington Square N, New York, NY 10012",
+        "original_coordinates": "40.73167362245731, -73.99709020380178",
+        "has_random_offset": false,
+        "geocoded_lat": 40.73167362245731,
+        "geocoded_lng": -73.99709020380178,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 32
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.81637016147282,
+          40.75284444790867
+        ]
+      },
+      "properties": {
+        "activityId": "TJ4",
+        "displayName": "【北美海米团建】2025纽约 | “金蛇狂舞2025华夏大型春节晚会”演唱《小美满+千年等一回》",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "纽约",
+        "description": "纽约群参加“金蛇狂舞2025华夏大型春节晚会”演唱《小美满+千年等一回》",
+        "lat": 40.75284444790867,
+        "lng": -73.81637016147282,
+        "timestamp": "2025-01-18T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=90D_vWSm4YM",
+        "bilibili_url": "https://www.bilibili.com/video/BV17TfsYHEgp",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "143-09 Holly Ave Flushing NY 11355",
+        "original_coordinates": "40.75284444790867, -73.81637016147282",
+        "has_random_offset": false,
+        "geocoded_lat": 40.75284444790867,
+        "geocoded_lng": -73.81637016147282,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 33
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.984684,
+          40.75383
+        ]
+      },
+      "properties": {
+        "activityId": "TJ34",
+        "displayName": "【北美海米应援】2025纽约 | Bryant park世巡媒体车打卡",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "Bryant park 媒体车打卡",
+        "lat": 40.75383,
+        "lng": -73.984684,
+        "timestamp": "2025-03-07T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1X5VF_sk2vev3hNtoyk16E1c_A-k0R_f6/view?usp=drive_link",
+        "photo_names": "NewYork_03072025.jpg",
+        "existing_photos": [
+          "NewYork_03072025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Bryant park  New York, NY 10018",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.75383,
+        "geocoded_lng": -73.984684,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 34
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.838802,
+          40.76999
+        ]
+      },
+      "properties": {
+        "activityId": "TJ1",
+        "displayName": "【北美海米团建】2025纽约 | 亚太裔月母亲节汇演献唱《小美满》",
+        "category": "团建",
+        "city": "纽约",
+        "locationString": "New York City, United States",
+        "description": "纽约群“庆祝亚太裔月五月的鲜花母亲节汇演暨全球华人旗袍艺术盛典展演”献唱《小美满Little Bliss》",
+        "lat": 40.76999,
+        "lng": -73.838802,
+        "timestamp": "2025-05-10T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=JJ6g8xuuCUc",
+        "bilibili_url": "https://www.bilibili.com/video/BV17TfsYHEgp",
+        "photo_link": "https://drive.google.com/file/d/1OkX4rAEtPqIunYswcw6xdDHEp6yoUcNu/view?usp=drive_link",
+        "photo_names": "NewYork_05102025.jpg",
+        "existing_photos": [
+          "NewYork_05102025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "130-30 31st Ave, College Point Blvd, NY, 11354",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.76999,
+        "geocoded_lng": -73.838802,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.664512,
+          40.340878
+        ]
+      },
+      "properties": {
+        "activityId": "TJ23",
+        "displayName": "【北美海米团建】2025纽约 | 725筹备暨十一周年庆祝",
+        "category": "团建",
+        "city": "纽约，新泽西",
+        "locationString": "Princeton, United States",
+        "description": "纽约群新泽西普林斯顿拍摄725应援歌曲MV",
+        "lat": 40.340878,
+        "lng": -74.664512,
+        "timestamp": "2025-06-08T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1BSdXLVupQipdCmQDUGhrHMY0XGbPKZVF/view?usp=drive_link",
+        "photo_names": "NewYork_06082025.jpg",
+        "existing_photos": [
+          "NewYork_06082025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Princeton, NJ 08544",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 40.340878,
+        "geocoded_lng": -74.664512,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96793077496477,
+          40.74942771728616
+        ]
+      },
+      "properties": {
+        "activityId": "TJ43",
+        "displayName": "【北美海米应援】2024联合国纽约 | 周深联合国中文日活动应援",
+        "category": "团建",
+        "city": "纽约，波士顿",
+        "locationString": "纽约，波士顿",
+        "description": "北美海米联合国欢迎应援",
+        "lat": 40.74942771728616,
+        "lng": -73.96793077496477,
+        "timestamp": "2024-04-18T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1ajA-vrV0dLCbiVMZ0p9YQnVQR-Hr65bi/view?usp=drive_link",
+        "photo_names": "NewYork_04182024.jpg",
+        "existing_photos": [
+          "NewYork_04182024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "405 E 45th St, New York, NY 10017",
+        "original_coordinates": "40.74942771728616, -73.96793077496477",
+        "has_random_offset": false,
+        "geocoded_lat": 40.74942771728616,
+        "geocoded_lng": -73.96793077496477,
+        "author": "北美海米纽约群 Alice J",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 37
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99698244613059,
+          40.71457587825223
+        ]
+      },
+      "properties": {
+        "activityId": "TJ8",
+        "displayName": "【北美海米团建】2024纽约波士顿联合 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "纽约，波士顿",
+        "locationString": "纽约，波士顿",
+        "description": "纽约波士顿群联动929庆生团建",
+        "lat": 40.71457587825223,
+        "lng": -73.99698244613059,
+        "timestamp": "2024-09-28T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=Fm5BSr9NraI",
+        "bilibili_url": "https://www.bilibili.com/video/BV1Cr1dYHE6b",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "1-9 Bowery, New York, NY 10002",
+        "original_coordinates": "40.71457587825223, -73.99698244613059",
+        "has_random_offset": false,
+        "geocoded_lat": 40.71457587825223,
+        "geocoded_lng": -73.99698244613059,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 38
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5728,
+          45.50283
+        ]
+      },
+      "properties": {
+        "activityId": "TJ26",
+        "displayName": "【北美海米团建】2025蒙特利尔 | 十一周年725筹备团建",
+        "category": "团建",
+        "city": "蒙特利尔",
+        "locationString": "Quebec, Canada",
+        "description": "725拍摄",
+        "lat": 45.50283,
+        "lng": -73.5728,
+        "timestamp": "2025-06-06T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1GlDOenFnNeawcimvKDEehTS_ICfV4OC1/view?usp=drive_link",
+        "photo_names": "Montreal_06062025.jpg",
+        "existing_photos": [
+          "Montreal_06062025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Parc Philippe-Laheurte, montreal, QC, Canada",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 45.50283,
+        "geocoded_lng": -73.5728,
+        "author": "蒙特利尔群",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 39
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.19809827256557,
+          47.61170166987674
+        ]
+      },
+      "properties": {
+        "activityId": "TJ16",
+        "displayName": "【北美海米团建】2025西雅图 | 我们在西雅图等你来做饭吃",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "西雅图",
+        "description": "西雅图团建祝贺周深出道十周年",
+        "lat": 47.61170166987674,
+        "lng": -122.19809827256557,
+        "timestamp": "2024-04-06T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=Jh0mRThFyDE",
+        "bilibili_url": "https://www.bilibili.com/video/BV1XSEnz5Ezm",
+        "photo_link": "",
+        "photo_names": "",
+        "existing_photos": [],
+        "missing_photos": [],
+        "original_location": "188 106th Ave NE Suite #210, Bellevue, WA 98004",
+        "original_coordinates": "47.611975692094944, -122.19847063410852",
+        "has_random_offset": true,
+        "geocoded_lat": 47.611975692094944,
+        "geocoded_lng": -122.19847063410852,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 40
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.19807364081164,
+          47.611370977781796
+        ]
+      },
+      "properties": {
+        "activityId": "TJ48",
+        "displayName": "【北美海米团建】2024西雅图 | 祝贺周深出道十周年",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Bellevue, United States",
+        "description": "西雅图群929庆生团建",
+        "lat": 47.611370977781796,
+        "lng": -122.19807364081164,
+        "timestamp": "2024-07-20T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1Aou_OErpqJ2qiNIykDgB1nzG4brfcivT/view?usp=drive_link",
+        "photo_names": "Seattle_07202024.jpg",
+        "existing_photos": [
+          "Seattle_07202024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "188 106th Ave NE Suite #210, Bellevue, WA 98004",
+        "original_coordinates": "",
+        "has_random_offset": true,
+        "geocoded_lat": 47.611645,
+        "geocoded_lng": -122.198446,
+        "author": "",
+        "format_type": "",
+        "notes": "",
+        "fakeId": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.198446,
+          47.611645
+        ]
+      },
+      "properties": {
+        "activityId": "TJ7",
+        "displayName": "【北美海米团建】2024西雅图 | 929祝深深生日快乐",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Bellevue, United States",
+        "description": "西雅图群929庆生团建",
+        "lat": 47.611645,
+        "lng": -122.198446,
+        "timestamp": "2024-09-29T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=gYSaBfZU42Q",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1UpO7WWd2Q3dLuhYfO6UulkKD2fRdaIBK/view?usp=drive_link",
+        "photo_names": "Seattle_09292024.jpg",
+        "existing_photos": [
+          "Seattle_09292024.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "188 106th Ave NE Suite #210, Bellevue, WA 98004",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.611645,
+        "geocoded_lng": -122.198446,
+        "author": "",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 42
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.19847063410852,
+          47.611975692094944
+        ]
+      },
+      "properties": {
+        "activityId": "TJ5",
+        "displayName": "【北美海米团建】2024西雅图 | 海米群舞《少管我》",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "西雅图",
+        "description": "大西雅图群海米团建群舞《少管我》",
+        "lat": 47.611975692094944,
+        "lng": -122.19847063410852,
+        "timestamp": "2024-12-30T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "https://www.youtube.com/watch?v=kIvv3ijW82k",
+        "bilibili_url": "",
+        "photo_link": "",
+        "photo_names": "Seattle_12302024_2.jpg",
+        "existing_photos": [
+          "Seattle_12302024_2.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "188 106th Ave NE Suite #210, Bellevue, WA 98004",
+        "original_coordinates": "47.611975692094944, -122.19847063410852",
+        "has_random_offset": false,
+        "geocoded_lat": 47.611975692094944,
+        "geocoded_lng": -122.19847063410852,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "Video",
+        "notes": "",
+        "fakeId": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.191744,
+          47.61587
+        ]
+      },
+      "properties": {
+        "activityId": "TJ38",
+        "displayName": "【北美海米团建】2025西雅图 | 世巡预热&amp;中文学校春晚《花开忘忧》",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Bellevue, United States",
+        "description": "西雅图演唱会预热-极易中文学校春晚-《花开忘忧》",
+        "lat": 47.61587,
+        "lng": -122.191744,
+        "timestamp": "2025-02-15T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1ZMIdA2KvnFZDiaGfUGRQw-MblgLI1xLs/view?usp=drive_link",
+        "photo_names": "Seattle_02152025.jpg",
+        "existing_photos": [
+          "Seattle_02152025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "11100 NE 6th St, Bellevue, WA 98004",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.61587,
+        "geocoded_lng": -122.191744,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 44
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.337326,
+          47.612092
+        ]
+      },
+      "properties": {
+        "activityId": "TJ37",
+        "displayName": "【北美海米应援】2025西雅图 | 世巡大屏打卡",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Seattle, United States",
+        "description": "西雅图演唱会大屏打卡- Monorail Westlake station",
+        "lat": 47.612092,
+        "lng": -122.337326,
+        "timestamp": "2025-02-21T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1YEZ4EROV2JgJkvuOKh1MJbvWIwZqbW8Q/view?usp=drive_link",
+        "photo_names": "Seattle_02212025.jpg",
+        "existing_photos": [
+          "Seattle_02212025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "1601 5th Ave, Seattle, WA 98101",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.612092,
+        "geocoded_lng": -122.337326,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.165712,
+          47.628842
+        ]
+      },
+      "properties": {
+        "activityId": "TJ35",
+        "displayName": "【北美海米应援】2025西雅图 | 演唱会后聚餐",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Bellevue, United States",
+        "description": "西雅图演唱会后聚餐",
+        "lat": 47.628842,
+        "lng": -122.165712,
+        "timestamp": "2025-03-06T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1USGEaUVSVv-1isrURucK_71WV3IggCmH/view?usp=drive_link",
+        "photo_names": "Seattle_03062025.jpg",
+        "existing_photos": [
+          "Seattle_03062025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "13112 NE 20th St, Bellevue, WA 98005",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.628842,
+        "geocoded_lng": -122.165712,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 46
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.13574,
+          47.653096
+        ]
+      },
+      "properties": {
+        "activityId": "TJ30",
+        "displayName": "【北美海米应援】2025西雅图 | 演唱会戒断团建",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Redmond, United States",
+        "description": "演唱会戒断团建",
+        "lat": 47.653096,
+        "lng": -122.13574,
+        "timestamp": "2025-04-06T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1gmDY2rlV-tqTmkV27q2eDgbuusJtvcCY/view?usp=drive_link",
+        "photo_names": "Seattle_04062025.jpg",
+        "existing_photos": [
+          "Seattle_04062025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "Microsoft Building 88, 5069 154th Pl NE, Redmond, WA 98052",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.653096,
+        "geocoded_lng": -122.13574,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.31184,
+          47.65544
+        ]
+      },
+      "properties": {
+        "activityId": "TJ24",
+        "displayName": "【北美海米应援】2025西雅图 |  725筹备暨十一周年庆祝",
+        "category": "团建",
+        "city": "西雅图",
+        "locationString": "Seattle, United States",
+        "description": "出道十一周年视频拍摄团建",
+        "lat": 47.65544,
+        "lng": -122.31184,
+        "timestamp": "2025-06-08T00:00:00.000Z",
+        "radius": 10,
+        "youtube_url": "",
+        "bilibili_url": "",
+        "photo_link": "https://drive.google.com/file/d/1kBSwkTFXvcGIkcwJDb08rzQbmAZapzHo/view?usp=drive_link",
+        "photo_names": "Seattle_06082025.jpg",
+        "existing_photos": [
+          "Seattle_06082025.jpg"
+        ],
+        "missing_photos": [],
+        "original_location": "4000 15th Ave NE, Seattle, WA 98195",
+        "original_coordinates": "",
+        "has_random_offset": false,
+        "geocoded_lat": 47.65544,
+        "geocoded_lng": -122.31184,
+        "author": "北美海米大西雅图群 C929-暖阳扬",
+        "format_type": "photo",
+        "notes": "",
+        "fakeId": 48
+      }
+    }
+  ]
+}

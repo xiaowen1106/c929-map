@@ -61,4 +61,11 @@ out/
 .vercel
 
 # Local Netlify folder
-.netlify 
+.netlify
+
+# Source geojson files
+docs/data/Canada CMA Bou_FeaturesToJSO.geojson
+docs/data/Canada_Provinc_FeaturesToJSO.geojson
+
+# Source folder
+source/ 

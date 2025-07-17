@@ -1,0 +1,172 @@
+/* Draggable Panel Styles for Mobile Bottom Sheet */
+
+@media (max-width: 768px) {
+    /* Base draggable panel styles */
+    .detail-panel {
+        position: fixed !important;
+        top: auto !important;
+        bottom: -50vh !important; /* Start off-screen at bottom */
+        left: 0 !important; /* Full width from left edge */
+        /* Panel positioning handled by styles.css - only override for mobile active state */
+        width: 100% !important; /* Full width */
+        /* Remove fixed height to allow dynamic expansion */
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important; /* Simplified shadow */
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        z-index: 1001 !important;
+        overflow: hidden !important;
+        border: none !important; /* Remove border */
+        touch-action: pan-y !important; /* Allow vertical scrolling but prevent horizontal */
+    }
+    
+    .detail-panel.active {
+        bottom: 0 !important; /* Position from bottom edge, ignore footer */
+        transform: none !important; /* Prevent any transform-based positioning changes */
+    }
+    
+    /* Dragging states */
+    .detail-panel.dragging {
+        transition: none !important; /* Disable transitions during drag */
+        user-select: none !important;
+    }
+    
+    .detail-panel.dragging .concert-panel-content {
+        pointer-events: none !important; /* Disable interactions during drag */
+    }
+    
+    /* Snap states */
+    .detail-panel.snap-closed {
+        bottom: -50vh !important;
+    }
+    
+    .detail-panel.snap-open {
+        bottom: 0 !important;
+        height: 50vh !important;
+    }
+    
+    .detail-panel.snap-expanded {
+        bottom: 0 !important;
+        height: 70vh !important;
+    }
+    
+    /* Visual feedback during dragging */
+    .detail-panel.dragging {
+        box-shadow: 0 -8px 32px rgba(0,0,0,0.25) !important;
+    }
+    
+    /* Enhanced drag handle indicator */
+    .detail-panel::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 2px;
+        z-index: 11;
+        transition: background-color 0.2s ease;
+    }
+    
+    .detail-panel.dragging::after {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Visual feedback for expansion */
+    .detail-panel[style*="height: 70vh"]::after {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Add a larger touch target for dragging - now covers the entire panel-header */
+    .detail-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px; /* Reduced to cover compact panel-header height */
+        z-index: 10;
+        cursor: grab;
+    }
+    
+    .detail-panel.dragging::before {
+        cursor: grabbing;
+    }
+    
+    /* Ensure drag handle is above other elements */
+    .detail-panel::after {
+        z-index: 1002 !important;
+    }
+    
+    /* Content height management for draggable panel */
+    .detail-panel .concert-panel-content {
+        height: 100% !important;
+        /* Remove fixed max-height to allow dynamic expansion */
+        border-radius: 12px 12px 0 0 !important;
+        overflow: hidden !important;
+        border: none !important; /* Remove border */
+    }
+    
+    .detail-panel .concert-panel-content .panel-header {
+        border-radius: 12px 12px 0 0 !important;
+        padding: 12px !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        border: none !important; /* Remove border */
+        cursor: grab !important; /* Indicate draggable area */
+        user-select: none !important; /* Prevent text selection during drag */
+    }
+    
+    .detail-panel.dragging .concert-panel-content .panel-header {
+        cursor: grabbing !important;
+    }
+    
+    .detail-panel .concert-panel-content .panel-body {
+        /* Remove fixed heights to allow dynamic expansion */
+        overflow: hidden !important;
+        padding: 8px !important;
+        border: none !important; /* Remove border */
+        background: white !important;
+    }
+    
+    .detail-panel .concert-panel-content .message-wall-only {
+        /* Remove fixed heights to allow dynamic expansion */
+        overflow-y: auto !important;
+    }
+    
+    .detail-panel .concert-panel-content .panel-body:has(.message-wall-only) {
+        max-height: calc(50vh - 40px) !important; /* Reduced for compact layout */
+        min-height: calc(50vh - 40px) !important; /* Reduced for compact layout */
+        overflow-y: auto !important;
+    }
+    .detail-panel[style*="height: 70vh"] .concert-panel-content .panel-body:has(.message-wall-only) {
+        max-height: calc(70vh - 40px) !important; /* Reduced for compact layout */
+        min-height: calc(70vh - 40px) !important; /* Reduced for compact layout */
+    }
+
+    
+    .detail-panel:not(.active) {
+        pointer-events: none !important;
+        opacity: 0 !important;
+        transition: opacity 0.2s;
+    }
+    
+    .detail-panel.active {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Desktop styles - disable draggable functionality */
+@media (min-width: 769px) {
+    .detail-panel::before,
+    .detail-panel::after {
+        display: none !important;
+    }
+    
+    .detail-panel {
+        touch-action: auto !important;
+    }
+} 

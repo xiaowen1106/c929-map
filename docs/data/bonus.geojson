@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.32665799341392,
+          37.531831326542765
+        ]
+      },
+      "properties": {
+        "id": "SS1",
+        "fakeId": 1,
+        "title": "【彩蛋】你是~弗吉尼亚",
+        "date": "2025-03-09",
+        "city": "Richmond, VA",
+        "description": "纽约《如愿》",
+        "content": "你是～遥遥的路～？错！你是~ 弗吉尼亚！2025.3.9，相信所有的米子都记住了弗吉尼亚版《如愿》的特别演绎。这是一次在纽约场演唱会现场，深深和米子们反复拉扯反复确认的\"地理课\"～谢谢来自Richmond, Virginia的Monica，谢谢多次空耳也要锲而不舍搞清粉丝来自哪里的深深，让我们拥有了又搞笑又温情的纽约场特别记忆！深深宝贝，弗吉尼亚在这里哦～请记住这个\"地名彩蛋\"，下次见面我们会考你的！",
+        "youtube_url": "https://www.youtube.com/watch?v=HcaLmrmEa44",
+        "lat": 37.531831326542765,
+        "lng": -77.32665799341392,
+        "category": "彩蛋",
+        "location_display": "弗吉尼亚",
+        "photo": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07613314096989,
+          43.0840519488384
+        ]
+      },
+      "properties": {
+        "id": "SS2",
+        "fakeId": 2,
+        "title": "【彩蛋】而我听见下雨的声音",
+        "date": "2025-03-17",
+        "city": "Niagara Falls, ON",
+        "description": "深深去了耶",
+        "content": "想起你用唇语说爱上生米是情非得已。美加巡演结束后的第二天，周深现身尼亚加拉大瀑布，结果刚巧赶上一场突如其来的大雨！一行人边笑边躲雨，像是结束旅程的仪式感小插曲。更巧的是，有海米在景点偶遇了深深！还拍下了不少同款打卡照～而我们的嫑嫑小朋友，现场踩上栏杆，想拍张绝美合影，结果被工作人员温柔却坚定地请了下来 。打卡有趣，安全第一～各位生米以后再去记得站稳脚步哦！有歌、有你、有风雨，这趟美加之行画上了完美句点。❤热切期盼深深再来!",
+        "youtube_url": "",
+        "lat": 43.0840519488384,
+        "lng": -79.07613314096989,
+        "category": "彩蛋",
+        "location_display": "尼亚加拉大瀑布",
+        "photo": "NF_1.JPEG",
+        "reference_link": "深深的微博 https://weibo.com/1736988591/5145516166877307",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3901807014667,
+          33.836305397195
+        ]
+      },
+      "properties": {
+        "id": "SS3",
+        "fakeId": 3,
+        "title": "【彩蛋】倒流回最初的相遇",
+        "date": "2024-11-03",
+        "city": "Santa Monica Beach",
+        "description": "工作室100万福利 / 大鱼录制在LA",
+        "content": "2024年11月3日，周深工作室突破百万关注！工作室发布了一组深深在洛杉矶的街拍，一下子把我们的思绪拉回了2016年。那一年，周深在洛杉矶录制了代表作《大鱼》，那是他第一次用歌声，为我们描绘梦与海的模样。时隔八年，这一次他不是一个人回来。歌迷们的爱已从梦中一路跟随到现实，一起倒流回那场温柔的相遇。时间可以走远，但爱和声音从不迷路。",
+        "youtube_url": "",
+        "lat": 33.836305397195,
+        "lng": -118.3901807014667,
+        "category": "彩蛋",
+        "location_display": "加利福尼亚",
+        "photo": "LA_1.JPEG"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01025293295942,
+          40.74227677203421
+        ]
+      },
+      "properties": {
+        "id": "SS4",
+        "fakeId": 4,
+        "title": "【彩蛋】纽约街头最靓的仔",
+        "date": "2024-04-20",
+        "city": "Little Island, NY",
+        "description": "纽约Cosmo拍摄",
+        "content": "在纽约街头与《时尚COSMO》不经意地邂逅，悄悄捕捉了执行浪漫任务的宝贝深深。镜头里的他松弛与锋芒并存，与平日截然不用的酷潮穿搭让人眼前一亮，绝对是纽约街头最靓的仔！镜头之外，是循着深深的足迹打卡取景地的生米们。同样的街角，同样的风景，会感受到你曾经站在这里的心跳频率吗？纽约客从不停下脚步，却在这里为你驻足。生米与深深永远可以穿越时空，同频共振。感谢你曾经来过！",
+        "youtube_url": "",
+        "lat": 40.74227677203421,
+        "lng": -74.01025293295942,
+        "category": "彩蛋",
+        "location_display": "纽约COSMO拍摄取景地",
+        "photo": "COSMO_1.JPEG",
+        "bilibili_url": "https://www.bilibili.com/video/BV1fi421v7HE/?share_source=copy_web&vd_source=532abbf09e959ae65f11cb290874b553"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96788118746571,
+          40.74937683848578
+        ]
+      },
+      "properties": {
+        "id": "SS5",
+        "fakeId": 5,
+        "title": "【彩蛋】终于等到你，还好我没放弃！",
+        "date": "2024-04-18",
+        "city": "United Nations Headquarters",
+        "description": "联合国中文日",
+        "content": "文案生产中",
+        "youtube_url": "",
+        "lat": 40.74937683848578,
+        "lng": -73.96788118746571,
+        "category": "彩蛋",
+        "location_display": "纽约联合国总部",
+        "photo": "UN_1.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.339564283297866,
+          36.01258971437238
+        ]
+      },
+      "properties": {
+        "id": "SS6",
+        "fakeId": 6,
+        "title": "【彩蛋】CocoMimiNono",
+        "date": "2025-06-11",
+        "city": "Comino, Malta",
+        "description": "Cocomiminono商标注册",
+        "content": "可可&米米&嫑嫑~咱们仨把日子过好比什么都重要！",
+        "youtube_url": "",
+        "lat": 36.01258971437238,
+        "lng": 14.339564283297866,
+        "category": "彩蛋",
+        "location_display": "Comino, Malta",
+        "photo": "CoMiNo_1.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.14878644163788,
+          36.083348294080984
+        ]
+      },
+      "properties": {
+        "id": "SS7",
+        "fakeId": 7,
+        "title": "【彩蛋】条条深的诞生与失踪",
+        "date": "2025-03-05",
+        "city": "拉斯维加斯",
+        "description": "海米投稿",
+        "content": "文案生产中",
+        "youtube_url": "",
+        "lat": 36.083348294080984,
+        "lng": -115.14878644163788,
+        "category": "彩蛋",
+        "location_display": "拉斯维加斯",
+        "photo": "Tall_1.jpg"
+      }
+    }
+  ]
+} 

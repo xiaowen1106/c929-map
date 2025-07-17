@@ -1,0 +1,137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-95.356820, 29.761613]
+      },
+      "properties": {
+        "name": "休斯顿",
+        "flyToCoords": [-95.406258, 29.763998],
+        "index": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.436249, 38.409586]
+      },
+      "properties": {
+        "name": "北加州",
+        "flyToCoords": [-122.381583, 37.770925],
+        "index": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.169214, 34.686535]
+      },
+      "properties": {
+        "name": "南加州",
+        "flyToCoords": [-117.705010, 34.111098],
+        "index": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-113.668757, 52.373268]
+      },
+      "properties": {
+        "name": "卡加里",
+        "flyToCoords": [-113.912054, 51.061705],
+        "index": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.850633, 44.876359]
+      },
+      "properties": {
+        "name": "多伦多",
+        "flyToCoords": [-79.312140, 43.721467],
+        "index": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.145196, 38.206119]
+      },
+      "properties": {
+        "name": "大华府",
+        "flyToCoords": [-77.621750, 38.951200],
+        "index": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.745200, 42.474233]
+      },
+      "properties": {
+        "name": "波士顿",
+        "flyToCoords": [-70.723289, 42.358689],
+        "index": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-123.029191, 49.372830]
+      },
+      "properties": {
+        "name": "温哥华",
+        "flyToCoords": [-123.124163, 49.283604],
+        "index": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.574508, 42.616386]
+      },
+      "properties": {
+        "name": "纽约",
+        "flyToCoords": [-73.338530, 40.728388],
+        "index": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.248515, 46.568468]
+      },
+      "properties": {
+        "name": "蒙特利尔",
+        "flyToCoords": [-73.443497, 45.495861],
+        "index": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-120.239804, 47.302546]
+      },
+      "properties": {
+        "name": "西雅图",
+        "flyToCoords": [-121.869010, 47.651906],
+        "index": 10
+      }
+    }
+  ]
+} 
