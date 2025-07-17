@@ -98,7 +98,7 @@ def main():
     failed_downloads = 0
     
     for video_id in sorted(youtube_ids):
-        output_path = thumbnails_dir / f"{video_id}.jpg"
+        output_path = thumbnails_dir / f"yt_{video_id}.jpg"
         
         # Skip if already downloaded
         if output_path.exists():
