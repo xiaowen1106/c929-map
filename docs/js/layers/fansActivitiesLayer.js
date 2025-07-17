@@ -262,11 +262,112 @@ let currentActivityFakeId = null;
 let isNavigating = false; // Flag to prevent reset during navigation
 let highlightedActivityId = null; // Track currently highlighted activity
 
+// Memory optimization: Cache for popup content to avoid recreating HTML
+let popupContentCache = new Map();
+let mediaElementCache = new Map();
+
 // Create data manager instance
 const dataManager = new FansActivitiesDataManager();
 
 // Make data manager globally accessible for consistency
 window.dataManager = dataManager;
+
+// Memory optimization: Enhanced popup cleanup
+function cleanupCurrentPopup() {
+    if (currentActivityPopup) {
+        // Remove event listeners before removing popup
+        currentActivityPopup.off('close');
+        currentActivityPopup.remove();
+        currentActivityPopup = null;
+    }
+}
+
+// Memory optimization: Cache popup content to avoid recreating HTML
+function getCachedPopupContent(fakeId, activity) {
+    const cacheKey = `${fakeId}_${activity.properties.displayName}_${activity.properties.timestamp}`;
+    
+    if (popupContentCache.has(cacheKey)) {
+        return popupContentCache.get(cacheKey);
+    }
+    
+    // Generate content and cache it
+    const content = generatePopupContent(activity);
+    popupContentCache.set(cacheKey, content);
+    
+    // Limit cache size to prevent memory growth
+    if (popupContentCache.size > 50) {
+        const firstKey = popupContentCache.keys().next().value;
+        popupContentCache.delete(firstKey);
+    }
+    
+    return content;
+}
+
+// Memory optimization: Separate content generation function
+function generatePopupContent(activity) {
+    const groupName = activity.properties.city;
+    const activityTitle = escapeHtml(activity.properties.displayName || '活动名称');
+    const activityDate = formatDate(activity.properties.timestamp) || '日期';
+
+    // Video or photo content
+    let mediaContent = '';
+    const hasVideo = (activity.properties.youtube_url && activity.properties.youtube_url !== 'N/A' && activity.properties.youtube_url !== '') || 
+                    (activity.properties.bilibili_url && activity.properties.bilibili_url !== 'N/A' && activity.properties.bilibili_url !== '');
+    
+    if (hasVideo) {
+        const videoObject = {
+            youtube_url: activity.properties.youtube_url,
+            bilibili_url: activity.properties.bilibili_url
+        };
+        
+        const videoCover = createVideoCoverFromObject(videoObject);
+        if (videoCover) {
+            mediaContent = videoCover;
+        }
+    }
+    
+    if (!mediaContent && activity.properties.photo_names && activity.properties.photo_names !== 'N/A' && activity.properties.photo_names !== '') {
+        mediaContent = createPhotoElement(`img/activities/${activity.properties.photo_names}`, 'Activity Photo', 'activity-photo');
+    }
+
+    const isMobile = window.innerWidth <= 768;
+    let actionButton;
+    
+    if (isMobile) {
+        actionButton = `<button class="close-btn" onclick="closeActivityPopup()" title="Close popup">×</button>`;
+    } else {
+        actionButton = `<button class="menu-icon" onclick="openFansActivitiesPanel()" title="View all activities"><span></span><span></span><span></span></button>`;
+    }
+
+    const leftArrow = `<button class="activity-nav-arrow left" onclick="navigateToPreviousActivity()" title="Previous activity">‹</button>`;
+    const rightArrow = `<button class="activity-nav-arrow right" onclick="navigateToNextActivity()" title="Next activity">›</button>`;
+
+    return `
+        <div class="popup-card custom-activity-popup">
+            <div class="activity-popup-header">
+            </div>
+            <div class="activity-popup-main">
+                ${leftArrow}
+                <div class="activity-content-container">
+                    <div class="activity-content-header">
+                        <div class="activity-content-text">
+                            <div class="activity-content-title">${groupName}</div>
+                            <div class="activity-content-subtitle">${activityTitle} / ${activityDate}</div>
+                        </div>
+                        ${actionButton}
+                    </div>
+                    <div class="activity-content-separator"></div>
+                    <div class="activity-content-body">
+                        <div class="activity-media-container">
+                            ${mediaContent}
+                        </div>
+                    </div>
+                </div>
+                ${rightArrow}
+            </div>
+        </div>
+    `;
+}
 
 // Function to escape HTML special characters
 function escapeHtml(text) {
@@ -343,19 +444,35 @@ export const fansActivitiesLayer = {
     }
 };
 
-// Function to highlight a specific activity
+// Memory optimization: Enhanced highlighting with minimal data updates
 export function highlightActivity(fakeId) {
+    if (highlightedActivityId === fakeId) {
+        return; // No change needed
+    }
+    
     highlightedActivityId = fakeId;
     if (window.map && window.map.getSource('fans-activities-source')) {
         const source = window.map.getSource('fans-activities-source');
         const currentData = source._data;
-        const updatedFeatures = currentData.features.map(feature => ({
-            ...feature,
-            properties: {
-                ...feature.properties,
-                highlighted: feature.properties.fakeId == fakeId
+        
+        // Only update features that actually need to change
+        const updatedFeatures = currentData.features.map(feature => {
+            const shouldHighlight = feature.properties.fakeId == fakeId;
+            const wasHighlighted = feature.properties.highlighted;
+            
+            if (shouldHighlight === wasHighlighted) {
+                return feature; // No change needed
             }
-        }));
+            
+            return {
+                ...feature,
+                properties: {
+                    ...feature.properties,
+                    highlighted: shouldHighlight
+                }
+            };
+        });
+        
         source.setData({
             type: 'FeatureCollection',
             features: updatedFeatures
@@ -363,19 +480,32 @@ export function highlightActivity(fakeId) {
     }
 }
 
-// Function to clear activity highlighting
+// Memory optimization: Enhanced clear highlighting
 export function clearActivityHighlight() {
+    if (highlightedActivityId === null) {
+        return; // No change needed
+    }
+    
     highlightedActivityId = null;
     if (window.map && window.map.getSource('fans-activities-source')) {
         const source = window.map.getSource('fans-activities-source');
         const currentData = source._data;
-        const updatedFeatures = currentData.features.map(feature => ({
-            ...feature,
-            properties: {
-                ...feature.properties,
-                highlighted: false
+        
+        // Only update features that are currently highlighted
+        const updatedFeatures = currentData.features.map(feature => {
+            if (!feature.properties.highlighted) {
+                return feature; // No change needed
             }
-        }));
+            
+            return {
+                ...feature,
+                properties: {
+                    ...feature.properties,
+                    highlighted: false
+                }
+            };
+        });
+        
         source.setData({
             type: 'FeatureCollection',
             features: updatedFeatures
@@ -496,7 +626,7 @@ function createMediaLinks(activity) {
     return links.length > 0 ? `<div class="media-links">${links.join(' ')}</div>` : '';
 }
 
-// Popup function for fans activities - accepts fakeId
+// Memory-optimized popup function for fans activities - accepts fakeId
 export function showFansActivityPopup(fakeId, coordinates) {
     const activity = findActivityByFakeId(fakeId);
     if (!activity) {
@@ -524,85 +654,13 @@ export function showFansActivityPopup(fakeId, coordinates) {
         }
     }
 
-    // Group name (customize as needed, or use a property if available)
-    const groupName = activity.properties.city;
-    // Activity name/date
-    const activityTitle = escapeHtml(activity.properties.displayName || '活动名称');
-    const activityDate = formatDate(activity.properties.timestamp) || '日期';
+    // Use cached popup content to avoid recreating HTML
+    const popupContent = getCachedPopupContent(fakeId, activity);
 
-    // Video or photo content
-    let mediaContent = '';
-    const hasVideo = (activity.properties.youtube_url && activity.properties.youtube_url !== 'N/A' && activity.properties.youtube_url !== '') || 
-                    (activity.properties.bilibili_url && activity.properties.bilibili_url !== 'N/A' && activity.properties.bilibili_url !== '');
-    
-    if (hasVideo) {
-        // Create video object structure for location-based selection
-        const videoObject = {
-            youtube_url: activity.properties.youtube_url,
-            bilibili_url: activity.properties.bilibili_url
-        };
-        
-        // Use createVideoCoverFromObject with location-based URL selection
-        const videoCover = createVideoCoverFromObject(videoObject);
-        if (videoCover) {
-            mediaContent = videoCover;
-        }
-    }
-    
-    // If no video, use the photo
-    if (!mediaContent && activity.properties.photo_names && activity.properties.photo_names !== 'N/A' && activity.properties.photo_names !== '') {
-        mediaContent = createPhotoElement(`img/activities/${activity.properties.photo_names}`, 'Activity Photo', 'activity-photo');
-    }
-
-    // Menu icon or close button based on screen size
-    const isMobile = window.innerWidth <= 768;
-    let actionButton;
-    
-    if (isMobile) {
-        // Create close button for mobile
-        actionButton = `<button class="close-btn" onclick="closeActivityPopup()" title="Close popup">×</button>`;
-    } else {
-        // Create menu icon for desktop
-        actionButton = `<button class="menu-icon" onclick="openFansActivitiesPanel()" title="View all activities"><span></span><span></span><span></span></button>`;
-    }
-
-    // Navigation arrows (outside main content) - no disabled state due to circular navigation
-    const leftArrow = `<button class="activity-nav-arrow left" onclick="navigateToPreviousActivity()" title="Previous activity">‹</button>`;
-    const rightArrow = `<button class="activity-nav-arrow right" onclick="navigateToNextActivity()" title="Next activity">›</button>`;
-
-    const popupContent = `
-        <div class="popup-card custom-activity-popup">
-            <div class="activity-popup-header">
-            </div>
-            <div class="activity-popup-main">
-                ${leftArrow}
-                <div class="activity-content-container">
-                    <div class="activity-content-header">
-                        <div class="activity-content-text">
-                            <div class="activity-content-title">${groupName}</div>
-                            <div class="activity-content-subtitle">${activityTitle} / ${activityDate}</div>
-                        </div>
-                        ${actionButton}
-                    </div>
-                    <div class="activity-content-separator"></div>
-                    <div class="activity-content-body">
-                        <div class="activity-media-container">
-                            ${mediaContent}
-                        </div>
-                    </div>
-                </div>
-                ${rightArrow}
-            </div>
-        </div>
-    `;
-    
-
-
-    // Remove existing popup if any
+    // Memory optimization: Enhanced popup cleanup
     if (currentActivityPopup) {
         isNavigating = true;
-        currentActivityPopup.remove();
-        currentActivityPopup = null;
+        cleanupCurrentPopup();
         isNavigating = false;
     }
 
@@ -630,21 +688,9 @@ window.highlightActivity = highlightActivity;
 window.clearActivityHighlight = clearActivityHighlight;
 window.getHighlightedActivity = getHighlightedActivity;
 
-// Test function for highlighting (can be called from browser console)
-window.testHighlighting = function() {
-    // Get the first activity from the data manager
-    const activities = dataManager.getData();
-    if (activities && activities.length > 0) {
-        const firstActivity = activities[0];
-        const fakeId = firstActivity.properties.fakeId;
-        highlightActivity(fakeId);
-        
-        // Clear highlight after 3 seconds
-        setTimeout(() => {
-            clearActivityHighlight();
-        }, 3000);
-    }
-};
+
+
+
 
 // Set fans activities data
 export function setFansActivitiesData(features) {
@@ -950,7 +996,7 @@ export function loadMiJieIcons(map) {
     ]);
 }
 
-// Cleanup function for memory management
+// Enhanced cleanup function for memory management
 export function cleanup() {
     resetActivityHighlighting();
     dataManager.cleanup();
@@ -963,11 +1009,12 @@ export function cleanup() {
         delete window.fansActivitiesData;
     }
     
-    // Clear any remaining popup
-    if (currentActivityPopup) {
-        currentActivityPopup.remove();
-        currentActivityPopup = null;
-    }
+    // Memory optimization: Clear caches
+    popupContentCache.clear();
+    mediaElementCache.clear();
+    
+    // Clear any remaining popup with enhanced cleanup
+    cleanupCurrentPopup();
     
     // Clear highlighting
     clearActivityHighlight();
@@ -976,11 +1023,7 @@ export function cleanup() {
     cleanupPanel();
 }
 
-// Function to log memory usage (for debugging)
-export function logMemoryUsage() {
-    const usage = dataManager.getMemoryUsage();
-    return usage;
-}
+
 
 // Cleanup on page unload
 window.addEventListener('beforeunload', () => {
