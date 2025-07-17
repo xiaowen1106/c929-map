@@ -13,7 +13,7 @@ import { handleMapClick, handleZoomHomeClick } from './utils/eventHandlers.js';
 import { panelHandlers, initializeDetailPanel, showDetailPanel } from './panels/index.js';
 import { showMessagesPanel, setCurrentMessageIndex } from './panels/messagesPanel.js';
 import { showFansActivitiesPanel, setCurrentActivityIndex, setActivityCityFilter } from './panels/fansActivitiesPanel.js';
-import { showBonusPanel, setCurrentBonusIndex } from './panels/bonusPanel.js';
+import { showBonusPanel, setCurrentBonusIndex, closeBonusPanel } from './panels/bonusPanel.js';
 
 // Import edit panel functionality
 import { initializeEditPanel } from './header.js';
@@ -134,6 +134,7 @@ window.setCurrentActivityIndex = setCurrentActivityIndex;
 window.setActivityCityFilter = setActivityCityFilter;
 window.setCurrentBonusIndex = setCurrentBonusIndex;
 window.showBonusPanel = showBonusPanel;
+window.closeBonusPanel = closeBonusPanel;
 
 // Initialize detail panel functionality
 initializeDetailPanel();

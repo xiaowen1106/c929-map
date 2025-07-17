@@ -1,6 +1,5 @@
-import { showFanWishPopup } from '../layers/fanWishesLayer.js';
 import { showFansActivityPopup } from '../layers/fansActivitiesLayer.js';
-import { showBonusPopup } from '../layers/bonusLayer.js';
+import { showFanWishPopup } from '../layers/fanWishesLayer.js';
 import { filterFlightTracksByConcert, resetFlightTracks } from '../layers/flyingTrackingLayer.js';
 import { handleCityMarkerClick } from '../layers/fansActivitiesLayer.js';
 import { showDetailPanel } from '../panels/index.js';
@@ -291,9 +290,14 @@ function handleBonusClick(coordinates, properties) {
         });
     }
     
-    // Show bonus popup
+    // Open bonus panel directly
     if (properties.id) {
-        showBonusPopup(properties.id, coordinates);
+        // Open the bonus panel with the selected bonus
+        if (window.showBonusPanel) {
+            window.showBonusPanel(properties.id);
+        } else {
+            console.error('showBonusPanel function not found');
+        }
     } else {
         console.error('No id found in properties:', properties);
     }
@@ -317,10 +321,6 @@ export function handleZoomHomeClick(map) {
     }
     
     // Close all popups
-    if (window.closeBonusPopup) {
-        window.closeBonusPopup();
-    }
-    
     if (window.closeFanWishPopup) {
         window.closeFanWishPopup();
     }

@@ -1,8 +1,9 @@
 import { baseUrl } from '../config.js';
 import { createVideoCoverFromObject, createPhotoElement } from '../utils/mediaUtils.js';
+import { initBonusDraggablePanel, cleanupBonusDraggablePanel, getBonusDraggablePanelInstance } from '../utils/bonusDraggablePanel.js';
 
 
-// Bonus Panel for displaying all bonus items
+// Bonus Panel for displaying current bonus item
 let bonusPanel = null;
 let currentSelectedBonusId = null;
 
@@ -45,6 +46,11 @@ const handleDocumentClick = (e) => {
     
     if (!panel) return;
     
+    // Don't close if we're in the process of opening
+    if (panel.dataset.opening === 'true' || panel.dataset.openingNew === 'true') {
+        return;
+    }
+    
     // Don't close if clicking on a marker (this will trigger a new panel to open)
     const isClickOnMarker = e.target.closest('.mapboxgl-marker');
     if (isClickOnMarker) {
@@ -75,36 +81,66 @@ function cleanupEventListeners() {
     document.removeEventListener('click', handleDocumentClick);
 }
 
-// Function to create media content HTML with redirection for videos
+// Function to create media content HTML with all available media
 async function createMediaContent(bonus) {
     let mediaContent = '';
     
-    // Check if bonus has video content (YouTube)
-    const hasVideo = (bonus.properties.youtube_url && bonus.properties.youtube_url !== 'N/A' && bonus.properties.youtube_url !== '');
+    // Check if bonus has video content (YouTube or Bilibili) - prioritize these
+    const hasYouTube = (bonus.properties.youtube_url && bonus.properties.youtube_url !== 'N/A' && bonus.properties.youtube_url !== '');
+    const hasBilibili = (bonus.properties.bilibili_url && bonus.properties.bilibili_url !== 'N/A' && bonus.properties.bilibili_url !== '');
     
-    if (hasVideo) {
-        // Create video object structure for location-based selection
+    // Add YouTube video first if available
+    if (hasYouTube) {
         const videoObject = {
             youtube_url: bonus.properties.youtube_url
         };
-        
-        // Use createVideoCoverFromObject with location-based URL selection
         const videoCover = createVideoCoverFromObject(videoObject);
         if (videoCover) {
-            mediaContent = videoCover;
+            mediaContent += `<div class="bonus-video">${videoCover}</div>`;
         }
     }
     
-    // If no video, use the photo
-    if (!mediaContent && bonus.properties.photo && bonus.properties.photo !== 'N/A' && bonus.properties.photo !== '') {
-        mediaContent = createPhotoElement(`img/bonus/${bonus.properties.photo}`, 'Bonus Photo', 'bonus-photo-panel');
+    // Add Bilibili video if available
+    if (hasBilibili) {
+        const videoObject = {
+            bilibili_url: bonus.properties.bilibili_url
+        };
+        const videoCover = createVideoCoverFromObject(videoObject);
+        if (videoCover) {
+            mediaContent += `<div class="bonus-video">${videoCover}</div>`;
+        }
     }
+    
+    // Add photos after videos
+    const photos = [];
+    
+    // Collect all available photos
+    if (bonus.properties.photo && bonus.properties.photo !== 'N/A' && bonus.properties.photo !== '') {
+        photos.push(bonus.properties.photo);
+    }
+    
+    // Add additional photos if available (photo2, photo3, etc.)
+    for (let i = 2; i <= 5; i++) {
+        const photoKey = `photo${i}`;
+        if (bonus.properties[photoKey] && bonus.properties[photoKey] !== 'N/A' && bonus.properties[photoKey] !== '') {
+            photos.push(bonus.properties[photoKey]);
+        }
+    }
+    
+    // Add all photos to media content
+    photos.forEach((photo, index) => {
+        const photoContent = createPhotoElement(`img/bonus/${photo}`, `Bonus Photo ${index + 1}`, 'bonus-photo-panel');
+        if (photoContent) {
+            mediaContent += `<div class="bonus-photo">${photoContent}</div>`;
+        }
+    });
     
     return mediaContent;
 }
 
 // Function to create the bonus panel
 export function createBonusPanel() {
+    
     if (bonusPanel) {
         return bonusPanel;
     }
@@ -114,128 +150,84 @@ export function createBonusPanel() {
     panel.id = 'bonus-panel';
     panel.className = 'bonus-panel';
     
-    // Create panel content
+    // Create panel content with updated header format
     panel.innerHTML = `
         <div class="panel-header">
-            <div class="header-content">
-                <h2>所有彩蛋</h2>
+            <div class="panel-header-content">
+                <h2 style="font-size: 1.1em; line-height: 1.3; display: flex; align-items: center; gap: 0.8em; color: white;">
+                    <div class="bonus-title">
+                        <div class="bonus-location" id="bonus-location" style="color: white;">彩蛋详情</div>
+                    </div>
+                </h2>
             </div>
-            <button class="close-panel" onclick="closeBonusPanel()">&times;</button>
+            <button class="close-panel" id="bonus-close-btn">&times;</button>
         </div>
         <div class="panel-body">
-            <div class="bonus-list" id="bonus-list">
+            <div class="bonus-content" id="bonus-content">
                 <div class="loading-bonus">
-                    <p>Loading bonus items...</p>
+                    <p>Loading bonus content...</p>
                 </div>
             </div>
         </div>
     `;
+    
+    // Add close button event listener
+    const closeBtn = panel.querySelector('#bonus-close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            closeBonusPanel();
+        });
+    }
 
     // Add panel to body
     document.body.appendChild(panel);
     bonusPanel = panel;
-
-    // Wait for data to be available before loading bonus items
-    waitForDataAndLoadBonus();
-
+    
     return panel;
 }
 
-// Function to wait for data to be available and then load bonus items
-async function waitForDataAndLoadBonus() {
-    let attempts = 0;
-    const maxAttempts = 50; // Wait up to 5 seconds (50 * 100ms)
+// Function to display current bonus content
+async function displayCurrentBonus(bonusId) {
     
-    while (attempts < maxAttempts) {
-        // Check if data is available
-        if (window.bonusDataManager && typeof window.bonusDataManager.getData === 'function' && window.bonusDataManager.getData().length > 0) {
-            loadAllBonus();
-            return;
-        }
-        
-        if (window.allBonus && window.allBonus.length > 0) {
-            loadAllBonus();
-            return;
-        }
-        
-        // Wait 100ms before next attempt
-        await new Promise(resolve => setTimeout(resolve, 100));
-        attempts++;
-    }
-    
-    // If we get here, data still isn't available after max attempts
-    loadAllBonus();
-}
-
-// Function to load bonus items
-async function loadAllBonus() {
     try {
         // Use data manager for consistency with popup function
-        let bonusItems = [];
-        if (window.bonusDataManager && typeof window.bonusDataManager.getData === 'function') {
-            bonusItems = window.bonusDataManager.getData() || [];
-        } else {
-            // Fallback to window.allBonus if data manager is not available
-            bonusItems = window.allBonus || [];
+        let bonus = null;
+        if (window.bonusDataManager && typeof window.bonusDataManager.findById === 'function') {
+            bonus = window.bonusDataManager.findById(bonusId);
         }
         
-        const bonusList = document.getElementById('bonus-list');
+        const bonusContent = document.getElementById('bonus-content');
+        const bonusLocation = document.getElementById('bonus-location');
         
-        if (bonusItems.length === 0) {
-            bonusList.innerHTML = '<p>No bonus items available.</p>';
+        if (!bonus) {
+            bonusContent.innerHTML = '<p>Bonus not found.</p>';
             return;
         }
 
-        // Create bonus items HTML with async media content creation
-        const bonusHTMLPromises = bonusItems.map(async (bonus, index) => {
-            const location = bonus.properties.city || '';
-            const bonusTitle = bonus.properties.title || 'Bonus';
-            const bonusDate = formatDate(bonus.properties.date) || '';
-            const mediaContent = await createMediaContent(bonus);
-            
-            return `
-                <div class="bonus-item" data-bonus-id="${bonus.properties.id}">
-                    <div class="bonus-header">
-                        <span class="bonus-title">${escapeHtml(bonusTitle)}</span>
-                        <span class="location">${escapeHtml(location)}</span>
-                    </div>
-                    <div class="bonus-date">${escapeHtml(bonusDate)}</div>
-                    ${bonus.properties.content ? `<div class="bonus-content">${escapeHtml(bonus.properties.content)}</div>` : ''}
-                    ${mediaContent ? `<div class="bonus-media">${mediaContent}</div>` : ''}
-                </div>
-            `;
-        });
+        // Update header with bonus information
+        const bonusTitle = bonus.properties.title || 'Bonus';
+        const bonusContentText = bonus.properties.content || '';
+        const mediaContent = await createMediaContent(bonus);
+        
+        // Update header elements
+        if (bonusLocation) {
+            bonusLocation.textContent = bonusTitle;
+        }
+        
+        const bonusHTML = `
+            ${bonusContentText ? `<div class="bonus-content-text">${escapeHtml(bonusContentText)}</div>` : ''}
+            ${mediaContent ? `<div class="bonus-media">${mediaContent}</div>` : ''}
+        `;
 
-        // Wait for all async operations to complete
-        const bonusHTMLArray = await Promise.all(bonusHTMLPromises);
-        const bonusHTML = bonusHTMLArray.join('');
-
-        bonusList.innerHTML = bonusHTML;
-
-        // Setup event listeners for bonus items
-        setupBonusEventListeners();
+        bonusContent.innerHTML = bonusHTML;
 
     } catch (error) {
-        console.error('Error loading bonus items:', error);
-        const bonusList = document.getElementById('bonus-list');
-        bonusList.innerHTML = '<p>Error loading bonus items.</p>';
+        console.error('Error displaying bonus content:', error);
+        const bonusContent = document.getElementById('bonus-content');
+        bonusContent.innerHTML = '<p>Error loading bonus content.</p>';
     }
-}
-
-// Function to setup event listeners for bonus items
-function setupBonusEventListeners() {
-    // Cleanup existing listeners
-    cleanupEventListeners();
-
-    // Add click listeners to bonus items
-    document.querySelectorAll('.bonus-item').forEach(item => {
-        const bonusId = item.getAttribute('data-bonus-id');
-        
-        // Main click listener for navigation
-        const listener = () => selectBonusInPanel(bonusId);
-        item.addEventListener('click', listener);
-        eventListeners.set(item, listener);
-    });
 }
 
 // Function to show bonus panel
@@ -246,18 +238,60 @@ export function showBonusPanel(bonusId = null) {
             createBonusPanel();
         }
         
+        // Set current bonus ID
+        if (bonusId) {
+            currentSelectedBonusId = bonusId;
+            
+            // Update the current bonus ID in the bonus layer
+            if (window.bonusDataManager) {
+                // Set the current bonus ID in the bonus layer
+                import('../layers/bonusLayer.js').then(module => {
+                    module.setCurrentBonusId(bonusId);
+                });
+            }
+        }
+        
+        // Display the current bonus content
+        if (currentSelectedBonusId) {
+            displayCurrentBonus(currentSelectedBonusId);
+        } else {
+            const bonusContent = document.getElementById('bonus-content');
+            bonusContent.innerHTML = '<p>No bonus selected.</p>';
+        }
+        
+        // Set opening flags to prevent immediate closing
+        bonusPanel.dataset.opening = 'true';
+        bonusPanel.dataset.openingNew = 'true';
+        
         // Show panel
         bonusPanel.classList.add('active');
         
-        // Add document click listener for panel closing
+        // Force panel to be visible if CSS transition isn't working
+        setTimeout(() => {
+            const panel = document.getElementById('bonus-panel');
+            if (panel) {
+                const styles = window.getComputedStyle(panel);
+                if (styles.right !== '8px') {
+                    panel.style.right = '8px';
+                }
+            }
+        }, 50);
+        
+        // Add document click listener for closing
         document.addEventListener('click', handleDocumentClick);
         
-        // Select specific bonus if provided
-        if (bonusId) {
-            setTimeout(() => {
-                selectBonusInPanel(bonusId);
-            }, 100);
-        }
+        // Remove the flags after a short delay
+        setTimeout(() => {
+            if (bonusPanel) {
+                delete bonusPanel.dataset.opening;
+                delete bonusPanel.dataset.openingNew;
+            }
+        }, 150);
+        
+        // Initialize draggable panel for mobile after a short delay
+        const timeoutId = setTimeout(() => {
+            initBonusDraggablePanel();
+        }, 200);
         
     } catch (error) {
         console.error('Error showing bonus panel:', error);
@@ -266,104 +300,64 @@ export function showBonusPanel(bonusId = null) {
 
 // Function to close bonus panel
 export function closeBonusPanel() {
-    if (bonusPanel) {
-        bonusPanel.classList.remove('active');
-        currentSelectedBonusId = null;
+    try {
+        if (bonusPanel) {
+            // On mobile, use the draggable panel's snap closed functionality
+            const draggableInstance = getBonusDraggablePanelInstance();
+            if (window.innerWidth <= 768 && draggableInstance) {
+                draggableInstance.snapClosed();
+            } else {
+                bonusPanel.classList.remove('active');
+                
+                // Reset the right position to ensure panel slides back
+                setTimeout(() => {
+                    if (bonusPanel) {
+                        bonusPanel.style.right = '';
+                    }
+                }, 300); // Wait for transition to complete
+            }
+        }
         
-        // Remove document click listener
-        document.removeEventListener('click', handleDocumentClick);
+        // Cleanup event listeners
+        cleanupEventListeners();
+        
+        // Cleanup draggable panel
+        cleanupBonusDraggablePanel();
+        
+    } catch (error) {
+        console.error('Error closing bonus panel:', error);
     }
 }
 
 // Function to find bonus by id
 function findBonusById(bonusId) {
-    // Try data manager first
     if (window.bonusDataManager && typeof window.bonusDataManager.findById === 'function') {
         return window.bonusDataManager.findById(bonusId);
     }
-    
-    // Fallback to window.allBonus
-    if (window.allBonus) {
-        return window.allBonus.find(bonus => bonus.properties.id === bonusId);
-    }
-    
     return null;
 }
 
 // Function to select bonus in panel
 export function selectBonusInPanel(bonusId) {
     try {
-        // Remove previous selection
-        const previousSelected = document.querySelector('.bonus-item.selected');
-        if (previousSelected) {
-            previousSelected.classList.remove('selected');
-        }
+        currentSelectedBonusId = bonusId;
         
-        // Add selection to current item
-        const currentItem = document.querySelector(`[data-bonus-id="${bonusId}"]`);
-        if (currentItem) {
-            currentItem.classList.add('selected');
-            currentSelectedBonusId = bonusId;
-            
-            // Scroll to item
-            scrollToBonus(bonusId);
-            
-            // Navigate to bonus on map
-            import('../layers/bonusLayer.js').then(module => {
-                module.navigateToBonus(bonusId);
-            });
-        }
+        // Update panel content with the selected bonus
+        displayCurrentBonus(bonusId);
         
     } catch (error) {
         console.error('Error selecting bonus in panel:', error);
     }
 }
 
-// Function to scroll to bonus item
-function scrollToBonus(bonusId) {
-    const bonusItem = document.querySelector(`[data-bonus-id="${bonusId}"]`);
-    if (bonusItem && bonusPanel) {
-        const panelBody = bonusPanel.querySelector('.panel-body');
-        if (panelBody) {
-            panelBody.scrollTop = bonusItem.offsetTop - panelBody.offsetTop - 20;
-        }
-    }
-}
-
-// Function to set current bonus index
+// Function to set current bonus index (for compatibility)
 export function setCurrentBonusIndex(bonusId) {
     try {
-        if (!bonusId) {
-            // Reset selection
-            const selectedItem = document.querySelector('.bonus-item.selected');
-            if (selectedItem) {
-                selectedItem.classList.remove('selected');
-            }
-            currentSelectedBonusId = null;
-            return;
-        }
+        currentSelectedBonusId = bonusId;
         
-        // Find the bonus item
-        const bonus = findBonusById(bonusId);
-        if (!bonus) {
-            console.error('Bonus not found:', bonusId);
-            return;
-        }
-        
-        // Remove previous selection
-        const previousSelected = document.querySelector('.bonus-item.selected');
-        if (previousSelected) {
-            previousSelected.classList.remove('selected');
-        }
-        
-        // Add selection to current item
-        const currentItem = document.querySelector(`[data-bonus-id="${bonusId}"]`);
-        if (currentItem) {
-            currentItem.classList.add('selected');
-            currentSelectedBonusId = bonusId;
-            
-            // Scroll to item
-            scrollToBonus(bonusId);
+        // If panel is open, update the content
+        if (bonusPanel && bonusPanel.classList.contains('active')) {
+            displayCurrentBonus(bonusId);
         }
         
     } catch (error) {
@@ -373,41 +367,65 @@ export function setCurrentBonusIndex(bonusId) {
 
 // Function to reset bonus selection
 export function resetBonusSelection() {
-    const selectedItem = document.querySelector('.bonus-item.selected');
-    if (selectedItem) {
-        selectedItem.classList.remove('selected');
+    try {
+        currentSelectedBonusId = null;
+        
+        // Clear panel content
+        const bonusContent = document.getElementById('bonus-content');
+        if (bonusContent) {
+            bonusContent.innerHTML = '<p>No bonus selected.</p>';
+        }
+        
+    } catch (error) {
+        console.error('Error resetting bonus selection:', error);
     }
-    currentSelectedBonusId = null;
 }
 
 // Function to force cleanup
 export function forceCleanup() {
-    if (bonusPanel) {
-        bonusPanel.remove();
-        bonusPanel = null;
+    try {
+        // Close panel
+        if (bonusPanel) {
+            bonusPanel.classList.remove('active');
+        }
+        
+        // Cleanup event listeners
+        cleanupEventListeners();
+        
+        // Reset variables
+        currentSelectedBonusId = null;
+        
+    } catch (error) {
+        console.error('Error during force cleanup:', error);
     }
-    currentSelectedBonusId = null;
-    cleanupEventListeners();
-    
-    // Remove document click listener
-    document.removeEventListener('click', handleDocumentClick);
 }
 
 // Function to log memory usage
 export function logMemoryUsage() {
-    const memoryInfo = {
-        panel: bonusPanel ? 'exists' : 'null',
-        selectedBonus: currentSelectedBonusId,
+    const usage = {
+        panel: bonusPanel ? 1 : 0,
+        currentId: currentSelectedBonusId ? 1 : 0,
         eventListeners: eventListeners.size
     };
-    console.log('Bonus Panel Memory Usage:', memoryInfo);
-    return memoryInfo;
+    console.log('Bonus Panel Memory Usage:', usage);
+    return usage;
 }
 
 // Function to cleanup
 export function cleanup() {
-    cleanupEventListeners();
-    currentSelectedBonusId = null;
+    try {
+        // Force cleanup
+        forceCleanup();
+        
+        // Remove panel from DOM
+        if (bonusPanel && bonusPanel.parentNode) {
+            bonusPanel.parentNode.removeChild(bonusPanel);
+            bonusPanel = null;
+        }
+        
+    } catch (error) {
+        console.error('Error during cleanup:', error);
+    }
 }
 
 // Global function for closing panel (needed for onclick)

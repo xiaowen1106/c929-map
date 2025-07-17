@@ -79,19 +79,19 @@ export function createVideoCoverFromObject(videoObject) {
                 ${thumbnailUrl ? `
                     <img src="${thumbnailUrl}" 
                          alt="Video thumbnail" 
-                         onload="this.style.opacity='1'; this.parentElement.querySelector('.thumbnail-placeholder.loading').style.display='none';" 
-                         onerror="this.style.display='none'; this.parentElement.querySelector('.thumbnail-placeholder.loading').style.display='none'; this.parentElement.querySelector('.thumbnail-placeholder.error').style.display='flex';"
+                         onload="this.style.opacity='1'; this.parentElement.querySelector('.photo-placeholder.loading').style.display='none';" 
+                         onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder.loading').style.display='none'; this.parentElement.querySelector('.photo-placeholder.error').style.display='flex';"
                          style="opacity: 0; transition: opacity 0.3s ease;">
-                    <div class="thumbnail-placeholder loading">
+                    <div class="photo-placeholder loading">
                         <div class="loading-spinner"></div>
                         <span>Loading...</span>
                     </div>
-                    <div class="thumbnail-placeholder error" style="display: none;">
+                    <div class="photo-placeholder error" style="display: none;">
                         <span>🎵</span>
                         <span>Video</span>
                     </div>
                 ` : `
-                    <div class="thumbnail-placeholder no-thumbnail">
+                    <div class="photo-placeholder no-photo">
                         <span>🎵</span>
                         <span>Video</span>
                     </div>

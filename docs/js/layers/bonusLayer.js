@@ -106,7 +106,6 @@ class BonusDataManager {
 }
 
 // Global variables for bonus navigation
-let currentBonusPopup = null;
 let currentBonusId = null;
 let isNavigating = false; // Flag to prevent reset during navigation
 
@@ -115,6 +114,18 @@ const dataManager = new BonusDataManager();
 
 // Make data manager globally accessible for consistency
 window.bonusDataManager = dataManager;
+
+// Function to set current bonus ID
+export function setCurrentBonusId(id) {
+    currentBonusId = id;
+    // Also set it globally for consistency
+    window.currentBonusId = id;
+}
+
+// Function to get current bonus ID
+export function getCurrentBonusId() {
+    return currentBonusId || window.currentBonusId;
+}
 
 // Function to escape HTML special characters
 function escapeHtml(text) {
@@ -176,8 +187,6 @@ function findBonusById(id) {
     return dataManager.findById(id);
 }
 
-
-
 // Function to format date
 function formatDate(dateString) {
     if (!dateString) return '';
@@ -194,130 +203,6 @@ function formatDate(dateString) {
     }
 }
 
-
-
-// Function to show bonus popup
-export function showBonusPopup(id, coordinates) {
-    try {
-        // Close any existing popup
-        if (currentBonusPopup) {
-            currentBonusPopup.remove();
-            currentBonusPopup = null;
-        }
-        
-        // Find the bonus item
-        const bonus = findBonusById(id);
-        if (!bonus) {
-            console.error('Bonus not found:', id);
-            return;
-        }
-        
-        // Set current bonus
-        currentBonusId = id;
-        
-        // Create popup content
-        const title = bonus.properties.title || 'Bonus';
-        const date = formatDate(bonus.properties.date);
-        const city = bonus.properties.city || '';
-        const content = bonus.properties.content || '';
-        
-        // Video or photo content
-        let mediaContent = '';
-        const hasVideo = (bonus.properties.youtube_url && bonus.properties.youtube_url !== 'N/A' && bonus.properties.youtube_url !== '');
-        
-        if (hasVideo) {
-            // Create video object structure for location-based selection
-            const videoObject = {
-                youtube_url: bonus.properties.youtube_url
-            };
-            
-            // Use createVideoCoverFromObject with location-based URL selection
-            const videoCover = createVideoCoverFromObject(videoObject);
-            if (videoCover) {
-                mediaContent = videoCover;
-            }
-        }
-        
-        // If no video, use the photo
-        if (!mediaContent && bonus.properties.photo && bonus.properties.photo !== 'N/A' && bonus.properties.photo_names !== '') {
-            mediaContent = createPhotoElement(`img/bonus/${bonus.properties.photo}`, 'Bonus Photo', 'bonus-photo');
-        }
-        
-        // Get all bonus items for navigation
-        const allBonus = dataManager.getAllBonus();
-        const currentIndex = findBonusIndexById(id);
-        const hasMultiple = allBonus.length > 1;
-        
-        // Menu icon or close button based on screen size
-        const isMobile = window.innerWidth <= 768;
-        let actionButton;
-        
-        if (isMobile) {
-            // Create close button for mobile
-            actionButton = `<button class="close-btn" onclick="closeBonusPopup()" title="Close popup">×</button>`;
-        } else {
-            // Create menu icon for desktop
-            actionButton = `<button class="menu-icon" onclick="openBonusPanel()" title="View all bonus"><span></span><span></span><span></span></button>`;
-        }
-
-        // Navigation arrows (outside main content) - always enabled for circular navigation
-        const leftArrow = `<button class="bonus-nav-arrow left" onclick="navigateToPreviousBonus()" title="Previous bonus">‹</button>`;
-        const rightArrow = `<button class="bonus-nav-arrow right" onclick="navigateToNextBonus()" title="Next bonus">›</button>`;
-
-        const popupContent = `
-            <div class="popup-card custom-bonus-popup">
-                <div class="bonus-popup-header">
-                </div>
-                <div class="bonus-popup-main">
-                    ${leftArrow}
-                    <div class="bonus-content-container">
-                        <div class="bonus-content-header">
-                            <div class="bonus-content-text">
-                                <div class="bonus-content-title">${escapeHtml(title)}</div>
-                                <div class="bonus-content-subtitle">${date ? escapeHtml(date) : ''} ${city ? `• ${escapeHtml(city)}` : ''}</div>
-                            </div>
-                            ${actionButton}
-                        </div>
-                        <div class="bonus-content-separator"></div>
-                        <div class="bonus-content-body">
-                            <div class="bonus-content-text">${escapeHtml(content)}</div>
-                            <div class="bonus-media-container">
-                                ${mediaContent}
-                            </div>
-                        </div>
-                    </div>
-                    ${rightArrow}
-                </div>
-            </div>
-        `;
-        
-        // Create and show popup
-        currentBonusPopup = new mapboxgl.Popup({
-            maxWidth: '500px',
-            closeButton: false,
-            closeOnClick: true
-        })
-        .setLngLat(coordinates)
-        .setHTML(popupContent)
-        .addTo(window.map);
-
-        // Note: We don't add a close event listener here to avoid circular dependency
-        // The popup will be handled by the global closeBonusPopup function
-        
-        // Check if panel is open and update selection
-        const isPanelOpen = document.querySelector('#bonus-panel')?.classList.contains('active');
-        if (isPanelOpen && !isNavigating) {
-            // Import and call panel selection function
-            import('../panels/bonusPanel.js').then(module => {
-                module.selectBonusInPanel(id);
-            });
-        }
-        
-    } catch (error) {
-        console.error('Error showing bonus popup:', error);
-    }
-}
-
 // Function to set bonus data
 export function setBonusData(features) {
     const processedFeatures = processBonusData(features);
@@ -325,19 +210,9 @@ export function setBonusData(features) {
     window.allBonus = processedFeatures; // For backward compatibility
 }
 
-// Function to get current bonus popup
-export function getCurrentBonusPopup() {
-    return currentBonusPopup;
-}
-
 // Function to get current bonus index
 export function getCurrentBonusIndex() {
     return currentBonusId ? findBonusIndexById(currentBonusId) : -1;
-}
-
-// Function to get current bonus id
-export function getCurrentBonusId() {
-    return currentBonusId;
 }
 
 // Function to reset bonus highlighting
@@ -349,10 +224,6 @@ export function resetBonusHighlighting() {
     
     // Reset current bonus
     currentBonusId = null;
-    
-    // Note: We don't call popup.remove() here to avoid circular dependency
-    // The popup should be closed using closeBonusPopup() instead
-    currentBonusPopup = null;
     
     // Reset panel selection if panel is open
     const isPanelOpen = document.querySelector('#bonus-panel')?.classList.contains('active');
@@ -381,10 +252,12 @@ export function navigateToBonus(id) {
             duration: 2000
         });
         
-        // Show popup after animation
+        // Open panel after animation
         setTimeout(() => {
-            showBonusPopup(id, bonus.geometry.coordinates);
-            isNavigating = false; // <-- add this line
+            if (window.showBonusPanel) {
+                window.showBonusPanel(id);
+            }
+            isNavigating = false;
         }, 2100);
         
     } catch (error) {
@@ -427,16 +300,6 @@ export function loadBonusIcon(map) {
 
 // Function to cleanup
 export function cleanup() {
-    // Close popup safely
-    if (currentBonusPopup) {
-        try {
-            currentBonusPopup.remove();
-        } catch (e) {
-            console.warn('Error removing popup during cleanup:', e);
-        }
-        currentBonusPopup = null;
-    }
-    
     // Reset variables
     currentBonusId = null;
     isNavigating = false;
@@ -455,44 +318,14 @@ export function logMemoryUsage() {
     return usage;
 }
 
-
-
-// Global function to open bonus panel
-window.openBonusPanel = function() {
-    if (window.showBonusPanel) {
-        // Pass the current bonus ID to auto-select it in the panel
-        window.showBonusPanel(currentBonusId);
-    }
-};
-
-// Global function to close bonus popup
-window.closeBonusPopup = function() {
-    if (currentBonusPopup) {
-        // Remove the popup without triggering the close event
-        currentBonusPopup.remove();
-        // Reset highlighting manually
-        if (!isNavigating) {
-            currentBonusId = null;
-            currentBonusPopup = null;
-            
-            // Reset panel selection if panel is open
-            const isPanelOpen = document.querySelector('#bonus-panel')?.classList.contains('active');
-            if (isPanelOpen) {
-                import('../panels/bonusPanel.js').then(module => {
-                    module.resetBonusSelection();
-                });
-            }
-        }
-    }
-};
-
-// Navigation functions
+// Navigation functions for panel
 window.navigateToPreviousBonus = function() {
-    if (!currentBonusId) {
+    const currentId = getCurrentBonusId();
+    if (!currentId) {
         return;
     }
     
-    const currentIndex = findBonusIndexById(currentBonusId);
+    const currentIndex = findBonusIndexById(currentId);
     const totalBonus = dataManager.getCount();
     
     if (totalBonus > 0) {
@@ -514,10 +347,12 @@ window.navigateToPreviousBonus = function() {
                 duration: 1000
             });
             
-            // Update the popup with the previous bonus
-            showBonusPopup(bonus.properties.id, coordinates);
+            // Update the panel with the previous bonus
+            if (window.showBonusPanel) {
+                window.showBonusPanel(bonus.properties.id);
+            }
             
-            // Update panel if it's open
+            // Update panel content if it's open
             const isPanelOpen = document.querySelector('#bonus-panel')?.classList.contains('active');
             if (isPanelOpen) {
                 import('../panels/bonusPanel.js').then(module => {
@@ -529,11 +364,12 @@ window.navigateToPreviousBonus = function() {
 };
 
 window.navigateToNextBonus = function() {
-    if (!currentBonusId) {
+    const currentId = getCurrentBonusId();
+    if (!currentId) {
         return;
     }
     
-    const currentIndex = findBonusIndexById(currentBonusId);
+    const currentIndex = findBonusIndexById(currentId);
     const totalBonus = dataManager.getCount();
     
     if (totalBonus > 0) {
@@ -555,10 +391,12 @@ window.navigateToNextBonus = function() {
                 duration: 1000
             });
             
-            // Update the popup with the next bonus
-            showBonusPopup(bonus.properties.id, coordinates);
+            // Update the panel with the next bonus
+            if (window.showBonusPanel) {
+                window.showBonusPanel(bonus.properties.id);
+            }
             
-            // Update panel if it's open
+            // Update panel content if it's open
             const isPanelOpen = document.querySelector('#bonus-panel')?.classList.contains('active');
             if (isPanelOpen) {
                 import('../panels/bonusPanel.js').then(module => {

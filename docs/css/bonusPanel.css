@@ -29,17 +29,20 @@
     border-radius: 8px 8px 0 0; /* Rounded top corners for desktop */
 }
 
-.bonus-panel .panel-header .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    .bonus-panel .panel-header .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1;
+    }
 
-.bonus-panel .panel-header h2 {
-    margin: 0;
-    font-size: 1.2rem; /* Reduced from 1.5rem to 1.2rem */
-    font-weight: 600;
-}
+    .bonus-panel .panel-header h2 {
+        margin: 0;
+        font-size: 1.2rem; /* Reduced from 1.5rem to 1.2rem */
+        font-weight: 600;
+        text-align: center;
+    }
 
 .bonus-panel .panel-header .city-filter {
     font-size: 0.9rem;
@@ -55,107 +58,137 @@
     flex-direction: column;
 }
 
-.bonus-panel .bonus-list {
+.bonus-panel .bonus-content {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
 }
 
-.bonus-panel .bonus-item {
-    padding: 16px;
-    border: 1px solid #e1e5e9;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    background: #F8F2F0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.bonus-panel .bonus-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-    border-color: #6A3B23;
-}
-
-.bonus-panel .bonus-item.selected {
-    border-color: #6A3B23;
-    background: rgba(106, 59, 35, 0.05);
-    box-shadow: 0 4px 12px rgba(106, 59, 35, 0.15);
-}
-
-.bonus-panel .bonus-item.selected::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #6A3B23;
-    border-radius: 2px;
-}
-
-.bonus-panel .bonus-header {
+/* Navigation buttons for bonus panel */
+.bonus-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: rgba(106, 59, 35, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(106, 59, 35, 0.1);
+}
+
+.bonus-navigation .nav-btn {
+    background: #6A3B23;
+    color: #F8F2F0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.bonus-navigation .nav-btn:hover {
+    background: #8B4513;
+    transform: translateY(-1px);
+}
+
+.bonus-navigation .nav-btn:active {
+    transform: translateY(0);
+}
+
+.bonus-navigation .bonus-counter {
     font-size: 0.9rem;
+    color: #6A3B23;
+    font-weight: 600;
+}
+
+/* Bonus header styles */
+.bonus-panel .bonus-header {
+    margin-bottom: 16px;
 }
 
 .bonus-panel .bonus-title {
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #2c3e50;
-    font-size: 1rem;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
-.bonus-panel .location {
+.bonus-panel .bonus-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9rem;
     color: #7f8c8d;
-    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.bonus-panel .bonus-date {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.bonus-panel .location::before {
-    content: "📍";
+.bonus-panel .bonus-date::before {
+    content: "📅";
     font-size: 0.9rem;
 }
 
-.bonus-panel .bonus-date {
-    color: #95a5a6;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    font-style: italic;
+.bonus-panel .bonus-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
+.bonus-panel .bonus-location::before {
+    content: "";
+    font-size: 0.9rem;
+}
+
+/* Bonus description and content styles */
 .bonus-panel .bonus-description {
-    margin: 8px 0 0 0;
-    line-height: 1.5;
-    font-size: 0.9rem;
-    color: #2c3e50;
-    word-wrap: break-word;
+    background: rgba(106, 59, 35, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #6A3B23;
+    font-weight: 500;
+    border-left: 3px solid #6A3B23;
 }
 
-.bonus-panel .bonus-content {
-    margin: 8px 0 0 0;
-    line-height: 1.5;
+.bonus-panel .bonus-content-text {
+    line-height: 1.6;
     font-size: 0.95rem;
     color: #2c3e50;
     word-wrap: break-word;
+    margin-bottom: 16px;
 }
 
 /* Increase spacing only for line breaks */
-.bonus-panel .bonus-content br {
+.bonus-panel .bonus-content-text br {
     display: block;
     content: "";
     margin-top: 0.5em;
 }
 
 /* Media content styles for panel */
-.bonus-panel .bonus-media-container {
-    margin: 12px 0;
+.bonus-panel .bonus-media {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bonus-panel .bonus-video {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.bonus-panel .bonus-photo {
+    width: 100%;
     border-radius: 8px;
     overflow: hidden;
     background: #f8f9fa;
@@ -233,15 +266,98 @@
         height: 50vh !important;
         border-radius: 12px 12px 0 0 !important; /* Rounded top corners for mobile */
         box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important; /* Shadow from top */
-        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
         z-index: 1001 !important;
         overflow: hidden !important;
         border: none !important; /* Remove border */
+        touch-action: pan-y !important; /* Allow vertical scrolling but prevent horizontal */
     }
     
     .bonus-panel.active {
         bottom: 0 !important; /* Position from bottom edge - match concert panel */
         transform: none !important; /* Prevent any transform-based positioning changes */
+    }
+    
+    /* Dragging states */
+    .bonus-panel.dragging {
+        transition: none !important; /* Disable transitions during drag */
+        user-select: none !important;
+    }
+    
+    .bonus-panel.dragging .panel-body {
+        pointer-events: none !important; /* Disable interactions during drag */
+    }
+    
+    /* Snap states */
+    .bonus-panel.snap-closed {
+        bottom: -50vh !important;
+        height: 50vh !important;
+    }
+    
+    .bonus-panel.snap-open {
+        bottom: 0 !important;
+        height: 50vh !important;
+    }
+    
+    .bonus-panel.snap-expanded {
+        bottom: 0 !important;
+        height: 70vh !important;
+    }
+    
+    /* Force expanded state even after snap classes are removed */
+    .bonus-panel[style*="height: 70vh"] {
+        bottom: 0 !important;
+        height: 70vh !important;
+    }
+    
+    /* Visual feedback during dragging */
+    .bonus-panel.dragging {
+        box-shadow: 0 -8px 32px rgba(0,0,0,0.25) !important;
+    }
+    
+    /* Enhanced drag handle indicator */
+    .bonus-panel::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 2px;
+        z-index: 11;
+        transition: background-color 0.2s ease;
+    }
+    
+    .bonus-panel.dragging::after {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Visual feedback for expansion */
+    .bonus-panel[style*="height: 70vh"]::after {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Add a larger touch target for dragging - now covers the entire panel-header */
+    .bonus-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px; /* Reduced to cover compact panel-header height */
+        z-index: 10;
+        cursor: grab;
+    }
+    
+    .bonus-panel.dragging::before {
+        cursor: grabbing;
+    }
+    
+    /* Ensure drag handle is above other elements */
+    .bonus-panel::after {
+        z-index: 1002 !important;
     }
     
     .bonus-panel .panel-header {
@@ -250,39 +366,129 @@
         position: sticky !important;
         top: 0 !important;
         z-index: 10 !important;
+        background: linear-gradient(135deg, #6A3B23 0%, #8B4513 100%) !important;
         border: none !important; /* Remove border */
+        cursor: grab !important; /* Indicate draggable area */
+        user-select: none !important; /* Prevent text selection during drag */
+        position: relative !important; /* For absolute positioning of close button */
+    }
+    
+    .bonus-panel.dragging .panel-header {
+        cursor: grabbing !important;
     }
     
     .bonus-panel .panel-body {
-        max-height: calc(50vh - 60px) !important; /* Subtract header height - match concert panel */
-        min-height: calc(50vh - 60px) !important; /* Ensure consistent height */
+        flex: 1 !important;
         overflow: hidden !important;
-        padding: 8px !important;
-        border: none !important; /* Remove border */
-        background: #F8F2F0 !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     
-    .bonus-panel .bonus-list {
-        max-height: calc(50vh - 80px) !important; /* Subtract header height for mobile - match concert panel */
-        min-height: calc(50vh - 80px) !important; /* Ensure consistent height */
+    .bonus-panel .bonus-content {
+        flex: 1 !important;
         overflow-y: auto !important;
-        padding: 8px !important;
+        padding: 16px !important;
     }
     
-    /* Remove borders from bonus items on mobile */
-    .bonus-panel .bonus-item {
-        border: none !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
-        margin-bottom: 8px !important;
+    /* Content height management for expanded state */
+    .bonus-panel[style*="height: 70vh"] .panel-body {
+        max-height: calc(70vh - 40px) !important;
+        min-height: calc(70vh - 40px) !important;
     }
     
-    .bonus-panel .bonus-item:hover {
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    .bonus-panel[style*="height: 70vh"] .bonus-content {
+        max-height: calc(70vh - 80px) !important;
+        min-height: calc(70vh - 80px) !important;
+    }
+    
+    /* Ensure expanded state persists */
+    .bonus-panel.active[style*="height: 70vh"] {
+        bottom: 0 !important;
+        height: 70vh !important;
         transform: none !important;
     }
     
-    /* Mobile video cover styles */
+    .bonus-panel .bonus-navigation {
+        margin-bottom: 16px !important;
+        padding: 10px !important;
+    }
+    
+    .bonus-panel .bonus-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .bonus-panel .bonus-meta {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .bonus-panel .bonus-description {
+        font-size: 0.9rem !important;
+        padding: 10px !important;
+    }
+    
+    .bonus-panel .bonus-content-text {
+        font-size: 0.9rem !important;
+    }
+    
     .bonus-panel .mobile-video-cover {
-        height: 120px !important; /* Smaller height for mobile */
+        width: 100% !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+    }
+    
+    /* Close button styles for bonus panel */
+    .bonus-panel .panel-header .close-panel {
+        z-index: 1003 !important;
+        position: absolute !important;
+        pointer-events: auto !important;
+        top: 50% !important;
+        right: 12px !important;
+        transform: translateY(-50%) !important;
+        background: none !important;
+        border: none !important;
+        color: #F8F2F0 !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        transition: background-color 0.2s ease !important;
+    }
+    
+    .bonus-panel .panel-header .close-panel:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .bonus-panel .panel-header .close-panel:active {
+        background: rgba(255, 255, 255, 0.2) !important;
+    }
+    
+    /* Panel visibility states */
+    .bonus-panel:not(.active) {
+        pointer-events: none !important;
+        opacity: 0 !important;
+        transition: opacity 0.2s;
+    }
+    
+    .bonus-panel.active {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Desktop styles - disable draggable functionality */
+@media (min-width: 769px) {
+    .bonus-panel::before,
+    .bonus-panel::after {
+        display: none !important;
+    }
+    
+    .bonus-panel {
+        touch-action: auto !important;
     }
 } 

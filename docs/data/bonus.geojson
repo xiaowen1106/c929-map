@@ -24,6 +24,8 @@
         "category": "彩蛋",
         "location_display": "弗吉尼亚",
         "photo": "VA_1.jpg",
+        "photo2": "VA_2.jpg",
+        "photo3": "VA_3.jpg",
         "reference_link": "",
         "link2": ""
       }
@@ -51,6 +53,7 @@
         "category": "彩蛋",
         "location_display": "尼亚加拉大瀑布",
         "photo": "NF_1.jpg",
+        "photo2": "NF_2.jpg",
         "reference_link": "深深的微博 https://weibo.com/1736988591/5145516166877307",
         "link2": ""
       }
@@ -78,6 +81,7 @@
         "category": "彩蛋",
         "location_display": "加利福尼亚",
         "photo": "LA_1.jpg",
+        "photo2": "LA_2.jpg",
         "reference_link": "https://weibo.com/7478855230/5096708222484901",
         "link2": "https://weibo.com/7303983273/4500956262585829"
       }
@@ -105,6 +109,8 @@
         "category": "彩蛋",
         "location_display": "纽约COSMO拍摄取景地",
         "photo": "COSMO_1.jpg",
+        "photo2": "COSMO_2.jpg",
+        "photo3": "COSMO_3.jpg",
         "bilibili_url": "https://www.bilibili.com/video/BV1fi421v7HE/?share_source=copy_web&vd_source=532abbf09e959ae65f11cb290874b553",
         "reference_link": "",
         "link2": ""
@@ -133,6 +139,8 @@
         "category": "彩蛋",
         "location_display": "纽约联合国总部",
         "photo": "UN_1.jpg",
+        "photo2": "UN_2.jpg",
+        "photo3": "UN_3.jpg",
         "reference_link": "https://news.un.org/zh/story/2024/04/1128171",
         "link2": ""
       }
@@ -160,6 +168,8 @@
         "category": "彩蛋",
         "location_display": "Comino, Malta",
         "photo": "CoMiNo_1.jpg",
+        "photo2": "CoMiNo_2.jpg",
+        "photo3": "CoMiNo_3.jpg",
         "reference_link": "",
         "link2": ""
       }
@@ -187,6 +197,7 @@
         "category": "彩蛋",
         "location_display": "拉斯维加斯",
         "photo": "Tall_1.jpg",
+        "photo2": "Tall_2.jpg",
         "reference_link": "",
         "link2": ""
       }
@@ -269,6 +280,7 @@
         "category": "彩蛋",
         "location_display": "利沃夫国立音乐学院",
         "photo": "HKWY_1.jpg",
+        "photo2": "HKWY_2.jpg",
         "reference_link": "",
         "link2": ""
       }
@@ -296,6 +308,33 @@
         "category": "彩蛋",
         "location_display": "周深工作室",
         "photo": "GZS_1.jpg",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.930798180354174,
+          83.99114992013908
+        ]
+      },
+      "properties": {
+        "id": "SS12",
+        "fakeId": 12,
+        "title": "【彩蛋】深米地图策划组",
+        "date": "2025-07-25",
+        "city": "ShenMi.World",
+        "description": "",
+        "content": "北美海米站祝宝贝周深出道十一周年快乐！祝全体生米十一周岁快乐！By 深米地图策划组: 拼图喵Ember，小文，十方，Linda，Ivy，SUN，Jinny，Yolanda",
+        "youtube_url": "",
+        "lat": 83.99114992013908,
+        "lng": 39.930798180354174,
+        "category": "彩蛋",
+        "location_display": "ShenMi.World",
+        "photo": "Video Headphoto",
         "reference_link": "",
         "link2": ""
       }
