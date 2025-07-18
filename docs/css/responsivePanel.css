@@ -90,11 +90,12 @@
     /* Make primary tabs more compact on mobile */
     .primary-tabs .tab-button {
         font-size: 1rem !important; /* Slightly reduced for more compact look */
-        padding: 8px 12px !important; /* Reduced padding for more compact tabs */
+        padding: 8px 12px 8px 20px !important; /* Extra left padding for icon space */
         border-radius: 20px !important; /* Reduced border radius */
         border: 1px solid #ddd !important; /* Add borders on mobile */
         min-height: 40px !important; /* Slightly reduced but still touch-friendly */
         gap: 6px !important; /* Reduced gap between elements */
+        position: relative !important; /* Ensure proper positioning for absolute icon */
     }
     
     /* Make secondary tabs more compact on mobile */
@@ -126,7 +127,7 @@
     
     /* Ensure proper spacing on mobile */
     .concert-panel-content .tabs {
-        gap: 6px !important; /* Reduced gap for more compact layout */
+        gap: 18px !important; /* Reduced gap for more compact layout */
         margin-bottom: 6px !important; /* Reduced margin for more compact layout */
     }
     
@@ -136,10 +137,20 @@
         padding: 0 6px !important; /* Reduced padding for more compact layout */
     }
     
-    /* Adjust tab icon sizing for mobile */
+    /* Adjust tab icon sizing and positioning for mobile */
     .tab-icon {
-        width: 24px !important; /* Reduced for more compact look */
-        height: 24px !important; /* Reduced for more compact look */
+        width: 48px !important; /* Slightly smaller than desktop but still prominent */
+        height: 48px !important; /* Slightly smaller than desktop but still prominent */
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        left: -12px !important; /* Adjusted for mobile positioning */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 2 !important;
+        border: 2px solid #fff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        pointer-events: none !important;
     }
     
     /* Ensure smooth scrolling on mobile */

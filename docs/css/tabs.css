@@ -7,8 +7,7 @@
 /* Basic tab container */
 .concert-panel-content .tabs {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 /* Tab button base styles */
@@ -22,6 +21,7 @@
     justify-content: center;
     gap: 8px;
     font-weight: 500;
+    position: relative;
 }
 
 .concert-panel-content .tab-button:hover {
@@ -81,13 +81,18 @@
    ======================================== */
 
 .primary-tabs {
-    gap: 15px;
+    gap: 20px;
     border-bottom: none;
+    justify-content: center;
+    display: flex;
+    padding: 0 5px 0 15px;
+    width: 100%;
 }
 
 .primary-tabs .tab-button {
     flex-grow: 1;
-    padding: 5px;
+    flex-shrink: 1;
+    padding: 5px 15px;
     font-size: 1.1rem;
     font-weight: bold;
     border: 1px solid #ddd;
@@ -103,18 +108,34 @@
     border: 1px solid #6b4a3a;
 }
 
+.primary-tabs .tab-button.active.shenshen-primary-tab .tab-icon {
+    border-color: #6b4a3a;
+}
+
 .primary-tabs .tab-button.active.fans-primary-tab {
     background-color: #005fb3;
     color: #fff;
     border: 1px solid #005fb3;
 }
 
+.primary-tabs .tab-button.active.fans-primary-tab .tab-icon {
+    border-color: #005fb3;
+}
+
 /* Tab icons */
 .tab-icon {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     object-fit: cover;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
 }
 
 /* ========================================
@@ -124,7 +145,6 @@
 .secondary-tabs {
     display: flex;
     justify-content: center;
-    gap: 4px;
     flex-wrap: wrap;
     border-bottom: none;
     margin-bottom: 15px;
@@ -147,14 +167,16 @@
 }
 
 .secondary-tabs .tab-button {
-    flex-shrink: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
     min-width: fit-content;
-    padding: 5px 8px;
+    padding: 5px;
     font-size: 0.9rem;
     border-radius: 20px;
     border: 1px solid #ddd;
     background-color: #f0f0f0;
     color: #444;
+    margin: 0px 3px;
 }
 
 .secondary-tabs .tab-button:hover:not(.active) {
@@ -188,6 +210,10 @@
     font-weight: bold;
 }
 
+.shenshen-tabs .tab-button.active .tab-icon {
+    border-color: #f8c56e;
+}
+
 /* Fans brand tabs */
 .fans-tabs .tab-button {
     color: #005fb3;
@@ -199,6 +225,10 @@
     color: #005fb3;
     border: 1px solid #a7d8f9;
     font-weight: bold;
+}
+
+.fans-tabs .tab-button.active .tab-icon {
+    border-color: #a7d8f9;
 }
 
 /* ========================================
