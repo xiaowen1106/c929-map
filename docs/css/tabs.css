@@ -145,7 +145,7 @@
 .secondary-tabs {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-bottom: none;
     margin-bottom: 15px;
     padding-bottom: 0;
@@ -163,7 +163,7 @@
 /* Ensure tabs remain centered even with fewer items */
 .secondary-tabs:not(.single-tab) {
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .secondary-tabs .tab-button {
