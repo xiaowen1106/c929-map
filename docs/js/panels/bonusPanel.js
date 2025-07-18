@@ -333,8 +333,11 @@ async function displayCurrentBonus(bonusId) {
             }
         }
         
+        // Handle line breaks properly by converting \n to <br> tags
+        const processedContent = bonusContentText ? escapeHtml(bonusContentText).replace(/\n/g, '<br>') : '';
+        
         const bonusHTML = `
-            ${bonusContentText ? `<div class="bonus-content-text">${escapeHtml(bonusContentText)}</div>` : ''}
+            ${processedContent ? `<div class="bonus-content-text">${processedContent}</div>` : ''}
             ${mediaContent ? `<div class="bonus-media">${mediaContent}</div>` : ''}
         `;
 
