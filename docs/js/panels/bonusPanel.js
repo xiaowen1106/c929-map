@@ -154,9 +154,10 @@ export function createBonusPanel() {
     panel.innerHTML = `
         <div class="panel-header">
             <div class="panel-header-content">
-                <h2 style="font-size: 1.1em; line-height: 1.3; display: flex; align-items: center; gap: 0.8em; color: white;">
+                <h2 style="font-size: 1.1em; line-height: 1.3; display: flex; align-items: center; justify-content: flex-start; gap: 0.8em; color: white;">
                     <div class="bonus-title">
                         <div class="bonus-location" id="bonus-location" style="color: white;">彩蛋详情</div>
+                        <div class="bonus-date" id="bonus-date" style="color: white; opacity: 0.9;">加载中...</div>
                     </div>
                 </h2>
             </div>
@@ -208,12 +209,29 @@ async function displayCurrentBonus(bonusId) {
 
         // Update header with bonus information
         const bonusTitle = bonus.properties.title || 'Bonus';
+        const bonusLocationText = bonus.properties.location_display || bonus.properties.location_display || '';
+        const bonusDate = bonus.properties.date ? formatDate(bonus.properties.date) : '';
         const bonusContentText = bonus.properties.content || '';
         const mediaContent = await createMediaContent(bonus);
         
         // Update header elements
-        if (bonusLocation) {
-            bonusLocation.textContent = bonusTitle;
+        const bonusLocationElement = document.getElementById('bonus-location');
+        const bonusDateElement = document.getElementById('bonus-date');
+        
+        if (bonusLocationElement) {
+            bonusLocationElement.textContent = bonusTitle;
+        }
+        
+        if (bonusDateElement) {
+            if (bonusLocationText && bonusDate) {
+                bonusDateElement.textContent = `${bonusLocationText} - ${bonusDate}`;
+            } else if (bonusLocationText) {
+                bonusDateElement.textContent = bonusLocationText;
+            } else if (bonusDate) {
+                bonusDateElement.textContent = bonusDate;
+            } else {
+                bonusDateElement.textContent = '';
+            }
         }
         
         const bonusHTML = `
