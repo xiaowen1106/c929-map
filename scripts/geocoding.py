@@ -311,12 +311,8 @@ def main():
             if not display_name or not message:
                 continue
                 
-            # Create query string for geocoding
-            has_zipcode = bool(zip_code)
-            if zip_code:
-                location_str = f"{zip_code}, {country}" if country else zip_code
-            else:
-                location_str = f"{city}, {country}" if city and country else city or country
+            # Create query string for geocoding (always use city, never zipcode)
+            location_str = f"{city}, {country}" if city and country else city or country
                 
             if not location_str:
                 continue
@@ -331,16 +327,11 @@ def main():
             # Extract coordinates from the feature
             lon, lat = geocode_result['center']
             
-            # Determine randomization radius based on whether zipcode is provided
-            # Use larger radius for city-based locations (no zipcode) to spread out more
-            if has_zipcode:
-                randomization_radius = 5.0  # 5km radius for zipcode-based locations
-            else:
-                randomization_radius = 15.0  # 15km radius for city-based locations
+            # Always use 20km radius for randomization around city
+            randomization_radius = 20.0
             
-            # Find unique coordinates, applying offset if necessary
-            # Always randomize for messages without zipcode
-            final_lat, final_lon, has_offset = find_unique_coordinates(lat, lon, used_coordinates, randomization_radius, always_randomize=not has_zipcode)
+            # Find unique coordinates, always applying offset
+            final_lat, final_lon, has_offset = find_unique_coordinates(lat, lon, used_coordinates, randomization_radius, always_randomize=True)
             
             # Extract location data from the response
             location_data = extract_location_data(geocode_result)
@@ -386,9 +377,8 @@ def main():
                     "has_random_offset": has_offset,
                     "original_lat": float(lat),
                     "original_lng": float(lon),
-                    "has_zipcode": has_zipcode,
                     "randomization_radius_km": randomization_radius,
-                    "randomized_due_to_no_zipcode": not has_zipcode
+                    "always_randomized": True
                 }
             }
             
@@ -409,12 +399,11 @@ def main():
     # Calculate randomization statistics
     total_messages = len(geojson['features'])
     offset_count = sum(1 for feature in geojson['features'] if feature['properties'].get('has_random_offset', False))
-    no_zipcode_count = sum(1 for feature in geojson['features'] if not feature['properties'].get('has_zipcode', True))
     
     print(f"Done! Output written to {OUTPUT_GEOJSON}")
     print(f"Total messages exported: {total_messages}")
     print(f"Messages with coordinate offsets: {offset_count} ({offset_count/total_messages*100:.1f}%)")
-    print(f"Messages without zipcode (city-based): {no_zipcode_count} ({no_zipcode_count/total_messages*100:.1f}%)")
+    print(f"All messages randomized around cities with 20km radius")
     print(f"Cache entries: {len(cache)}")
     print(f"Unique coordinates used: {len(used_coordinates)}")
     print(f"Messages ordered by geographic proximity (cluster radius: 50km)")
