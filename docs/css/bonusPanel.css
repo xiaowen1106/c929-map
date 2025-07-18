@@ -29,6 +29,45 @@
     border-radius: 8px 8px 0 0; /* Rounded top corners for desktop */
 }
 
+/* Header navigation buttons */
+.bonus-panel .panel-header .navigation-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    z-index: 1004; /* Higher than drag handle */
+    position: relative;
+}
+
+.bonus-panel .panel-header .nav-btn {
+    background: rgba(248, 242, 240, 0.2);
+    color: #F8F2F0;
+    border: 1px solid rgba(248, 242, 240, 0.3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Ensure buttons are clickable */
+    position: relative;
+    z-index: 1005; /* Higher than drag handle */
+}
+
+.bonus-panel .panel-header .nav-btn:hover {
+    background: rgba(248, 242, 240, 0.3);
+    border-color: rgba(248, 242, 240, 0.5);
+    transform: translateY(-1px);
+}
+
+.bonus-panel .panel-header .nav-btn:active {
+    transform: translateY(0);
+    background: rgba(248, 242, 240, 0.4);
+}
+
     .bonus-panel .panel-header .header-content {
         display: flex;
         flex-direction: column;
@@ -393,7 +432,46 @@
         border: none !important; /* Remove border */
         cursor: grab !important; /* Indicate draggable area */
         user-select: none !important; /* Prevent text selection during drag */
-        position: relative !important; /* For absolute positioning of close button */
+        position: relative !important; /* For absolute positioning of navigation buttons */
+    }
+    
+    /* Mobile navigation buttons */
+    .bonus-panel .panel-header .navigation-buttons {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: center !important;
+        z-index: 1005 !important; /* Higher than drag handle and other elements */
+        position: absolute !important;
+        right: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        pointer-events: auto !important; /* Ensure buttons are clickable */
+    }
+    
+    .bonus-panel .panel-header .nav-btn {
+        background: rgba(248, 242, 240, 0.2) !important;
+        color: #F8F2F0 !important;
+        border: 1px solid rgba(248, 242, 240, 0.3) !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .bonus-panel .panel-header .nav-btn:hover {
+        background: rgba(248, 242, 240, 0.3) !important;
+        border-color: rgba(248, 242, 240, 0.5) !important;
+    }
+    
+    .bonus-panel .panel-header .nav-btn:active {
+        background: rgba(248, 242, 240, 0.4) !important;
     }
     
     .bonus-panel.dragging .panel-header {
@@ -460,36 +538,7 @@
         overflow: hidden !important;
     }
     
-    /* Close button styles for bonus panel */
-    .bonus-panel .panel-header .close-panel {
-        z-index: 1003 !important;
-        position: absolute !important;
-        pointer-events: auto !important;
-        top: 50% !important;
-        right: 12px !important;
-        transform: translateY(-50%) !important;
-        background: none !important;
-        border: none !important;
-        color: #F8F2F0 !important;
-        font-size: 1.5rem !important;
-        cursor: pointer !important;
-        padding: 0 !important;
-        width: 30px !important;
-        height: 30px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        border-radius: 50% !important;
-        transition: background-color 0.2s ease !important;
-    }
-    
-    .bonus-panel .panel-header .close-panel:hover {
-        background: rgba(255, 255, 255, 0.1) !important;
-    }
-    
-    .bonus-panel .panel-header .close-panel:active {
-        background: rgba(255, 255, 255, 0.2) !important;
-    }
+
     
     /* Panel visibility states */
     .bonus-panel:not(.active) {

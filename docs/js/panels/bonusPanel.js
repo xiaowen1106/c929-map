@@ -150,7 +150,7 @@ export function createBonusPanel() {
     panel.id = 'bonus-panel';
     panel.className = 'bonus-panel';
     
-    // Create panel content with updated header format
+    // Create panel content with navigation buttons instead of close button
     panel.innerHTML = `
         <div class="panel-header">
             <div class="panel-header-content">
@@ -161,7 +161,10 @@ export function createBonusPanel() {
                     </div>
                 </h2>
             </div>
-            <button class="close-panel" id="bonus-close-btn">&times;</button>
+            <div class="navigation-buttons">
+                <button class="nav-btn prev-btn" id="bonus-prev-btn">&lt;</button>
+                <button class="nav-btn next-btn" id="bonus-next-btn">&gt;</button>
+            </div>
         </div>
         <div class="panel-body">
             <div class="bonus-content" id="bonus-content">
@@ -172,13 +175,23 @@ export function createBonusPanel() {
         </div>
     `;
     
-    // Add close button event listener
-    const closeBtn = panel.querySelector('#bonus-close-btn');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', (e) => {
+    // Add navigation button event listeners
+    const prevBtn = panel.querySelector('#bonus-prev-btn');
+    const nextBtn = panel.querySelector('#bonus-next-btn');
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            closeBonusPanel();
+            navigateToPreviousBonus();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            navigateToNextBonus();
         });
     }
 
@@ -187,6 +200,92 @@ export function createBonusPanel() {
     bonusPanel = panel;
     
     return panel;
+}
+
+// Function to navigate to previous bonus
+function navigateToPreviousBonus() {
+    if (!window.bonusDataManager || !currentSelectedBonusId) return;
+    
+    const allBonuses = window.bonusDataManager.getAllBonus();
+    if (!allBonuses || allBonuses.length === 0) return;
+    
+    const currentIndex = allBonuses.findIndex(bonus => bonus.properties.id === currentSelectedBonusId);
+    if (currentIndex === -1) return;
+    
+    const prevIndex = currentIndex === 0 ? allBonuses.length - 1 : currentIndex - 1;
+    const prevBonus = allBonuses[prevIndex];
+    
+    if (prevBonus) {
+        selectBonusInPanel(prevBonus.properties.id);
+        
+        // Update the current bonus ID in the bonus layer
+        import('../layers/bonusLayer.js').then(module => {
+            module.setCurrentBonusId(prevBonus.properties.id);
+        });
+        
+        // Center map on the bonus location
+        centerMapOnBonus(prevBonus);
+    }
+}
+
+// Function to navigate to next bonus
+function navigateToNextBonus() {
+    if (!window.bonusDataManager || !currentSelectedBonusId) return;
+    
+    const allBonuses = window.bonusDataManager.getAllBonus();
+    if (!allBonuses || allBonuses.length === 0) return;
+    
+    const currentIndex = allBonuses.findIndex(bonus => bonus.properties.id === currentSelectedBonusId);
+    if (currentIndex === -1) return;
+    
+    const nextIndex = currentIndex === allBonuses.length - 1 ? 0 : currentIndex + 1;
+    const nextBonus = allBonuses[nextIndex];
+    
+    if (nextBonus) {
+        selectBonusInPanel(nextBonus.properties.id);
+        
+        // Update the current bonus ID in the bonus layer
+        import('../layers/bonusLayer.js').then(module => {
+            module.setCurrentBonusId(nextBonus.properties.id);
+        });
+        
+        // Center map on the bonus location
+        centerMapOnBonus(nextBonus);
+    }
+}
+
+// Function to center map on bonus location
+function centerMapOnBonus(bonus) {
+    if (!window.map || !bonus || !bonus.geometry || !bonus.geometry.coordinates) return;
+    
+    const coordinates = bonus.geometry.coordinates;
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // On mobile, center on the top 50% of the map
+        const mapContainer = window.map.getContainer();
+        const mapHeight = mapContainer.offsetHeight;
+        const centerOffset = mapHeight * 0.25; // Move center down by 25% of map height
+        
+        window.map.flyTo({
+            center: coordinates,
+            zoom: Math.max(window.map.getZoom(), 6),
+            duration: 1000,
+            offset: [0, -centerOffset] // Negative to move down
+        });
+    } else {
+        // On desktop, center on the left 75% of the map
+        const mapContainer = window.map.getContainer();
+        const mapWidth = mapContainer.offsetWidth;
+        const centerOffset = mapWidth * 0.125; // Move center right by 12.5% of map width (to center on left 75%)
+        
+        window.map.flyTo({
+            center: coordinates,
+            zoom: Math.max(window.map.getZoom(), 6),
+            duration: 1000,
+            offset: [-centerOffset, 0] // Negative to move right
+        });
+    }
 }
 
 // Function to display current bonus content
