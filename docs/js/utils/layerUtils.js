@@ -139,8 +139,17 @@ export async function loadLayer(layer, map) {
             map.addLayer(layerConfig);
             
             return; // Exit early since we handled the city markers layer specially
+        } else if (layer.id === 'concerts') {
+            // For concerts, load from GeoJSON file and initialize data manager
+            const response = await fetch(layer.source);
+            data = await response.json();
+            
+            // Initialize concert data manager for navigation
+            if (window.concertDataManager && data.features) {
+                window.concertDataManager.setData(data.features);
+            }
         } else {
-            // For other layers (including concerts), load from GeoJSON file
+            // For other layers, load from GeoJSON file
             const response = await fetch(layer.source);
             data = await response.json();
         }

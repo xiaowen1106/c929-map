@@ -11,6 +11,45 @@
         padding: 6px 8px !important; /* Further reduced for more compact header */
     }
     
+    /* Mobile concert panel navigation buttons */
+    .concert-panel-content .panel-header .navigation-buttons {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: center !important;
+        z-index: 1005 !important; /* Higher than drag handle and other elements */
+        position: absolute !important;
+        right: 8px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        pointer-events: auto !important; /* Ensure buttons are clickable */
+    }
+    
+    .concert-panel-content .panel-header .nav-btn {
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #fff !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .concert-panel-content .panel-header .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.3) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    .concert-panel-content .panel-header .nav-btn:active {
+        background: rgba(255, 255, 255, 0.4) !important;
+    }
+    
     .concert-panel-content .panel-header h2 {
         font-size: 0.9rem !important; /* Further reduced for more compact header */
         margin: 0 !important;

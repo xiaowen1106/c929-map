@@ -73,6 +73,45 @@
     border: none !important;
 }
 
+/* Concert panel header navigation buttons */
+.concert-panel-content .panel-header .navigation-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    z-index: 1004; /* Higher than drag handle */
+    position: relative;
+}
+
+.concert-panel-content .panel-header .nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Ensure buttons are clickable */
+    position: relative;
+    z-index: 1005; /* Higher than drag handle */
+}
+
+.concert-panel-content .panel-header .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.concert-panel-content .panel-header .nav-btn:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.4);
+}
+
 .concert-panel-content .panel-header h2 {
     margin: 0;
     font-size: 1.1rem;

@@ -48,6 +48,9 @@ class DraggablePanel {
         // Only handle touches in the panel-header area and when panel is active
         if (!this.panel.classList.contains('active')) return;
         
+        // Don't handle if clicking on navigation buttons
+        if (e.target.closest('.nav-btn')) return;
+        
         const touch = e.touches[0];
         const rect = this.panel.getBoundingClientRect();
         const touchY = touch.clientY - rect.top;
@@ -86,6 +89,9 @@ class DraggablePanel {
     handleMouseDown(e) {
         // Only handle clicks in the panel-header area and when panel is active
         if (!this.panel.classList.contains('active')) return;
+        
+        // Don't handle if clicking on navigation buttons
+        if (e.target.closest('.nav-btn')) return;
         
         const rect = this.panel.getBoundingClientRect();
         const clickY = e.clientY - rect.top;

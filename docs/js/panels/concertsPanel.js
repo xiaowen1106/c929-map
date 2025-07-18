@@ -4,6 +4,59 @@ import { createVideoCoverFromObject, getImageUrl, createPhotoElement } from '../
 
 import { initDraggablePanel, cleanupDraggablePanel, getDraggablePanelInstance } from '../utils/draggablePanel.js';
 
+// Concert data manager for navigation
+class ConcertDataManager {
+    constructor() {
+        this.data = null;
+        this.indexMap = new Map(); // id -> index mapping for O(1) lookups
+    }
+    
+    setData(features) {
+        this.data = features;
+        this.buildIndexes();
+    }
+    
+    getData() {
+        return this.data;
+    }
+    
+    // Build indexes for efficient lookups
+    buildIndexes() {
+        this.indexMap.clear();
+        
+        if (!this.data) return;
+        
+        this.data.forEach((feature, index) => {
+            // Build id index
+            const id = feature.properties.id;
+            if (id !== undefined) {
+                this.indexMap.set(id, index);
+            }
+        });
+    }
+    
+    // O(1) lookup by id
+    findById(id) {
+        return this.indexMap.get(id) !== undefined ? this.data[this.indexMap.get(id)] : null;
+    }
+    
+    // Get all concerts
+    getAllConcerts() {
+        return this.data || [];
+    }
+    
+    // Get total count
+    getCount() {
+        return this.data ? this.data.length : 0;
+    }
+}
+
+// Global concert data manager instance
+const concertDataManager = new ConcertDataManager();
+
+// Make concert data manager globally accessible
+window.concertDataManager = concertDataManager;
+
 // Panel state management for cleanup
 class ConcertPanelManager {
     constructor() {
@@ -13,6 +66,7 @@ class ConcertPanelManager {
         this.messageCache = new Map();
         this.timeoutIds = new Set();
         this.isInitialized = false;
+        this.currentConcertId = null; // Track current concert for navigation
     }
 
     // Cleanup all resources
@@ -48,6 +102,7 @@ class ConcertPanelManager {
         this.currentCity = null;
         this.currentData = null;
         this.isInitialized = false;
+        this.currentConcertId = null;
     }
 
     // Track timeout for cleanup
@@ -65,6 +120,16 @@ class ConcertPanelManager {
     // Get cached messages
     getCachedMessages(city) {
         return this.messageCache.get(city);
+    }
+    
+    // Set current concert ID for navigation
+    setCurrentConcertId(id) {
+        this.currentConcertId = id;
+    }
+    
+    // Get current concert ID
+    getCurrentConcertId() {
+        return this.currentConcertId;
     }
 }
 
@@ -134,6 +199,84 @@ const handleSongClick = (e) => {
         }
     }
 };
+
+// Function to navigate to previous concert
+function navigateToPreviousConcert() {
+    if (!window.concertDataManager || !panelManager.getCurrentConcertId()) return;
+    
+    const allConcerts = window.concertDataManager.getAllConcerts();
+    if (!allConcerts || allConcerts.length === 0) return;
+    
+    const currentIndex = allConcerts.findIndex(concert => concert.properties.id === panelManager.getCurrentConcertId());
+    if (currentIndex === -1) return;
+    
+    const prevIndex = currentIndex === 0 ? allConcerts.length - 1 : currentIndex - 1;
+    const prevConcert = allConcerts[prevIndex];
+    
+    if (prevConcert) {
+        // Show the previous concert panel
+        showDetailPanel('concert', prevConcert.properties);
+        
+        // Center map on the concert location
+        centerMapOnConcert(prevConcert);
+    }
+}
+
+// Function to navigate to next concert
+function navigateToNextConcert() {
+    if (!window.concertDataManager || !panelManager.getCurrentConcertId()) return;
+    
+    const allConcerts = window.concertDataManager.getAllConcerts();
+    if (!allConcerts || allConcerts.length === 0) return;
+    
+    const currentIndex = allConcerts.findIndex(concert => concert.properties.id === panelManager.getCurrentConcertId());
+    if (currentIndex === -1) return;
+    
+    const nextIndex = currentIndex === allConcerts.length - 1 ? 0 : currentIndex + 1;
+    const nextConcert = allConcerts[nextIndex];
+    
+    if (nextConcert) {
+        // Show the next concert panel
+        showDetailPanel('concert', nextConcert.properties);
+        
+        // Center map on the concert location
+        centerMapOnConcert(nextConcert);
+    }
+}
+
+// Function to center map on concert location
+function centerMapOnConcert(concert) {
+    if (!window.map || !concert || !concert.geometry || !concert.geometry.coordinates) return;
+    
+    const coordinates = concert.geometry.coordinates;
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // On mobile, center on the top 50% of the map
+        const mapContainer = window.map.getContainer();
+        const mapHeight = mapContainer.offsetHeight;
+        const centerOffset = mapHeight * 0.25; // Move center down by 25% of map height
+        
+        window.map.flyTo({
+            center: coordinates,
+            zoom: Math.max(window.map.getZoom(), 6),
+            duration: 1000,
+            offset: [0, -centerOffset] // Negative to move down
+        });
+    } else {
+        // On desktop, center on the left 75% of the map
+        const mapContainer = window.map.getContainer();
+        const mapWidth = mapContainer.offsetWidth;
+        const centerOffset = mapWidth * 0.125; // Move center right by 12.5% of map width (to center on left 75%)
+        
+        window.map.flyTo({
+            center: coordinates,
+            zoom: Math.max(window.map.getZoom(), 6),
+            duration: 1000,
+            offset: [-centerOffset, 0] // Negative to move right
+        });
+    }
+}
 
 // Helper function to handle document clicks for panel closing (moved to global scope for reuse)
 const handleDocumentClick = (e) => {
@@ -362,6 +505,10 @@ export const concertsPanel = async (properties) => {
                             </div>
                         </h2>
                     </div>
+                    <div class="navigation-buttons">
+                        <button class="nav-btn prev-btn" id="concert-prev-btn">&lt;</button>
+                        <button class="nav-btn next-btn" id="concert-next-btn">&gt;</button>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="message-wall-only">
@@ -490,6 +637,10 @@ export const concertsPanel = async (properties) => {
                             <div class="concert-date">${(properties.venue || properties.address || 'Unknown Venue')} - ${properties.date || 'Date TBA'}</div>
                         </div>
                     </h2>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" id="concert-prev-btn">&lt;</button>
+                    <button class="nav-btn next-btn" id="concert-next-btn">&gt;</button>
                 </div>
             </div>
             <div class="panel-body">
@@ -665,6 +816,9 @@ export const showDetailPanel = async (type, properties) => {
         // Store the current concert city for message wall loading
         panelManager.currentCity = properties.city;
         
+        // Set current concert ID for navigation
+        panelManager.setCurrentConcertId(properties.id);
+        
         // Handle concert panel
         const panelContent = await concertsPanel(properties);
         
@@ -687,6 +841,30 @@ export const showDetailPanel = async (type, properties) => {
         if (detailPanel) {
             detailPanel.addEventListener('click', handleTabClick);
             panelManager.eventListeners.set(detailPanel, handleTabClick);
+        }
+        
+        // Add navigation button event listeners
+        const prevBtn = info.querySelector('#concert-prev-btn');
+        const nextBtn = info.querySelector('#concert-next-btn');
+        
+        if (prevBtn) {
+            const prevListener = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                navigateToPreviousConcert();
+            };
+            prevBtn.addEventListener('click', prevListener);
+            panelManager.eventListeners.set(prevBtn, prevListener);
+        }
+        
+        if (nextBtn) {
+            const nextListener = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                navigateToNextConcert();
+            };
+            nextBtn.addEventListener('click', nextListener);
+            panelManager.eventListeners.set(nextBtn, nextListener);
         }
         
         // Auto-load message wall data since fans tab is now active by default
