@@ -9,6 +9,9 @@
     /* Make concert panel header more compact on mobile */
     .concert-panel-content .panel-header {
         padding: 6px 8px !important; /* Further reduced for more compact header */
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
     
     /* Mobile concert panel navigation buttons */
@@ -17,10 +20,7 @@
         gap: 6px !important;
         align-items: center !important;
         z-index: 1005 !important; /* Higher than drag handle and other elements */
-        position: absolute !important;
-        right: 8px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
+        position: relative !important; /* Use relative positioning like desktop */
         pointer-events: auto !important; /* Ensure buttons are clickable */
     }
     
@@ -92,7 +92,7 @@
         font-size: 1rem !important; /* Slightly reduced for more compact look */
         padding: 8px 12px !important; /* Reduced padding for more compact tabs */
         border-radius: 20px !important; /* Reduced border radius */
-        border: none !important; /* Remove borders on mobile */
+        border: 1px solid #ddd !important; /* Add borders on mobile */
         min-height: 40px !important; /* Slightly reduced but still touch-friendly */
         gap: 6px !important; /* Reduced gap between elements */
     }
@@ -102,8 +102,26 @@
         font-size: 0.9rem !important; /* Reduced for more compact look */
         padding: 6px 10px !important; /* Reduced padding for more compact tabs */
         border-radius: 16px !important; /* Reduced border radius */
-        border: none !important; /* Remove borders on mobile */
+        border: 1px solid #ddd !important; /* Add borders on mobile */
         min-height: 32px !important; /* Reduced but still touch-friendly */
+    }
+    
+    /* Active state borders for mobile primary tabs */
+    .primary-tabs .tab-button.active.shenshen-primary-tab {
+        border: 1px solid #6b4a3a !important;
+    }
+    
+    .primary-tabs .tab-button.active.fans-primary-tab {
+        border: 1px solid #005fb3 !important;
+    }
+    
+    /* Active state borders for mobile secondary tabs */
+    .shenshen-tabs .tab-button.active {
+        border: 1px solid #f8c56e !important;
+    }
+    
+    .fans-tabs .tab-button.active {
+        border: 1px solid #a7d8f9 !important;
     }
     
     /* Ensure proper spacing on mobile */
