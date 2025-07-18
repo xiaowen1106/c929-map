@@ -246,6 +246,17 @@
     .concert-panel-content .mobile-video-cover {
         margin-bottom: 0;
     }
+    
+    /* Activity media container specific adjustments */
+    .activity-media-container .mobile-video-cover {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    
+    .activity-media-container .video-thumbnail {
+        height: auto;
+        min-height: 120px;
+    }
 }
 
 /* Desktop adjustments for video covers */

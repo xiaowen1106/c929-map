@@ -711,6 +711,25 @@
     margin-bottom: 8px;
 }
 
+/* Ensure mobile video covers use full width in activity media containers */
+.activity-media-container .mobile-video-cover {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
+}
+
+.activity-media-container .video-thumbnail {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+}
+
+.activity-media-container .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .activity-video {
     width: 100%;
     border: none;

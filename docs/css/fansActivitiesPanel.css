@@ -172,6 +172,25 @@
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 0;
+}
+
+.fans-activities-panel .activity-media-container .mobile-video-cover {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
+}
+
+.fans-activities-panel .activity-media-container .video-thumbnail {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+}
+
+.fans-activities-panel .activity-media-container .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .fans-activities-panel .activity-media-fallback-panel {
@@ -269,5 +288,17 @@
     /* Mobile video cover styles */
     .fans-activities-panel .mobile-video-cover {
         height: 120px !important; /* Smaller height for mobile */
+    }
+    
+    .fans-activities-panel .activity-media-container .mobile-video-cover {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+        height: auto !important;
+    }
+    
+    .fans-activities-panel .activity-media-container .video-thumbnail {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
     }
 } 
