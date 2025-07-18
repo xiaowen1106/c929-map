@@ -1,5 +1,5 @@
 import { baseUrl } from '../config.js';
-import { createVideoCoverFromObject, createPhotoElement } from '../utils/mediaUtils.js';
+import { createVideoCoverFromObject, createPhotoElement, createClickablePhotoElement } from '../utils/mediaUtils.js';
 import { initBonusDraggablePanel, cleanupBonusDraggablePanel, getBonusDraggablePanelInstance } from '../utils/bonusDraggablePanel.js';
 
 
@@ -85,11 +85,24 @@ function cleanupEventListeners() {
 async function createMediaContent(bonus) {
     let mediaContent = '';
     
-    // Check if bonus has video content (YouTube or Bilibili) - prioritize these
+    // Add reference photo first if available (highest priority)
+    if (bonus.properties.reference && bonus.properties.reference.photo && bonus.properties.reference.link) {
+        const referencePhotoContent = createClickablePhotoElement(
+            `img/bonus/${bonus.properties.reference.photo}`, 
+            bonus.properties.reference.link, 
+            'Reference Photo', 
+            'bonus-photo-panel'
+        );
+        if (referencePhotoContent) {
+            mediaContent += `<div class="bonus-video reference-video">${referencePhotoContent}</div>`;
+        }
+    }
+    
+    // Check if bonus has video content (YouTube or Bilibili) - second priority
     const hasYouTube = (bonus.properties.youtube_url && bonus.properties.youtube_url !== 'N/A' && bonus.properties.youtube_url !== '');
     const hasBilibili = (bonus.properties.bilibili_url && bonus.properties.bilibili_url !== 'N/A' && bonus.properties.bilibili_url !== '');
     
-    // Add YouTube video first if available
+    // Add YouTube video if available
     if (hasYouTube) {
         const videoObject = {
             youtube_url: bonus.properties.youtube_url

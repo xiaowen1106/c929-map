@@ -173,3 +173,43 @@ export function parseYouTubeUrl(url) {
         return null;
     }
 } 
+
+// Create clickable photo element with link redirect (YouTube thumbnail style)
+export function createClickablePhotoElement(imagePath, linkUrl, altText = 'Photo', className = 'photo') {
+    if (!imagePath) {
+        return `
+            <div class="photo-container">
+                <div class="photo-placeholder no-photo">
+                    <span>📷</span>
+                    <span>Photo</span>
+                </div>
+            </div>
+        `;
+    }
+    
+    const imageUrl = getImageUrl(imagePath);
+    const clickHandler = linkUrl ? `onclick="window.open('${linkUrl}', '_blank')"` : '';
+    
+    return `
+        <div class="mobile-video-cover" ${clickHandler}>
+            <div class="video-thumbnail">
+                <img src="${imageUrl}" 
+                     alt="${altText}" 
+                     onload="this.style.opacity='1'; this.parentElement.querySelector('.photo-placeholder.loading').style.display='none';" 
+                     onerror="this.style.display='none'; this.parentElement.querySelector('.photo-placeholder.loading').style.display='none'; this.parentElement.querySelector('.photo-placeholder.error').style.display='flex';"
+                     style="opacity: 0; transition: opacity 0.3s ease;">
+                <div class="photo-placeholder loading">
+                    <div class="loading-spinner"></div>
+                    <span>Loading...</span>
+                </div>
+                <div class="photo-placeholder error" style="display: none;">
+                    <span>🔗</span>
+                    <span>Link</span>
+                </div>
+            </div>
+            <div class="play-button youtube-play-button">
+                <img src="${baseUrl}/img/PlayButton.png" alt="Open Link" class="play-icon">
+            </div>
+        </div>
+    `;
+} 
