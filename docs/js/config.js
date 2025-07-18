@@ -1,6 +1,25 @@
+// Define tokens for different environments
+const tokens = {
+    localhost: 'pk.eyJ1IjoianVzdGFub3RoZXJtaSIsImEiOiJjbWQ4Znl0M2UwZm50MnFxMnZzNHdoaXd2In0.SSrE0vP6LzznWw_429_hCQ',
+    production: 'pk.eyJ1IjoianVzdGFub3RoZXJtaSIsImEiOiJjbWQ4ZnkwdGwwdm1qMmtvazVpZ2NtMjJ5In0.__cF9qE9d-YyEblXZS4mgA'
+};
+
+// Determine which token to use based on current URL
+const getMapboxToken = () => {
+    const hostname = window.location.hostname;
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+        return tokens.localhost;
+    } else if (hostname === 'shenmi.world') {
+        return tokens.production;
+    } else {
+        // Fallback to production token for any other domain
+        return tokens.production;
+    }
+};
+
 export const config = {
-    // Load Mapbox token from environment variable
-    mapboxToken: 'pk.eyJ1IjoianVzdGFub3RoZXJtaSIsImEiOiJjbWFwMmU1ZnkwZHJ6MmxwdnloemZhY3I0In0.TiHvo3M3CHK0ciLiNC77iQ',
+    // Load Mapbox token based on current URL
+    mapboxToken: getMapboxToken(),
     
     // Video platform filtering based on geolocation
     videoFiltering: {
