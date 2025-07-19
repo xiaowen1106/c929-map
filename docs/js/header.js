@@ -147,7 +147,7 @@ function showTermsPopup() {
     closeBtn.onclick = () => popup.remove();
 
     const title = document.createElement('h2');
-    title.textContent = '深米旅志 ShenMi Journal 服务条款';
+    title.textContent = 'shenmi.world 服务条款';
     title.style.cssText = `
         margin: 0 0 20px 0;
         color: #333;
@@ -157,7 +157,7 @@ function showTermsPopup() {
 
     const termsText = document.createElement('div');
     termsText.innerHTML = `
-        <p style="margin-bottom: 20px;">欢迎访问深米旅志 ShenMi Journal。当您使用本网站并提交所在城市、留言内容、演唱会或团建活动记录时，即表示您已阅读、理解并同意以下服务条款：</p>
+        <p style="margin-bottom: 20px;">欢迎访问shenmi.world。当您使用本网站浏览或提交所在城市、留言内容、演唱会或团建活动记录时，即表示您已阅读、理解并同意以下服务条款：</p>
         
         <h3 style="margin: 25px 0 15px 0;">1. 信息收集范围</h3>
         <p style="margin-bottom: 10px;">我们收集的内容包括但不限于：</p>
@@ -165,14 +165,14 @@ function showTermsPopup() {
             <li style="margin-bottom: 8px;">您自愿填写的所在城市</li>
             <li style="margin-bottom: 8px;">您的留言内容</li>
             <li style="margin-bottom: 8px;">您参与演唱会的记录及感想</li>
-            <li style="margin-bottom: 8px;">您参与团建活动的记录</li>
+            <li style="margin-bottom: 8px;">您参与团建活动的记录及影像</li>
         </ul>
         <p style="margin: 0;">所有信息均为用户自愿提交，您有权选择不提供其中某些信息。</p>
         
         <h3 style="margin: 25px 0 15px 0;">2. 信息使用方式</h3>
         <p style="margin-bottom: 10px;">您提交的内容可能会用于以下用途：</p>
         <ul style="margin: 0; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">在网站上公开展示，展示生米的足迹与互动</li>
+            <li style="margin-bottom: 8px;">在网站上公开展示，展示个人的足迹与互动</li>
             <li style="margin-bottom: 8px;">统计或可视化展示用户的分布及参与情况</li>
             <li style="margin-bottom: 8px;">用于编辑、整理或呈现特定专题内容（如演唱会地图、团建回顾）</li>
         </ul>
@@ -188,16 +188,19 @@ function showTermsPopup() {
             <li style="margin-bottom: 8px;">涉及政治敏感、违法信息</li>
             <li style="margin-bottom: 8px;">他人未经授权的个人隐私（如姓名、照片、联系方式等）</li>
         </ul>
-        <p style="margin: 0;">我们保留对不当内容进行删除、屏蔽的权利，情节严重者将限制其使用权限。</p>
+        <p style="margin: 0;">我们保留对不当内容进行删除、屏蔽的权利，情节严重者将限制其使用权限，以及自行负担法律责任。</p>
         
         <h3 style="margin: 25px 0 15px 0;">5. 个人信息与责任说明</h3>
-        <p style="margin-bottom: 10px;">请勿提交身份证号、联系方式、家庭住址等敏感个人信息。如您主动提交此类信息，深米旅志 ShenMi Journal不对此承担任何责任。</p>
+        <p style="margin-bottom: 10px;">请勿提交身份证号、联系方式、家庭住址等敏感个人信息。如您主动提交此类信息，shenmi.world 不对此承担任何责任。</p>
         <p style="margin: 0;">我们不会将您提供的信息用于商业用途，也不会出售或提供给任何第三方。</p>
         
         <h3 style="margin: 25px 0 15px 0;">6. 内容授权</h3>
         <p style="margin: 0;">您提交的留言和活动记录即视为您授权本网站在不改变原意的前提下进行展示、编辑、归档或引用。内容版权仍归您本人所有，但您同意授权我们以非商业形式使用。</p>
         
-        <h3 style="margin: 25px 0 15px 0;">7. 条款更新</h3>
+        <h3 style="margin: 25px 0 15px 0;">7. 项目开源与社区共识</h3>
+        <p style="margin: 0;">本网站为开源项目，其代码及部分内容已公开发布。我们倡导友好、包容、协作的社区氛围，使用或参与本项目即表示您同意遵守相关开源许可证、尊重他人劳动成果，并遵循开源社区公约。</p>
+
+        <h3 style="margin: 25px 0 15px 0;">8. 条款更新</h3>
         <p style="margin: 0;">我们可能不定期更新本服务条款，并在网站上公示最新版本。您继续使用本网站，即表示接受更新后的内容。</p>
     `;
     termsText.style.cssText = `
