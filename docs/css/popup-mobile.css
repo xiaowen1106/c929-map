@@ -1,0 +1,319 @@
+/* Mobile Popup Styles */
+
+/* Responsive popup navigation */
+@media (max-width: 768px) {
+    .mapboxgl-popup {
+        max-width: 280px;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .mapboxgl-popup-content {
+        border-radius: 12px 12px 0 0 !important;
+        max-height: 60vh !important;
+        overflow-y: auto !important;
+    }
+    
+    .popup-header {
+        padding: 6px 8px;
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .author-info {
+        width: 100%;
+    }
+    
+    .popup-actions {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+    
+    .more-btn {
+        display: none !important; /* Hide the "..." button on mobile */
+    }
+    
+    .nav-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        min-width: 24px;
+        min-height: 24px;
+        max-width: 24px;
+        max-height: 24px;
+        padding: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(33, 150, 243, 0.10);
+        transition: box-shadow 0.2s;
+    }
+    
+    .nav-btn:active {
+        box-shadow: 0 1px 4px rgba(33, 150, 243, 0.18);
+    }
+    
+    .message-counter {
+        font-size: 14px;
+        min-width: 40px;
+    }
+    
+    .popup-body {
+        padding: 12px;
+    }
+    
+    .popup-footer {
+        padding: 10px 12px;
+    }
+    
+    .popup-navigation {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        margin-top: 6px;
+    }
+    
+    .nav-icon {
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        line-height: 1;
+    }
+    
+    .wish-counter {
+        order: -1;
+        font-size: 14px;
+    }
+    
+    .author-name {
+        font-size: 13px;
+    }
+    
+    /* Replace hamburger menu icon with close button on mobile */
+    .menu-icon {
+        display: none !important;
+    }
+    
+    /* Show close button on mobile - default blue for fan wishes */
+    .close-btn {
+        display: flex !important;
+        background: none;
+        border: none;
+        color: #386FC4;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1;
+        box-shadow: none;
+        transition: none;
+        backdrop-filter: none;
+    }
+    
+    .close-btn:hover, .close-btn:active {
+        background: none;
+        border: none;
+        color: #2a5aa0;
+        transform: none;
+    }
+}
+
+/* Responsive styles for multiple messages */
+@media (max-width: 768px) {
+    .multiple-messages .popup-header {
+        padding: 12px;
+    }
+    
+    .multiple-messages .popup-header h3 {
+        font-size: 14px;
+    }
+    
+    .multiple-messages .popup-header p {
+        font-size: 11px;
+    }
+    
+    .message-preview {
+        padding: 10px 12px;
+    }
+    
+    .message-author {
+        font-size: 13px;
+    }
+    
+    .message-excerpt {
+        font-size: 11px;
+    }
+}
+
+/* Custom Fan Wish Popup Mobile Styles */
+@media (max-width: 600px) {
+    .custom-fan-wish-popup {
+        min-width: 0;
+        max-width: 98vw;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .fan-wish-popup-header {
+        padding: 16px 8px 12px 8px;
+    }
+    
+    .fan-wish-popup-main {
+        padding: 0 2vw 0 2vw;
+    }
+    
+    .fan-wish-content-container {
+        min-width: 120px;
+        height: 100%;
+        max-width: 98vw;
+        margin-top: -12px;
+        max-height: 60vh !important;
+        overflow-y: auto !important;
+    }
+    
+    .fan-wish-content-header {
+        padding: 16px 16px 12px 16px;
+    }
+    
+    .fan-wish-content-title {
+        font-size: 13px;
+    }
+    
+    .fan-wish-content-author {
+        font-size: 13px;
+    }
+    
+    .fan-wish-message-content {
+        padding: 6px 16px 16px 16px;
+    }
+    
+    .fan-wish-nav-arrow {
+        width: 24px;
+        height: 48px;
+        font-size: 2.8rem;
+        z-index: 10;
+    }
+    
+    .fan-wish-message-text {
+        font-size: 13px;
+    }
+}
+
+/* Custom Activity Popup Mobile Styles */
+@media (max-width: 600px) {
+    .custom-activity-popup {
+        min-width: 0;
+        max-width: 98vw;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .activity-popup-header {
+        padding: 16px 16px 12px 16px;
+    }
+    
+    .activity-popup-main {
+        padding: 0 2vw 0 2vw;
+    }
+    
+    .activity-content-container {
+        min-width: 120px;
+        max-width: 98vw;
+        max-height: 60vh !important;
+        margin-top: -12px;
+        overflow-y: auto !important;
+    }
+    
+    .activity-content-header {
+        padding: 8px 8px 4px 8px;
+    }
+    
+    .activity-content-title {
+        font-size: 13px;
+    }
+    
+    .activity-content-subtitle {
+        font-size: 13px;
+    }
+    
+    .activity-content-body {
+        padding: 6px 16px 16px 16px;
+    }
+    
+    .activity-nav-arrow {
+        width: 24px;
+        height: 48px;
+        font-size: 2.8rem;
+        z-index: 10;
+    }
+    
+    .activity-media-container {
+        min-width: 120px;
+        max-width: 98vw;
+        max-height: 40vw;
+    }
+    
+    .activity-video, .activity-fallback-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Replace hamburger menu icon with close button on mobile */
+    .menu-icon {
+        display: none !important;
+    }
+    
+    /* Show close button on mobile - yellow for fans activities */
+    .custom-activity-popup .close-btn {
+        color: #FFD68A !important;
+    }
+    
+    .custom-activity-popup .close-btn:hover, 
+    .custom-activity-popup .close-btn:active {
+        color: #FFD68A !important;
+    }
+}
+
+
+
+/* Desktop styles - hide close button, show menu icon */
+@media (min-width: 769px) {
+    .close-btn {
+        display: none !important;
+    }
+    
+    .menu-icon {
+        display: flex !important;
+    }
+} 

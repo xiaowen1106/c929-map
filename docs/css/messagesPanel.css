@@ -1,0 +1,208 @@
+/* Messages Panel Styles */
+.messages-panel {
+    position: fixed;
+    top: 52px; /* Reduced from 60px to move panel up closer to header */
+    right: -25%; /* Start off-screen to the right - same as concert panel */
+    width: 25%; /* Back to 1/4 of screen width */
+    height: calc(100vh - 90px); /* Reduced space from footer by increasing height */
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Same shadow as concert panel */
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Rounded corners for desktop */
+}
+
+.messages-panel.active {
+    right: 8px;
+}
+
+.messages-panel .panel-header {
+    background: #0057A1;
+    color: white;
+    padding: 12px 20px; /* Reduced from 20px to 12px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for desktop */
+}
+
+.messages-panel .panel-header h2 {
+    margin: 0;
+    font-size: 1.2rem; /* Reduced from 1.5rem to 1.2rem */
+    font-weight: 600;
+}
+
+.messages-panel .panel-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-panel .messages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.messages-panel .message-item {
+    padding: 16px;
+    border: 1px solid #e1e5e9;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    background: #ECF2F8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.messages-panel .message-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    border-color: #2196f3;
+}
+
+.messages-panel .message-item.selected {
+    border-color: #386FC4;
+    background: rgba(56, 111, 196, 0.05);
+    box-shadow: 0 4px 12px rgba(56, 111, 196, 0.15);
+}
+
+.messages-panel .message-item.selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    background: #386FC4;
+    border-radius: 2px;
+}
+
+.messages-panel .message-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+}
+
+.messages-panel .user {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.messages-panel .location {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+    margin: 6px 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.messages-panel .location::before {
+    content: none;
+}
+
+.messages-panel .message-text {
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    word-wrap: break-word;
+}
+
+/* Increase spacing only for line breaks */
+.messages-panel .message-text br {
+    display: block;
+    content: "";
+    margin-top: 0.5em;
+}
+
+/* Loading messages styles */
+.loading-messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.loading-messages p {
+    margin: 0;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Responsive design for messages panel */
+@media (max-width: 768px) {
+    .messages-panel {
+        position: fixed !important;
+        top: auto !important;
+        bottom: -50vh !important; /* Start off-screen at bottom */
+        left: 0 !important; /* Full width from left edge */
+        right: 0 !important; /* Full width to right edge */
+        width: 100% !important; /* Full width */
+        height: 50vh !important;
+        border-radius: 12px 12px 0 0 !important; /* Rounded top corners for mobile */
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important; /* Shadow from top */
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        z-index: 1001 !important;
+        overflow: hidden !important;
+        border: none !important; /* Remove border */
+    }
+    
+    .messages-panel.active {
+        right: 8px;
+        bottom: 0 !important; /* Position from bottom edge - match concert panel */
+        transform: none !important; /* Prevent any transform-based positioning changes */
+    }
+    
+    .messages-panel .panel-header {
+        border-radius: 12px 12px 0 0 !important; /* Match mobile border radius */
+        padding: 12px !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        border: none !important; /* Remove border */
+    }
+    
+    .messages-panel .panel-body {
+        max-height: calc(50vh - 60px) !important; /* Subtract header height - match concert panel */
+        min-height: calc(50vh - 60px) !important; /* Ensure consistent height */
+        overflow: hidden !important;
+        padding: 8px !important;
+        border: none !important; /* Remove border */
+        background: white !important;
+    }
+    
+    .messages-panel .messages-list {
+        max-height: calc(50vh - 80px) !important; /* Subtract header height for mobile - match concert panel */
+        min-height: calc(50vh - 80px) !important; /* Ensure consistent height */
+        overflow-y: auto !important;
+        padding: 8px !important;
+    }
+    
+    /* Remove borders from message items on mobile */
+    .messages-panel .message-item {
+        border: none !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .messages-panel .message-item:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+        transform: none !important;
+    }
+} 

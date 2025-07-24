@@ -1,0 +1,368 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.3062501,
+          27.2244685
+        ]
+      },
+      "properties": {
+        "id": "SS9",
+        "fakeId": 9,
+        "title": "【彩蛋】你从山中来",
+        "date": "Sep 29, 1992",
+        "city": "Shaoyang, Hunan",
+        "description": "",
+        "content": "在湖南邵阳，一座山、一块半山腰的平地、一间木头房，是周深最初的世界。推开门，家中一切尽收眼底——一张木床，一个米缸，一只鸡，是童年最初的温度。\n后来，他随着家人一同前往贵阳，山里的回音渐渐融进了城市的风。但那个从木屋走出来的孩子，从未忘记过，最初那片天与歌的起点。",
+        "youtube_url": "",
+        "lat": 27.2244685,
+        "lng": 111.3062501,
+        "category": "彩蛋",
+        "location_display": "湖南邵阳",
+        "photo": "SY_1.jpg",
+        "photo2": "",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.0298169,
+          49.8369543
+        ]
+      },
+      "properties": {
+        "id": "SS10",
+        "fakeId": 10,
+        "title": "【彩蛋】在利沃夫遇见光",
+        "date": "Jun 04, 2016",
+        "city": "Mykola Lysenko Lviv National Music Academy (Львівська національна музична академія імені Миколи Лисенка), or informally Lviv Conservatory",
+        "description": "",
+        "content": "在乌克兰的古城利沃夫，周深遇见了他的声乐恩师，也遇见了属于自己的光。这座铺满鹅卵石的城市，是他留学的起点，也是他真正走进音乐世界的地方。利沃夫音乐学院的琴房里，曾飘出他一遍遍练习发声的旋律；课堂上，恩师悉心指导，帮他打磨声音最初的轮廓；黄昏的街角、转角的小咖啡馆，也许藏着他一个人走过的寂寞与坚定。\n多年以后，我们在更大的舞台上听见他，将歌声唱入千万人心中。可那些来自利沃夫的片段，仍静静地留在他声音的底色里。细腻、温柔、穿越语言，却直达心底。利沃夫不喧哗，但它记得他。也悄悄地，成就了他。",
+        "youtube_url": "",
+        "lat": 49.8369543,
+        "lng": 24.0298169,
+        "category": "彩蛋",
+        "location_display": "利沃夫国立音乐学院",
+        "photo": "HKWY_1.jpg",
+        "photo2": "HKWY_2.jpg",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3076351,
+          31.01226
+        ]
+      },
+      "properties": {
+        "id": "SS11",
+        "fakeId": 11,
+        "title": "【彩蛋】好柿发生",
+        "date": "Jul 19, 2020",
+        "city": "上海市松江区北松公路4915号16幢",
+        "description": "周深工作室注册地址",
+        "content": "2020年7月19日，周深工作室官宣成立啦！好柿诞生，好运常在！",
+        "youtube_url": "",
+        "lat": 31.01226,
+        "lng": 121.3076351,
+        "category": "彩蛋",
+        "location_display": "周深工作室",
+        "photo": "GZS_1.jpg",
+        "photo2": "",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96788118746571,
+          40.74937683848578
+        ]
+      },
+      "properties": {
+        "id": "SS5",
+        "fakeId": 5,
+        "title": "【彩蛋】大鱼飞进了联合国",
+        "date": "Apr 18, 2024",
+        "city": "United Nations Headquarters",
+        "description": "联合国中文日",
+        "content": "2024年4月18日，周深在联合国纽约总部参加联合国中文日活动，献唱《和平颂》《大鱼》《等着我》。这是一次北美海米终生难忘的浪漫相遇。谁能想到，在活动前一天，海米与深深却是上演了一场美错剧情——谁能想到深深自己跑到了时代广场打卡应援大屏，与此同时沉浸在高喊\"风雨同周深情不移\"的米子们就近在咫尺却完美错过！这么近那么远，深和米却没能相认！\n好在美好的相遇虽迟但到。活动当天，海米再也不想错过一分一毫了！从陪着深深进入联合国，到全程观看全球直播，到深深活动后出现打招呼，到深深离开联合国下班，这一天中的每一次见面都让人激动不已，回味无穷。台上的深深专业范儿十足，和米子打招呼的深深无时无刻不是带着笑亲和力满满。这是深深的荣誉时刻，海米为深深感到无比骄傲！\n深深，无论错过多少次，我们终将相遇，在世界的每一个角落！",
+        "youtube_url": "",
+        "lat": 40.74937683848578,
+        "lng": -73.96788118746571,
+        "category": "彩蛋",
+        "location_display": "纽约联合国总部",
+        "photo": "UN_1.jpg",
+        "photo2": "UN_2.jpg",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": "",
+        "reference": {
+          "photo": "UN_3.jpg",
+          "link": "https://news.un.org/zh/story/2024/04/1128171"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01025293295942,
+          40.74227677203421
+        ]
+      },
+      "properties": {
+        "id": "SS4",
+        "fakeId": 4,
+        "title": "【彩蛋】纽约街头最靓的仔",
+        "date": "Apr 20, 2024",
+        "city": "Little Island, NY",
+        "description": "纽约Cosmo拍摄",
+        "content": "在纽约街头与《时尚COSMO》不经意地邂逅，悄悄捕捉了执行浪漫任务的宝贝深深。镜头里的他松弛与锋芒并存，与平日截然不用的酷潮穿搭让人眼前一亮，绝对是纽约街头最靓的仔！\n镜头之外，是循着深深的足迹打卡取景地的生米们。同样的街角，同样的风景，会感受到你曾经站在这里的心跳频率吗？纽约客从不停下脚步，却在这里为你驻足。生米与深深永远可以穿越时空，同频共振。感谢你曾经来过！\n",
+        "youtube_url": "",
+        "lat": 40.74227677203421,
+        "lng": -74.01025293295942,
+        "category": "彩蛋",
+        "location_display": "纽约COSMO拍摄取景地",
+        "photo": "COSMO_1.jpg",
+        "photo2": "COSMO_2.jpg",
+        "photo3": "COSMO_3.jpg",
+        "bilibili_url": "https://www.bilibili.com/video/BV1fi421v7HE/?share_source=copy_web&vd_source=532abbf09e959ae65f11cb290874b553",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.5515732,
+          26.5959596
+        ]
+      },
+      "properties": {
+        "id": "SS8",
+        "fakeId": 8,
+        "title": "【彩蛋】中华好儿郎",
+        "date": "Jul 13, 2024",
+        "city": "Guiyang, Guizhou",
+        "description": "",
+        "content": "2003年，11岁的《中华小儿郎》雏鸟初啼；2024年，大鹏已展翅翱翔，带着929Hz巡演回到家乡。贵阳之于深深，是成长的故乡，是味蕾的依恋。这里有他从前读书的校园、走过的街道、熟悉的亲朋好友，亦有如今为他而来的万千粉丝和歌迷。舞台灯光亮起的那一刻，整个贵阳都在为他骄傲。他是贵州小百灵，贵州小茅台，也是贵州蛊王！谢谢贵州的好山好水养出天下最好的周深！也谢谢周深把把贵阳带给了世界！",
+        "youtube_url": "https://www.youtube.com/watch?v=zRc9LA-2qpE",
+        "lat": 26.5959596,
+        "lng": 106.5515732,
+        "category": "彩蛋",
+        "location_display": "贵州贵阳",
+        "photo": "GY_Tape.png",
+        "photo2": "",
+        "photo3": "",
+        "bilibili_url": "https://www.bilibili.com/video/BV1qb421n7NW",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.3901807014667,
+          33.836305397195
+        ]
+      },
+      "properties": {
+        "id": "SS3",
+        "fakeId": 3,
+        "title": "【彩蛋】倒流回最初的相遇",
+        "date": "Nov 03, 2024",
+        "city": "Santa Monica Beach",
+        "description": "工作室100万福利 / 大鱼录制在LA",
+        "content": "2024年11月3日，周深工作室突破百万关注！工作室发布了一组深深在洛杉矶的街拍，一下子把我们的思绪拉回了2016年。那一年，周深在洛杉矶录制了代表作《大鱼》，那是他第一次用歌声，为我们描绘梦与海的模样。\n时隔八年，这一次他不是一个人回来。歌迷们的爱已从梦中一路跟随到现实，一起倒流回那场温柔的相遇。时间可以走远，但爱和声音从不迷路。",
+        "youtube_url": "",
+        "lat": 33.836305397195,
+        "lng": -118.3901807014667,
+        "category": "彩蛋",
+        "location_display": "加利福尼亚",
+        "photo": "LA_1.jpg",
+        "photo2": "LA_2.jpg",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "https://weibo.com/7478855230/5096708222484901",
+        "link2": "https://weibo.com/7303983273/4500956262585829"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.14878644163788,
+          36.083348294080984
+        ]
+      },
+      "properties": {
+        "id": "SS7",
+        "fakeId": 7,
+        "title": "【彩蛋】条条深的诞生",
+        "date": "Feb 28, 2025",
+        "city": "拉斯维加斯",
+        "description": "海米投稿",
+        "content": "你还记得那只随风飘扬\"条条深\"吗？原本是海米妈粉2月14日一时冲动下单的特色(抽象)应援，却在拉斯维加斯世巡现场\"长高高\"，一飞冲天，冲破天花板，也冲上了热搜榜。条条深成为当日应援现场团宠人气王，他在人群中摇摇晃晃地卖萌，陪我们一起见证了深深的舞台高光。\n可惜——还没断奶的小条条，却在第二程西雅图之旅离奇失踪……短短五天，他完成了一场华丽但短暂的\"出道即毕业\"。条条深，愿你被温柔收藏，奔赴山川大海，替我们看遍世间好风光！我们还会再见的！\n",
+        "youtube_url": "",
+        "lat": 36.083348294080984,
+        "lng": -115.14878644163788,
+        "category": "彩蛋",
+        "location_display": "拉斯维加斯",
+        "photo": "Tall_1.jpg",
+        "photo2": "Tall_2.jpg",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.32665799341392,
+          37.531831326542765
+        ]
+      },
+      "properties": {
+        "id": "SS1",
+        "fakeId": 1,
+        "title": "【彩蛋】你是~弗吉尼亚",
+        "date": "Mar 09, 2025",
+        "city": "Richmond, VA",
+        "description": "纽约《如愿》",
+        "content": "你是～遥遥的路～？错！你是~ 弗吉尼亚！2025年3月9日，相信所有的米子都记住了弗吉尼亚版《如愿》的特别演绎。这是一次在纽约场演唱会现场，深深和米子们反复拉扯反复确认的\"地理课\"～\n谢谢来自Richmond, Virginia的Monica，谢谢多次空耳也要锲而不舍搞清粉丝来自哪里的深深，让我们拥有了又搞笑又温情的纽约场特别记忆！\n深深宝贝，弗吉尼亚在这里哦～请记住这个\"地名彩蛋\"，下次见面我们会考你的！",
+        "youtube_url": "https://www.youtube.com/watch?v=HcaLmrmEa44",
+        "lat": 37.531831326542765,
+        "lng": -77.32665799341392,
+        "category": "彩蛋",
+        "location_display": "弗吉尼亚",
+        "photo": "VA_1.jpg",
+        "photo2": "VA_2.jpg",
+        "photo3": "VA_3.jpg",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.07613314096989,
+          43.0840519488384
+        ]
+      },
+      "properties": {
+        "id": "SS2",
+        "fakeId": 2,
+        "title": "【彩蛋】而我听见下雨的声音",
+        "date": "Mar 17, 2025",
+        "city": "Niagara Falls, ON",
+        "description": "深深去了耶",
+        "content": "想起你用唇语说爱上生米是情非得已。\n美加巡演结束后的第二天，周深现身尼亚加拉大瀑布，结果刚巧赶上一场突如其来的大雨！一行人边笑边躲雨，像是结束旅程的仪式感小插曲。更巧的是，有海米在景点偶遇了深深！还拍下了不少同款打卡照～\n而我们的嫑嫑小朋友，现场踩上栏杆，想拍张绝美合影，结果被工作人员温柔却坚定地请了下来 。打卡有趣，安全第一～各位生米以后再去记得站稳脚步哦！\n有歌、有你、有风雨，这趟美加之行画上了完美句点。❤热切期盼深深再来!",
+        "youtube_url": "",
+        "lat": 43.0840519488384,
+        "lng": -79.07613314096989,
+        "category": "彩蛋",
+        "location_display": "尼亚加拉大瀑布",
+        "photo": "NF_1.jpg",
+        "photo2": "NF_2.png",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "深深的微博 https://weibo.com/1736988591/5145516166877307",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.339564283297866,
+          36.01258971437238
+        ]
+      },
+      "properties": {
+        "id": "SS6",
+        "fakeId": 6,
+        "title": "【彩蛋】CocoMimiNono",
+        "date": "Jun 11, 2025",
+        "city": "Comino, Malta",
+        "description": "Cocomiminono商标注册",
+        "content": "2025年5月16日，周可可旗舰店开业啦！一户一可一嫑一深指日可待！\n2025年6月11日，在无人在意的小角落，工作室注册了Cocomiminono商标，从此就是相亲与相爱的Comino一家人啦！可可&米米&嫑嫑~咱们仨把日子过好比什么都重要！",
+        "youtube_url": "",
+        "lat": 36.01258971437238,
+        "lng": 14.339564283297866,
+        "category": "彩蛋",
+        "location_display": "Comino, Malta",
+        "photo": "CoMiNo_1.jpg",
+        "photo2": "CoMiNo_2.jpg",
+        "photo3": "CoMiNo_3.jpg",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "id": "SS12",
+        "fakeId": 12,
+        "title": "【彩蛋】深米地图",
+        "date": "Jul 25, 2025",
+        "city": "Null Island",
+        "description": "ShenMi.World项目组",
+        "content": "Welcome to【ShenMi.World】\n🗺️ 欢迎来到【深米地图】\n\n我们用地图记录周深和生米们的双向奔赴。\n祝周深出道十一周年快乐！祝生米们十一周岁生日快乐！\n\n每一寸深深足迹，都被悉心收集久久回味；\n每一个生米坐标，都珍藏着一缕怦然心动。\n以微光追你，望你踏上璀璨的舞台星河；\n以渺小爱你，伴你一路不朽的音乐旅程。\n\n谢谢你用歌声点亮世界的每一个角落。请继续做你想做的一切吧！世界那么大，任凭天涯海角都与你同行。\n\nby ShenMi.World项目组：拼图喵Ember，小文，十方，Halcyon一粒米，浅糖，SUN，Jinny\n\n2025.07.25",
+        "youtube_url": "",
+        "lat": 0.0,
+        "lng": 0.0,
+        "category": "彩蛋",
+        "location_display": "Null Island",
+        "photo": "",
+        "photo2": "",
+        "photo3": "",
+        "bilibili_url": "",
+        "reference_link": "",
+        "link2": ""
+      }
+    }
+  ]
+}

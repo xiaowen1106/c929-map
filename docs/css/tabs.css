@@ -1,0 +1,328 @@
+/* Tab System Styles */
+
+/* ========================================
+   CONCERT PANEL TAB STYLES
+   ======================================== */
+
+/* Basic tab container */
+.concert-panel-content .tabs {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+/* Tab button base styles */
+.concert-panel-content .tab-button {
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    position: relative;
+}
+
+.concert-panel-content .tab-button:hover {
+    opacity: 0.9;
+}
+
+/* Tab content containers */
+.concert-panel-content .tab-content {
+    display: none;
+    flex: 1 !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 4px 0;
+    max-height: calc(100vh - 200px); /* Desktop: limit height to prevent overflow */
+}
+
+.concert-panel-content .tab-content.active {
+    display: flex !important;
+}
+
+.concert-panel-content .tab-content:not(.active) {
+    display: none;
+}
+
+/* Secondary tab content */
+.concert-panel-content .secondary-tab-content {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    max-height: calc(100vh - 240px); /* Desktop: limit height for secondary content */
+}
+
+/* Secondary content containers */
+.concert-panel-content .secondary-content {
+    display: none;
+    padding: 4px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 280px); /* Desktop: limit height for secondary content */
+}
+
+.concert-panel-content .secondary-content.active {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 280px); /* Desktop: limit height for active secondary content */
+}
+
+/* ========================================
+   PRIMARY TABS
+   ======================================== */
+
+.primary-tabs {
+    gap: 20px;
+    border-bottom: none;
+    justify-content: center;
+    display: flex;
+    padding: 0 5px 0 15px;
+    width: 100%;
+}
+
+.primary-tabs .tab-button {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    color: #555;
+    background-color: #f7f7f7;
+}
+
+/* Primary tab active states */
+.primary-tabs .tab-button.active.shenshen-primary-tab {
+    background-color: #6b4a3a;
+    color: #fff;
+    border: 1px solid #6b4a3a;
+}
+
+.primary-tabs .tab-button.active.shenshen-primary-tab .tab-icon {
+    border-color: #6b4a3a;
+}
+
+.primary-tabs .tab-button.active.fans-primary-tab {
+    background-color: #005fb3;
+    color: #fff;
+    border: 1px solid #005fb3;
+}
+
+.primary-tabs .tab-button.active.fans-primary-tab .tab-icon {
+    border-color: #005fb3;
+}
+
+/* Tab icons */
+.tab-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+/* ========================================
+   SECONDARY TABS
+   ======================================== */
+
+.secondary-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-bottom: none;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+}
+
+/* Ensure proper centering when there are fewer tabs */
+.secondary-tabs.single-tab {
+    justify-content: center;
+}
+
+.secondary-tabs.single-tab .tab-button {
+    margin: 0 auto;
+}
+
+/* Ensure tabs remain centered even with fewer items */
+.secondary-tabs:not(.single-tab) {
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.secondary-tabs .tab-button {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: fit-content;
+    padding: 5px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    color: #444;
+    margin: 0px 3px;
+}
+
+.secondary-tabs .tab-button:hover:not(.active) {
+    background-color: #e0e0e0;
+}
+
+/* Secondary content base styles */
+.secondary-content {
+    display: none;
+    padding: 4px 0;
+}
+
+.secondary-content.active {
+    display: block;
+}
+
+.secondary-content p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   BRAND-SPECIFIC TAB STYLES
+   ======================================== */
+
+/* Shenshen brand tabs */
+.shenshen-tabs .tab-button.active {
+    background-color: #f8c56e;
+    color: #333;
+    border: 1px solid #f8c56e;
+    font-weight: bold;
+}
+
+.shenshen-tabs .tab-button.active .tab-icon {
+    border-color: #f8c56e;
+}
+
+/* Fans brand tabs */
+.fans-tabs .tab-button {
+    color: #005fb3;
+    border-color: #a7d8f9;
+}
+
+.fans-tabs .tab-button.active {
+    background-color: #a7d8f9;
+    color: #005fb3;
+    border: 1px solid #a7d8f9;
+    font-weight: bold;
+}
+
+.fans-tabs .tab-button.active .tab-icon {
+    border-color: #a7d8f9;
+}
+
+/* ========================================
+   DESKTOP SCROLLABLE STYLES
+   ======================================== */
+
+@media (min-width: 769px) {
+    /* Desktop: Make tab content scrollable */
+    .concert-panel-content .tab-content {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        max-height: calc(100vh - 200px) !important;
+    }
+    
+    .concert-panel-content .secondary-tab-content {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        max-height: calc(100vh - 240px) !important;
+    }
+    
+    .concert-panel-content .secondary-content {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        max-height: calc(100vh - 280px) !important;
+    }
+    
+    .concert-panel-content .secondary-content.active {
+        max-height: calc(100vh - 280px) !important;
+    }
+    
+    /* Ensure smooth scrolling on desktop */
+    .concert-panel-content .tab-content,
+    .concert-panel-content .secondary-content,
+    .concert-panel-content .secondary-tab-content {
+        scroll-behavior: smooth !important;
+    }
+}
+
+/* Mobile responsive styles moved to responsivePanel.css to avoid conflicts */
+
+/* ========================================
+   ACCESSIBILITY & INTERACTION
+   ======================================== */
+
+/* Focus states for keyboard navigation */
+.tab-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Disabled state */
+.tab-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading state for dynamic content */
+.tab-content.loading {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* ========================================
+   ANIMATIONS & TRANSITIONS
+   ======================================== */
+
+/* Remove animation and transition effects from tab system */
+
+/* Remove transitions from tab content */
+.tab-content.active {
+    opacity: 1;
+    transform: none;
+}
+.tab-content:not(.active) {
+    opacity: 0;
+    transform: none;
+}
+
+/* Remove shimmer hover effect from tab buttons */
+.tab-button {
+    position: static;
+    overflow: visible;
+}
+.tab-button::before {
+    display: none;
+}
+.tab-button:hover::before {
+    display: none;
+}
+
+/* Remove transition from tab-button hover */
+.tab-button {
+    transition: none;
+} 

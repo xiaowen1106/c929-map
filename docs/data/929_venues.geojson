@@ -1,0 +1,496 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25LON",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at The O2",
+        "date": "Feb 14, 2025 (Cancelled)",
+        "venue": "The O2",
+        "city": "London",
+        "address": "London, United Kingdom",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "london_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0012068,
+          51.5025247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25LV",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Dolby Live at Park MGM",
+        "date": "Feb 28 & Mar 1, 2025",
+        "venue": "Dolby Live at Park MGM",
+        "city": "Las Vegas",
+        "address": "Las Vegas, United States",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "las_vegas_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.1775902,
+          36.1039821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25SEA",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Angel of the Winds Arena",
+        "date": "Mar 5, 2025",
+        "venue": "Angel of the Winds Arena",
+        "city": "Seattle",
+        "address": "Everett, United States",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "seattle_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2031761,
+          47.9785715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25NYC",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "周深Zhou Shen 9.29Hz World Concert Tour - New York",
+        "date": "Mar 9, 2025",
+        "venue": "Barclays Center",
+        "city": "New York",
+        "address": "New York, United States",
+        "description": "",
+        "source_link": "https://youtu.be/_utsQMOxuOU?si=FscNG9s3qMxEw9XB",
+        "emoji": "🎵",
+        "concertDataRef": "new_york_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9754156,
+          40.6826465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25TOR",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Coca-Cola Coliseum",
+        "date": "Mar 14-15, 2025",
+        "venue": "Coca-Cola Coliseum",
+        "city": "Toronto",
+        "address": "Toronto, Canada",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "toronto_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4153189,
+          43.6349022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25MEL",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Rod Laver Arena",
+        "date": "Mar 29, 2025",
+        "venue": "Rod Laver Arena",
+        "city": "Melbourne",
+        "address": "Melbourne, Australia",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "melbourne_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9759888,
+          -37.8216161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25SYD",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at International Convention Centre Sydney",
+        "date": "Apr 6, 2025",
+        "venue": "International Convention Centre Sydney",
+        "city": "Sydney",
+        "address": "Sydney, Australia",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "sydney_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.1969394,
+          -33.8748582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "25KL",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Axiata Arena",
+        "date": "Apr 12-13, 2025",
+        "venue": "Axiata Arena",
+        "city": "Kuala Lumpur",
+        "address": "Kuala Lumpur, Malaysia",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵",
+        "concertDataRef": "kuala_lumpur_concert.json"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6908643,
+          3.0538145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24SH",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Mercedes-Benz Arena",
+        "date": "May 18-19, 2024",
+        "venue": "Mercedes-Benz Arena",
+        "city": "Shanghai",
+        "address": "Shanghai, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.49282,
+          31.189042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24SHZH",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Shenzhen Universiade Sports Center Stadium",
+        "date": "Jun 1, 2024",
+        "venue": "Shenzhen Universiade Sports Center Stadium",
+        "city": "Shenzhen",
+        "address": "Shenzhen, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.0579,
+          22.5431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24CD",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Dong'an Lake Sports Park Stadium",
+        "date": "Jun 15, 2024",
+        "venue": "Dong'an Lake Sports Park Stadium",
+        "city": "Chengdu",
+        "address": "Chengdu, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.249847,
+          30.596862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24GY",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Guiyang Olympic Sports Center Stadium",
+        "date": "Jul 13, 2024",
+        "venue": "Guiyang Olympic Sports Center Stadium",
+        "city": "Guiyang",
+        "address": "Guiyang, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.605792,
+          26.616136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24WH",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Wuhan Sports Center Stadium",
+        "date": "Jul 27, 2024",
+        "venue": "Wuhan Sports Center Stadium",
+        "city": "Wuhan",
+        "address": "Wuhan, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.175798,
+          30.500238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24NJ",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Nanjing Olympic Sports Center Stadium",
+        "date": "Aug 10-11, 2024",
+        "venue": "Nanjing Olympic Sports Center Stadium",
+        "city": "Nanjing",
+        "address": "Nanjing, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.724828,
+          32.008567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24HZ",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Hangzhou Olympic Sports Center Stadium",
+        "date": "Aug 23-24, 2024",
+        "venue": "Hangzhou Olympic Sports Center Stadium",
+        "city": "Hangzhou",
+        "address": "Hangzhou, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.233388,
+          30.229779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24SY",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Shenyang Olympic Sports Centre Stadium",
+        "date": "Sep 7, 2024",
+        "venue": "Shenyang Olympic Sports Centre Stadium",
+        "city": "Shenyang",
+        "address": "Shenyang, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.46355,
+          41.743291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24BJ",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Beijing National Stadium",
+        "date": "Sep 21-22, 2024",
+        "venue": "Beijing National Stadium",
+        "city": "Beijing",
+        "address": "Beijing, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396606,
+          39.992739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24CQ",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Chongqing Olympic Sports Center Stadium",
+        "date": "Oct 6-7, 2024",
+        "venue": "Chongqing Olympic Sports Center Stadium",
+        "city": "Chongqing",
+        "address": "Chongqing, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.509597,
+          29.522422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24SZ",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Suzhou Sports Center Stadium",
+        "date": "Nov 9-10, 2024",
+        "venue": "Suzhou Sports Center Stadium",
+        "city": "Suzhou",
+        "address": "Suzhou, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.578369,
+          31.29377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24NC",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Nanchang International Sports Center Stadium",
+        "date": "Nov 23, 2024",
+        "venue": "Nanchang International Sports Center Stadium",
+        "city": "Nanchang",
+        "address": "Nanchang, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.821776,
+          28.623669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "24NN",
+        "type": "singer_activity",
+        "tour": "9.29Hz",
+        "title": "Concert at Guangxi Sports Center Main Stadium",
+        "date": "Dec 6-7, 2024",
+        "venue": "Guangxi Sports Center Main Stadium",
+        "city": "Nanning",
+        "address": "Nanning, China",
+        "description": "",
+        "source_link": "",
+        "emoji": "🎵"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.366217,
+          22.817227
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d3e3f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+    /* Fallback for older browsers */
+    text-align: center;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Fallback centering */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.loading-logo {
+    width: 300px;
+    height: 300px;
+    animation: spin 3s linear infinite;
+    /* Ensure logo is centered */
+    display: block;
+    margin: 0 auto;
+}
+
+.version-number {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #223D71;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    /* Ensure text is centered */
+    text-align: center;
+    width: 100%;
+    /* Fallback for flexbox issues */
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+} 

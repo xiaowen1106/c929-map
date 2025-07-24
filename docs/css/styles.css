@@ -1,0 +1,489 @@
+/* Import component styles */
+@import url('./header.css');
+@import url('./sidebar.css');
+@import url('./popup.css');
+@import url('./popup-mobile.css');
+@import url('./messagesPanel.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #map {
+        flex: 1;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #map {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* Remove conflicting detail-panel styles - let panel.css handle mobile */
+    
+    .close-panel {
+        top: 10px;
+        right: 10px;
+    }
+    
+
+    
+    .header-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Detail Panel */
+.detail-panel {
+    position: fixed;
+    top: 52px; /* Reduced from 60px to move panel up closer to header */
+    right: -25%; /* Start off-screen to the right */
+    width: 25%; /* Back to 1/4 of screen width */
+    height: calc(100vh - 90px); /* Reduced space from footer by increasing height */
+    background: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow: hidden; /* Prevent panel scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-panel.active {
+    right: 0;
+}
+
+.detail-content {
+    padding: 20px;
+    flex-grow: 1;
+    overflow: hidden; /* Prevent content scrolling */
+}
+
+.close-panel {
+    position: static; /* Remove absolute positioning to work with flexbox */
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.close-panel:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.close-panel:active {
+    transform: scale(0.95);
+}
+
+/* Detail Content Styles */
+#detail-info {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f7; /* Light grey background for the body */
+}
+
+
+
+/* View Details Button */
+.view-details {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4ECDC4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.view-details:hover {
+    background-color: #45b7aa;
+}
+
+.view-details:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Concert Panel Specific Styles */
+.concert-panel-content {
+    padding: 0; /* Remove padding from detail-content */
+}
+
+.concert-panel-content .panel-header {
+    background-color: #2c2c2c !important;
+    color: #fff !important;
+    border-bottom: 1px solid #2c2c2c !important;
+    border-top: 5px solid #2c2c2c !important;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.concert-panel-content .panel-header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.concert-panel-content .concert-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.concert-panel-content .panel-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.concert-panel-content .panel-body {
+    padding: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+}
+
+.concert-panel-content .date {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Adjustments for the main close button to not overlap */
+.detail-panel.active .close-panel {
+    top: 15px;
+    right: 20px;
+    z-index: 3;
+}
+
+/* Cluster text styling */
+.mapboxgl-marker-cluster {
+    background: rgba(255, 235, 59, 0.8);
+    border: 2px solid #FFEB3B;
+    border-radius: 50%;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mapboxgl-marker-cluster:hover {
+    background: rgba(255, 235, 59, 0.9);
+    border-color: #FFC107;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsive styles for concert panel */
+@media (max-width: 768px) {
+    .concert-panel-content .panel-header {
+        border-bottom: none !important;
+        border-top: none !important;
+        padding: 12px !important;
+    }
+    
+    .concert-panel-content .panel-body {
+        padding: 8px !important;
+        background: white !important;
+    }
+    
+    .concert-panel-content .panel-header h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .concert-panel-content .concert-icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 28px;
+    background: #223D71;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    z-index: 1000;
+}
+
+/* Hide footer on mobile */
+@media (max-width: 768px) {
+    .footer {
+        display: none;
+    }
+}
+
+/* ========================================
+   DARK MODE ICON PROTECTION
+   ======================================== */
+
+/* Prevent icons from being affected by dark mode */
+img[src*=".png"], 
+img[src*=".jpg"], 
+img[src*=".jpeg"], 
+img[src*=".gif"], 
+img[src*=".svg"],
+img[src*=".ico"] {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Specifically protect sidebar icons */
+.sidebar-icon,
+#sidebar-toggle-icon,
+.header-logo,
+.header-edit-btn img {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Protect tab icons */
+.tab-icon {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Protect music service icons */
+.music-service-icon img {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Protect edit panel icons */
+.edit-panel-follow-icons img {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Force light color scheme for the entire document to prevent dark mode */
+html {
+    color-scheme: light only;
+}
+
+/* Ensure images maintain their original colors */
+img {
+    color-scheme: light only;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Override any dark mode media queries */
+@media (prefers-color-scheme: dark) {
+    img[src*=".png"], 
+    img[src*=".jpg"], 
+    img[src*=".jpeg"], 
+    img[src*=".gif"], 
+    img[src*=".svg"],
+    img[src*=".ico"],
+    .sidebar-icon,
+    #sidebar-toggle-icon,
+    .header-logo,
+    .header-edit-btn img,
+    .tab-icon,
+    .music-service-icon img,
+    .edit-panel-follow-icons img {
+        color-scheme: light only !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        -o-filter: none !important;
+        -webkit-invert: none !important;
+        -moz-invert: none !important;
+        -ms-invert: none !important;
+        -o-invert: none !important;
+        invert: none !important;
+        brightness: 1 !important;
+        contrast: 1 !important;
+        saturate: 1 !important;
+        hue-rotate: 0deg !important;
+    }
+    
+    /* Ensure the document stays in light mode */
+    html, body {
+        color-scheme: light only !important;
+    }
+} 
+
+/* ========================================
+   MAPBOX MAP ICON PROTECTION
+   ======================================== */
+
+/* Protect Mapbox map icons from dark mode */
+.mapboxgl-canvas,
+.mapboxgl-canvas-container,
+.mapboxgl-marker,
+.mapboxgl-marker svg,
+.mapboxgl-marker img,
+.mapboxgl-popup,
+.mapboxgl-popup-content,
+.mapboxgl-popup-tip {
+    color-scheme: light only !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+    -webkit-invert: none !important;
+    -moz-invert: none !important;
+    -ms-invert: none !important;
+    -o-invert: none !important;
+    invert: none !important;
+    brightness: 1 !important;
+    contrast: 1 !important;
+    saturate: 1 !important;
+    hue-rotate: 0deg !important;
+}
+
+/* Protect Mapbox symbol layers */
+.mapboxgl-canvas-container canvas {
+    color-scheme: light only !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Protect Mapbox markers specifically */
+.mapboxgl-marker {
+    color-scheme: light only !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
+}
+
+/* Override any dark mode media queries for map elements */
+@media (prefers-color-scheme: dark) {
+    .mapboxgl-canvas,
+    .mapboxgl-canvas-container,
+    .mapboxgl-marker,
+    .mapboxgl-marker svg,
+    .mapboxgl-marker img,
+    .mapboxgl-popup,
+    .mapboxgl-popup-content,
+    .mapboxgl-popup-tip,
+    .mapboxgl-canvas-container canvas {
+        color-scheme: light only !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        -moz-filter: none !important;
+        -ms-filter: none !important;
+        -o-filter: none !important;
+        -webkit-invert: none !important;
+        -moz-invert: none !important;
+        -ms-invert: none !important;
+        -o-invert: none !important;
+        invert: none !important;
+        brightness: 1 !important;
+        contrast: 1 !important;
+        saturate: 1 !important;
+        hue-rotate: 0deg !important;
+    }
+} 

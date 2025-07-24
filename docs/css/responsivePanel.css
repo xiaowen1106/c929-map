@@ -1,0 +1,312 @@
+/* ========================================
+   RESPONSIVE PANEL STYLES
+   ======================================== */
+
+/* Mobile responsive styles for concert panel */
+@media (max-width: 768px) {
+    /* Draggable functionality moved to draggablePanel.css */
+    
+    /* Make concert panel header more compact on mobile */
+    .concert-panel-content .panel-header {
+        padding: 6px 8px !important; /* Further reduced for more compact header */
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Mobile concert panel navigation buttons */
+    .concert-panel-content .panel-header .navigation-buttons {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: center !important;
+        z-index: 1005 !important; /* Higher than drag handle and other elements */
+        position: relative !important; /* Use relative positioning like desktop */
+        pointer-events: auto !important; /* Ensure buttons are clickable */
+    }
+    
+    .concert-panel-content .panel-header .nav-btn {
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #fff !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .concert-panel-content .panel-header .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.3) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    .concert-panel-content .panel-header .nav-btn:active {
+        background: rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    .concert-panel-content .panel-header h2 {
+        font-size: 0.9rem !important; /* Further reduced for more compact header */
+        margin: 0 !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Adjust tab content heights for mobile slide-up panel */
+    .concert-panel-content .tab-content {
+        max-height: calc(50vh - 80px) !important; /* Mobile: limit height to 50vh minus compact header and primary tabs */
+        overflow-y: auto !important;
+    }
+    
+    .concert-panel-content .secondary-tab-content {
+        max-height: calc(50vh - 120px) !important; /* Mobile: limit height to 50vh minus compact header, primary tabs, and secondary tabs */
+        overflow-y: auto !important;
+        padding: 8px !important;
+        border-top: none !important; /* Remove border on mobile */
+    }
+    
+    .concert-panel-content .secondary-content {
+        max-height: calc(50vh - 160px) !important; /* Mobile: limit height to 50vh minus all compact fixed elements */
+        overflow-y: auto !important;
+    }
+    
+    /* Override fixed heights when panel is expanded */
+    .detail-panel[style*="height: 70vh"] .concert-panel-content .tab-content {
+        max-height: calc(70vh - 70px) !important;
+    }
+    
+    .detail-panel[style*="height: 70vh"] .concert-panel-content .secondary-tab-content {
+        max-height: calc(70vh - 110px) !important;
+    }
+    
+    .detail-panel[style*="height: 70vh"] .concert-panel-content .secondary-content {
+        max-height: calc(70vh - 150px) !important;
+    }
+    
+    /* Make primary tabs more compact on mobile */
+    .primary-tabs .tab-button {
+        font-size: 1rem !important; /* Slightly reduced for more compact look */
+        padding: 8px 12px 8px 20px !important; /* Extra left padding for icon space */
+        border-radius: 20px !important; /* Reduced border radius */
+        border: 1px solid #ddd !important; /* Add borders on mobile */
+        min-height: 40px !important; /* Slightly reduced but still touch-friendly */
+        margin: 0px 5px;
+        position: relative !important; /* Ensure proper positioning for absolute icon */
+    }
+    
+    /* Make secondary tabs more compact on mobile */
+    .secondary-tabs .tab-button {
+        font-size: 0.9rem !important; /* Reduced for more compact look */
+        padding: 6px 10px !important; /* Reduced padding for more compact tabs */
+        border-radius: 16px !important; /* Reduced border radius */
+        border: 1px solid #ddd !important; /* Add borders on mobile */
+        min-height: 32px !important; /* Reduced but still touch-friendly */
+    }
+    
+    /* Active state borders for mobile primary tabs */
+    .primary-tabs .tab-button.active.shenshen-primary-tab {
+        border: 1px solid #6b4a3a !important;
+    }
+    
+    .primary-tabs .tab-button.active.fans-primary-tab {
+        border: 1px solid #005fb3 !important;
+    }
+    
+    /* Active state borders for mobile secondary tabs */
+    .shenshen-tabs .tab-button.active {
+        border: 1px solid #f8c56e !important;
+    }
+    
+    .fans-tabs .tab-button.active {
+        border: 1px solid #a7d8f9 !important;
+    }
+    
+    /* Ensure proper spacing on mobile */
+    .concert-panel-content .tabs {
+        gap: 8px !important; /* Reduced gap for more compact layout */
+        margin-bottom: 6px !important; /* Reduced margin for more compact layout */
+    }
+    
+    .secondary-tabs {
+        margin-bottom: 8px !important; /* Reduced margin for more compact layout */
+        padding: 0 6px !important; /* Reduced padding for more compact layout */
+        flex-wrap: nowrap !important; /* Prevent wrapping on mobile */
+    }
+    
+    /* Adjust tab icon sizing and positioning for mobile */
+    .tab-icon {
+        width: 48px !important; /* Slightly smaller than desktop but still prominent */
+        height: 48px !important; /* Slightly smaller than desktop but still prominent */
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        left: -12px !important; /* Adjusted for mobile positioning */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 2 !important;
+        border: 2px solid #fff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+        pointer-events: none !important;
+    }
+    
+    /* Ensure smooth scrolling on mobile */
+    .concert-panel-content .tab-content,
+    .concert-panel-content .secondary-content,
+    .concert-panel-content .secondary-tab-content {
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+    }
+    
+    /* Remove shadows to indicate scrollable content on mobile */
+    .concert-panel-content .tab-content.active,
+    .concert-panel-content .secondary-content.active {
+        box-shadow: none !important;
+    }
+    
+    /* Remove borders from message items on mobile */
+    .message-item {
+        border: none !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .message-item:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+        transform: none !important;
+    }
+    
+    /* Remove borders from video and media items on mobile */
+    .video-item, .media-item {
+        border-bottom: none !important;
+        padding: 2px 0 !important;
+    }
+    
+    /* Restore borders for video items in concert panel */
+    .concert-panel-content .video-item,
+    .concert-panel-content .media-item {
+        border-bottom: 1px solid #e1e5e9 !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .concert-panel-content .video-item:last-child,
+    .concert-panel-content .media-item:last-child {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Remove borders from song items on mobile */
+    .song-item {
+        border-bottom: none !important;
+        padding: 6px 4px !important;
+    }
+    
+    /* Remove borders from message headers on mobile */
+    .message-header {
+        border-bottom: none !important;
+    }
+    
+    /* Ensure message wall has consistent height on mobile */
+    .message-wall {
+        min-height: calc(50vh - 100px) !important; /* Match loading state height with compact layout */
+    }
+    
+    /* Override fixed heights when panel is expanded */
+    .detail-panel[style*="height: 70vh"] .message-wall {
+        min-height: calc(70vh - 100px) !important;
+    }
+}
+
+/* Edit panel responsive styles */
+@media (max-width: 768px) {
+    .edit-panel {
+        top: 48px;
+        right: -100vw;
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
+        min-height: 220px;
+        max-height: calc(100vh - 60px);
+        border-radius: 0 0 16px 16px;
+    }
+    .edit-panel.active {
+        right: 0;
+    }
+    .edit-panel-content {
+        padding: 18px 8px 12px 8px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile-specific adjustments for video covers */
+@media (max-width: 768px) {
+    .mobile-video-cover {
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+    
+    /* Remove bottom margin when inside video containers */
+    .video-item .mobile-video-cover,
+    .media-item .mobile-video-cover {
+        margin-bottom: 0;
+    }
+    
+    .video-thumbnail {
+        height: 160px;
+    }
+    
+    .play-button {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .play-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    /* Ensure mobile video covers work well in concert panel */
+    .concert-panel-content .mobile-video-cover {
+        margin-bottom: 0;
+    }
+    
+    /* Activity media container specific adjustments */
+    .activity-media-container .mobile-video-cover {
+        margin-bottom: 0;
+        width: 100%;
+    }
+    
+    .activity-media-container .video-thumbnail {
+        height: auto;
+        min-height: 120px;
+    }
+}
+
+/* Desktop adjustments for video covers */
+@media (min-width: 769px) {
+    .mobile-video-cover {
+        max-width: 400px;
+    }
+}
+
+/* Playlist mobile video styles */
+.song-mobile-video {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.song-mobile-video .mobile-video-cover {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .song-mobile-video {
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+} 

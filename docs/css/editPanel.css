@@ -1,0 +1,291 @@
+/* Edit Panel Styles (moved from panel.css) */
+
+.edit-panel {
+    position: fixed;
+    top: 60px;
+    right: -30%;
+    width: 450px;
+    max-width: 98vw;
+    height: auto;
+    min-height: 220px;
+    max-height: 480px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    border-radius: 16px;
+    z-index: 1200;
+    transition: right 0.3s cubic-bezier(.4,0,.2,1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    /* Ensure panel is hidden by default */
+    visibility: hidden;
+    opacity: 0;
+}
+
+.edit-panel.active {
+    right: 32px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.edit-panel-content {
+    padding: 24px 20px 16px 20px;
+    font-size: 0.95rem;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-panel-btn {
+    background: #eaf1fa;
+    color: #223D71 !important;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(34,61,113,0.08);
+    transition: background 0.18s;
+}
+
+.edit-panel-btn:hover {
+    background: #d5e3f2;
+}
+
+.edit-panel-flex {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-top: 1px solid #e0e6f0;
+    margin-top: 6px;
+    padding-top: 6px;
+}
+
+.edit-panel-logo {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #eaf1fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #223D71;
+}
+
+.edit-panel-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.edit-panel-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edit-panel-title {
+    font-size: 1.08rem;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.edit-panel-desc {
+    display: block;
+    font-size: 0.98rem;
+    color: #444;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.edit-panel-btn-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.edit-panel-btn-icon-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.1em;
+}
+
+.edit-panel-social {
+    border-top: 1px solid #e0e6f0;
+    margin-top: 6px;
+    padding-top: 6px;
+    font-size: 0.93rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.edit-panel-social a {
+    color: #223D71;
+    text-decoration: none;
+    transition: text-decoration 0.15s;
+}
+
+.edit-panel-social a:hover {
+    text-decoration: underline;
+}
+
+.edit-panel-follow-accounts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.edit-panel-follow-left {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.edit-panel-follow-right {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.edit-panel-follow-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-panel-follow > div {
+    margin-bottom: 10px;
+}
+
+.edit-panel-follow > div:last-child {
+    margin-bottom: 0;
+}
+
+.edit-panel-follow-links a {
+    color: #223D71;
+    text-decoration: none;
+    transition: text-decoration 0.15s;
+}
+
+.edit-panel-follow-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .edit-panel {
+        top: 48px;
+        right: -100vw;
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
+        min-height: 120px;
+        max-height: 480px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .edit-panel.active {
+        right: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .edit-panel-content {
+        padding: 12px 3vw 10px 3vw;
+        font-size: 0.92rem;
+        gap: 12px;
+    }
+
+    .edit-panel-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .edit-panel-logo {
+        width: 80px;
+        height: 80px;
+        min-width: 70px;
+        max-width: 90px;
+        flex: 0 0 auto;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: -1;
+        align-self: center;
+    }
+
+    .edit-panel-main {
+        flex: 1 1 0%;
+        min-width: 0;
+        max-width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        word-break: break-word;
+    }
+
+    .edit-panel-title {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+
+    .edit-panel-desc {
+        font-size: 0.85rem;
+        margin-top: 2px;
+    }
+
+    .edit-panel-btn-row {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+    .edit-panel-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.98rem;
+        padding: 7px 0;
+    }
+
+    .edit-panel-social {
+        font-size: 0.85rem;
+        margin-top: 2px;
+        padding-top: 2px;
+        text-align: left;
+        word-break: break-word;
+    }
+
+    .edit-panel-follow-accounts {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .edit-panel-follow-right {
+        align-items: flex-start;
+    }
+} 

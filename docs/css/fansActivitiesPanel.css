@@ -1,0 +1,438 @@
+/* Fans Activities Panel Styles */
+.fans-activities-panel {
+    position: fixed;
+    top: 52px;
+    right: -25%;
+    width: 25%;
+    height: calc(100vh - 90px);
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.fans-activities-panel.active {
+    right: 8px;
+}
+
+.fans-activities-panel .panel-header {
+    background: linear-gradient(135deg, #FFD68A 0%, #FFC107 100%);
+    color: #333;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    user-select: none;
+}
+
+.fans-activities-panel .panel-header:active {
+    /* No dragging behavior on desktop */
+}
+
+.fans-activities-panel .panel-header .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fans-activities-panel .panel-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.fans-activities-panel .panel-header .city-filter {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+/* Navigation buttons styles */
+.fans-activities-panel .navigation-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    z-index: 1004; /* Higher than drag handle */
+    position: relative;
+}
+
+.fans-activities-panel .nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Ensure buttons are clickable */
+    position: relative;
+    z-index: 1005; /* Higher than drag handle */
+}
+
+.fans-activities-panel .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.fans-activities-panel .nav-btn:active {
+    transform: translateY(0);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.fans-activities-panel .nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.fans-activities-panel .panel-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.fans-activities-panel .activities-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.fans-activities-panel .activity-item {
+    padding: 16px;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.fans-activities-panel .activity-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    border-color: #FFC107;
+}
+
+.fans-activities-panel .activity-item.selected {
+    border-color: #FFC107;
+    background: rgba(255, 193, 7, 0.05);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.fans-activities-panel .activity-item.selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #FFC107;
+    border-radius: 2px;
+}
+
+.fans-activities-panel .activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.fans-activities-panel .activity-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.fans-activities-panel .location {
+    color: #7f8c8d;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.fans-activities-panel .activity-date {
+    color: #95a5a6;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.fans-activities-panel .activity-description {
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    word-wrap: break-word;
+}
+
+/* Media content styles for panel */
+.fans-activities-panel .activity-media-container {
+    margin: 12px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.fans-activities-panel .activity-video-panel {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 8px;
+}
+
+.fans-activities-panel .activity-photo-panel {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.fans-activities-panel .activity-image-panel {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Video cover styles - using existing mobile-video-cover from panel.css */
+.fans-activities-panel .mobile-video-cover {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.fans-activities-panel .activity-media-container .mobile-video-cover {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
+}
+
+.fans-activities-panel .activity-media-container .video-thumbnail {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+}
+
+.fans-activities-panel .activity-media-container .video-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fans-activities-panel .activity-media-fallback-panel {
+    width: 100%;
+    height: 150px;
+    background: #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Loading activities styles */
+.loading-activities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.loading-activities p {
+    margin: 0;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Draggable panel states */
+.fans-activities-panel.dragging {
+    transition: none !important;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.fans-activities-panel.snap-open {
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.fans-activities-panel.snap-closed {
+    transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    bottom: -50vh !important;
+}
+
+.fans-activities-panel.snap-expanded {
+    transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Responsive design for fans activities panel */
+@media (max-width: 768px) {
+    .fans-activities-panel {
+        position: fixed !important;
+        top: auto !important;
+        bottom: -50vh !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 50vh;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important;
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        z-index: 1001 !important;
+        overflow: hidden !important;
+        border: none !important;
+    }
+    
+    .fans-activities-panel.active {
+        bottom: 0 !important;
+        transform: none !important;
+    }
+    
+    /* Ensure smooth closing animation by overriding transition for snap-closed state */
+    .fans-activities-panel.snap-closed {
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        bottom: -50vh !important;
+    }
+    
+    .fans-activities-panel .panel-header {
+        border-radius: 12px 12px 0 0 !important;
+        padding: 12px !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        border: none !important;
+        cursor: grab !important;
+        user-select: none !important;
+    }
+    
+    .fans-activities-panel .panel-header:active {
+        cursor: grabbing !important;
+    }
+    
+    .fans-activities-panel .panel-header::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+    
+    .fans-activities-panel .panel-header:hover::before {
+        opacity: 0.8;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Mobile navigation buttons */
+    .fans-activities-panel .navigation-buttons {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: center !important;
+        z-index: 1005 !important; /* Higher than drag handle and other elements */
+        position: absolute !important;
+        right: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        pointer-events: auto !important; /* Ensure buttons are clickable */
+    }
+    
+    .fans-activities-panel .nav-btn {
+        background: rgba(255, 255, 255, 0.2) !important;
+        color: #333 !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .fans-activities-panel .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.3) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+    
+    .fans-activities-panel .nav-btn:active {
+        background: rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    .fans-activities-panel .panel-body {
+        max-height: calc(50vh - 60px);
+        min-height: calc(50vh - 60px);
+        overflow: hidden !important;
+        padding: 8px !important;
+        border: none !important;
+        background: white !important;
+    }
+    
+    .fans-activities-panel .activities-list {
+        max-height: calc(50vh - 80px);
+        min-height: calc(50vh - 80px);
+        overflow-y: auto !important;
+        padding: 8px !important;
+    }
+    
+    /* Remove borders from activity items on mobile */
+    .fans-activities-panel .activity-item {
+        border: none !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .fans-activities-panel .activity-item:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+        transform: none !important;
+    }
+    
+    /* Mobile video cover styles */
+    .fans-activities-panel .mobile-video-cover {
+        height: 120px !important;
+    }
+    
+    .fans-activities-panel .activity-media-container .mobile-video-cover {
+        width: 100% !important;
+        margin-bottom: 0 !important;
+        height: auto !important;
+    }
+    
+    .fans-activities-panel .activity-media-container .video-thumbnail {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
+    }
+} 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>深米地图 ShenMi.World</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/panel.css">
+    <link href='css/tabs.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/responsivePanel.css">
+    <link rel="stylesheet" href="css/draggablePanel.css">
+    <link rel="stylesheet" href="css/editPanel.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='css/sidebar.css' rel='stylesheet' />
+    <link href='css/messagesPanel.css' rel='stylesheet' />
+    <link href='css/fansActivitiesPanel.css' rel='stylesheet' />
+        <link href='css/bonusPanel.css' rel='stylesheet' />
+    <link href='css/loading.css' rel='stylesheet' />
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="img/ShenMi.World.logo.png" alt="Loading..." class="loading-logo">
+            <div class="version-number"></div>
+        </div>
+    </div>
+
+    <header class="main-header" id="main-header">
+        <img src="img/ShenMi.World.logo.png" alt="Logo" class="header-logo" id="header-logo" />
+        <span class="header-title">ShenMi.World</span>
+        <button id="edit-btn" class="header-edit-btn" aria-label="Edit">
+            <img src="img/edit.png" alt="Edit" style="width:28px;height:28px;" />
+        </button>
+    </header>
+    <div class="container">
+        <div class="sidebar-container" id="sidebar-container">
+            <button id="sidebar-toggle-btn" class="sidebar-toggle-btn" aria-label="Toggle layers">
+                <img id="sidebar-toggle-icon" src="img/layers-dark.png" alt="Toggle Layers" />
+            </button>
+            <div class="sidebar collapsed" id="sidebar">
+                <div class="sidebar-items">
+                    <div class="sidebar-item" data-layer="concerts">
+                        <img src="img/929hz.png" alt="Concerts" class="sidebar-icon" />
+                        <div class="sidebar-label">9.29Hz</div>
+                    </div>
+                    <div class="sidebar-item" data-layer="fan-wishes">
+                        <img src="img/MiStar_Icon.png" alt="Messages" class="sidebar-icon" />
+                        <div class="sidebar-label">留言</div>
+                    </div>
+                    <div class="sidebar-item" data-layer="fans-activities">
+                        <img src="img/MiJie_circle.png" alt="Fans Activities" class="sidebar-icon" />
+                        <div class="sidebar-label">团建</div>
+                    </div>
+                    <div class="sidebar-item" data-layer="bonus">
+                        <img src="img/QuestionMark.png" alt="Bonus" class="sidebar-icon" />
+                        <div class="sidebar-label">彩蛋</div>
+                    </div>
+                    <div class="sidebar-item" data-layer="flying-tracking">
+                        <img src="img/Journey.png" alt="Flight Tracking" class="sidebar-icon" />
+                        <div class="sidebar-label">飞行</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div id="detail-panel" class="detail-panel">
+        <div class="detail-content">
+            <div id="detail-info"></div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">© 2025 Zhou Shen North America Fan Club</div>
+
+    <!-- Edit Panel -->
+    <div id="edit-panel" class="edit-panel">
+        <div class="edit-panel-content"></div>
+    </div>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/utils/preloader.js"></script>
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script type="module" src="js/sidebar.js"></script>
+
+    <script type="module">
+        import { config } from './js/config.js';
+        
+        // Set version number from config
+        document.addEventListener('DOMContentLoaded', function() {
+            const versionElement = document.querySelector('.version-number');
+            if (versionElement) {
+                versionElement.textContent = config.version;
+            }
+        });
+        
+        // Loading screen management
+        window.addEventListener('load', function() {
+            // Start preloading resources immediately
+            if (window.preloader) {
+                window.preloader.startPreloading();
+            }
+            
+            // Start the globe animation earlier, after 0.5 seconds
+            setTimeout(function() {
+                if (window.startGlobeAnimation) {
+                    window.startGlobeAnimation();
+                }
+            }, 1000); // Start animation after 1 second
+            
+            // Hide loading screen after a minimum time to ensure smooth transition
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('fade-out');
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500); // Show loading for at least 1.5 seconds
+        });
+    </script>
+
+</body>
+</html> 

@@ -1,0 +1,581 @@
+/* Bonus Panel Styles */
+.bonus-panel {
+    position: fixed;
+    top: 52px; /* Reduced from 60px to move panel up closer to header */
+    right: -25%; /* Start off-screen to the right - same as concert panel */
+    width: 25%; /* Back to 1/4 of screen width */
+    height: calc(100vh - 90px); /* Reduced space from footer by increasing height */
+    background: #F8F2F0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Same shadow as concert panel */
+    z-index: 1000;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Rounded corners for desktop */
+}
+
+.bonus-panel.active {
+    right: 8px;
+}
+
+.bonus-panel .panel-header {
+    background: linear-gradient(135deg, #6A3B23 0%, #8B4513 100%);
+    color: #F8F2F0;
+    padding: 12px 20px; /* Reduced from 20px to 12px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for desktop */
+}
+
+/* Header navigation buttons */
+.bonus-panel .panel-header .navigation-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    z-index: 1004; /* Higher than drag handle */
+    position: relative;
+}
+
+.bonus-panel .panel-header .nav-btn {
+    background: rgba(248, 242, 240, 0.2);
+    color: #F8F2F0;
+    border: 1px solid rgba(248, 242, 240, 0.3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Ensure buttons are clickable */
+    position: relative;
+    z-index: 1005; /* Higher than drag handle */
+}
+
+.bonus-panel .panel-header .nav-btn:hover {
+    background: rgba(248, 242, 240, 0.3);
+    border-color: rgba(248, 242, 240, 0.5);
+    transform: translateY(-1px);
+}
+
+.bonus-panel .panel-header .nav-btn:active {
+    transform: translateY(0);
+    background: rgba(248, 242, 240, 0.4);
+}
+
+    .bonus-panel .panel-header .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        flex: 1;
+    }
+
+    .bonus-panel .panel-header h2 {
+        margin: 0;
+        font-size: 1.2rem; /* Reduced from 1.5rem to 1.2rem */
+        font-weight: 600;
+        text-align: left;
+    }
+
+.bonus-panel .panel-header .city-filter {
+    font-size: 0.9rem;
+    color: #F8F2F0;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.bonus-panel .panel-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.bonus-panel .bonus-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Navigation buttons for bonus panel */
+.bonus-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: rgba(106, 59, 35, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(106, 59, 35, 0.1);
+}
+
+.bonus-navigation .nav-btn {
+    background: #6A3B23;
+    color: #F8F2F0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.bonus-navigation .nav-btn:hover {
+    background: #8B4513;
+    transform: translateY(-1px);
+}
+
+.bonus-navigation .nav-btn:active {
+    transform: translateY(0);
+}
+
+.bonus-navigation .bonus-counter {
+    font-size: 0.9rem;
+    color: #6A3B23;
+    font-weight: 600;
+}
+
+/* Bonus header styles */
+.bonus-panel .bonus-header {
+    margin-bottom: 16px;
+}
+
+.bonus-panel .bonus-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.bonus-panel .bonus-location {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.bonus-panel .bonus-date {
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
+/* Content area bonus title styling */
+.bonus-panel .bonus-content .bonus-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    display: block; /* Override flex for content area */
+}
+
+.bonus-panel .bonus-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 12px;
+}
+
+/* Content area bonus date and location styling */
+.bonus-panel .bonus-content .bonus-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bonus-panel .bonus-content .bonus-date::before {
+    content: "📅";
+    font-size: 0.9rem;
+}
+
+.bonus-panel .bonus-content .bonus-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bonus-panel .bonus-content .bonus-location::before {
+    content: "";
+    font-size: 0.9rem;
+}
+
+/* Bonus description and content styles */
+.bonus-panel .bonus-description {
+    background: rgba(106, 59, 35, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #6A3B23;
+    font-weight: 500;
+    border-left: 3px solid #6A3B23;
+}
+
+.bonus-panel .bonus-content-text {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    word-wrap: break-word;
+    margin-bottom: 16px;
+}
+
+/* Increase spacing only for line breaks */
+.bonus-panel .bonus-content-text br {
+    display: block;
+    content: "";
+    margin-top: 0.5em;
+}
+
+/* Media content styles for panel */
+.bonus-panel .bonus-media {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bonus-panel .bonus-video {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.bonus-panel .bonus-photo {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.bonus-panel .bonus-photo.clickable {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bonus-panel .bonus-photo.clickable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bonus-panel .bonus-video.reference-video {
+    position: relative;
+}
+
+/* Removed the top-right link button for reference videos */
+
+.bonus-panel .bonus-video-panel {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 8px;
+}
+
+.bonus-panel .bonus-photo-panel {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.bonus-panel .bonus-image-panel {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Video cover styles - using existing mobile-video-cover from panel.css */
+.bonus-panel .mobile-video-cover {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bonus-panel .bonus-media-fallback-panel {
+    width: 100%;
+    height: 150px;
+    background: #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Loading bonus styles */
+.loading-bonus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.loading-bonus p {
+    margin: 0;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Responsive design for bonus panel */
+@media (max-width: 768px) {
+    .bonus-panel {
+        position: fixed !important;
+        top: auto !important;
+        bottom: -50vh !important; /* Start off-screen at bottom */
+        left: 0 !important; /* Full width from left edge */
+        right: 0 !important; /* Full width to right edge */
+        width: 100% !important; /* Full width */
+        height: 50vh !important;
+        border-radius: 12px 12px 0 0 !important; /* Rounded top corners for mobile */
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.15) !important; /* Shadow from top */
+        transition: bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        z-index: 1001 !important;
+        overflow: hidden !important;
+        border: none !important; /* Remove border */
+        touch-action: pan-y !important; /* Allow vertical scrolling but prevent horizontal */
+    }
+    
+    .bonus-panel.active {
+        bottom: 0 !important; /* Position from bottom edge - match concert panel */
+        transform: none !important; /* Prevent any transform-based positioning changes */
+    }
+    
+    /* Dragging states */
+    .bonus-panel.dragging {
+        transition: none !important; /* Disable transitions during drag */
+        user-select: none !important;
+    }
+    
+    .bonus-panel.dragging .panel-body {
+        pointer-events: none !important; /* Disable interactions during drag */
+    }
+    
+    /* Snap states */
+    .bonus-panel.snap-closed {
+        bottom: -50vh !important;
+        height: 50vh !important;
+    }
+    
+    .bonus-panel.snap-open {
+        bottom: 0 !important;
+        height: 50vh !important;
+    }
+    
+    .bonus-panel.snap-expanded {
+        bottom: 0 !important;
+        height: 70vh !important;
+    }
+    
+    /* Force expanded state even after snap classes are removed */
+    .bonus-panel[style*="height: 70vh"] {
+        bottom: 0 !important;
+        height: 70vh !important;
+    }
+    
+    /* Visual feedback during dragging */
+    .bonus-panel.dragging {
+        box-shadow: 0 -8px 32px rgba(0,0,0,0.25) !important;
+    }
+    
+    /* Enhanced drag handle indicator */
+    .bonus-panel::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 2px;
+        z-index: 11;
+        transition: background-color 0.2s ease;
+    }
+    
+    .bonus-panel.dragging::after {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Visual feedback for expansion */
+    .bonus-panel[style*="height: 70vh"]::after {
+        background: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Add a larger touch target for dragging - now covers the entire panel-header */
+    .bonus-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px; /* Reduced to cover compact panel-header height */
+        z-index: 10;
+        cursor: grab;
+    }
+    
+    .bonus-panel.dragging::before {
+        cursor: grabbing;
+    }
+    
+    /* Ensure drag handle is above other elements */
+    .bonus-panel::after {
+        z-index: 1002 !important;
+    }
+    
+    .bonus-panel .panel-header {
+        border-radius: 12px 12px 0 0 !important; /* Match mobile border radius */
+        padding: 12px !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+        background: linear-gradient(135deg, #6A3B23 0%, #8B4513 100%) !important;
+        border: none !important; /* Remove border */
+        cursor: grab !important; /* Indicate draggable area */
+        user-select: none !important; /* Prevent text selection during drag */
+        position: relative !important; /* For absolute positioning of navigation buttons */
+    }
+    
+    /* Mobile navigation buttons */
+    .bonus-panel .panel-header .navigation-buttons {
+        display: flex !important;
+        gap: 6px !important;
+        align-items: center !important;
+        z-index: 1005 !important; /* Higher than drag handle and other elements */
+        position: absolute !important;
+        right: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        pointer-events: auto !important; /* Ensure buttons are clickable */
+    }
+    
+    .bonus-panel .panel-header .nav-btn {
+        background: rgba(248, 242, 240, 0.2) !important;
+        color: #F8F2F0 !important;
+        border: 1px solid rgba(248, 242, 240, 0.3) !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        min-width: 28px !important;
+        height: 28px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .bonus-panel .panel-header .nav-btn:hover {
+        background: rgba(248, 242, 240, 0.3) !important;
+        border-color: rgba(248, 242, 240, 0.5) !important;
+    }
+    
+    .bonus-panel .panel-header .nav-btn:active {
+        background: rgba(248, 242, 240, 0.4) !important;
+    }
+    
+    .bonus-panel.dragging .panel-header {
+        cursor: grabbing !important;
+    }
+    
+    .bonus-panel .panel-body {
+        flex: 1 !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .bonus-panel .bonus-content {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        padding: 16px !important;
+    }
+    
+    /* Content height management for expanded state */
+    .bonus-panel[style*="height: 70vh"] .panel-body {
+        max-height: calc(70vh - 40px) !important;
+        min-height: calc(70vh - 40px) !important;
+    }
+    
+    .bonus-panel[style*="height: 70vh"] .bonus-content {
+        max-height: calc(70vh - 80px) !important;
+        min-height: calc(70vh - 80px) !important;
+    }
+    
+    /* Ensure expanded state persists */
+    .bonus-panel.active[style*="height: 70vh"] {
+        bottom: 0 !important;
+        height: 70vh !important;
+        transform: none !important;
+    }
+    
+    .bonus-panel .bonus-navigation {
+        margin-bottom: 16px !important;
+        padding: 10px !important;
+    }
+    
+    .bonus-panel .bonus-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .bonus-panel .bonus-meta {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .bonus-panel .bonus-description {
+        font-size: 0.9rem !important;
+        padding: 10px !important;
+    }
+    
+    .bonus-panel .bonus-content-text {
+        font-size: 0.9rem !important;
+    }
+    
+    .bonus-panel .mobile-video-cover {
+        width: 100% !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+    }
+    
+
+    
+    /* Panel visibility states */
+    .bonus-panel:not(.active) {
+        pointer-events: none !important;
+        opacity: 0 !important;
+        transition: opacity 0.2s;
+    }
+    
+    .bonus-panel.active {
+        pointer-events: auto !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Desktop styles - disable draggable functionality */
+@media (min-width: 769px) {
+    .bonus-panel::before,
+    .bonus-panel::after {
+        display: none !important;
+    }
+    
+    .bonus-panel {
+        touch-action: auto !important;
+    }
+} 
