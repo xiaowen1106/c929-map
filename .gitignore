@@ -68,4 +68,7 @@ docs/data/Canada CMA Bou_FeaturesToJSO.geojson
 docs/data/Canada_Provinc_FeaturesToJSO.geojson
 
 # Source folder
-source/ 
+source/
+
+# Scripts folder
+scripts/ 
