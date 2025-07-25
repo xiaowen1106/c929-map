@@ -1050,6 +1050,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -93.73658475368215,
+          41.62515740742688
+        ]
+      },
+      "properties": {
+        "fakeId": 172,
+        "displayName": "Xiang Ma",
+        "country": "United States",
+        "city": "Iowa",
+        "locationString": "Urbandale, Iowa, United States",
+        "message": "祝周深健康平安越来越好！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -93.62264580036225,
           41.583668407426885
         ]
@@ -1626,6 +1644,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -117.1473405594221,
+          33.492068407426885
+        ]
+      },
+      "properties": {
+        "fakeId": 175,
+        "displayName": "欧阳",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Temecula, California, United States",
+        "message": "感谢周深的音乐，陪我度过异国他乡那些难熬的时光！除了亲人以外，我从未感到有一个陌生人的命运能和我如此紧密相连。他的一举一动都扣动着我的心弦，他的所有坎坷与挫折都让我感同深受！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -117.68435496256564,
           33.645551407426886
         ]
@@ -1925,6 +1961,24 @@
         "city": "California",
         "locationString": "Agoura Hills, California, United States",
         "message": "深深宝贝，真是无比庆幸此生听到了你❤️，从此成为一粒生米。因为你我重拾中文音乐，因为你生活变得美好太多。感恩世巡LV多伦多四场和你同频。宝贝你真的会发光！我没有大的愿望，只希望你好好的，做成你想做的事。愿无论世间如何变幻，你的内心世界永远春暖花开。爱你哦！❤️❤️❤️"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.14506680464555,
+          36.169528047656634
+        ]
+      },
+      "properties": {
+        "fakeId": 174,
+        "displayName": "Suri",
+        "country": "United States",
+        "city": "Nevada",
+        "locationString": "Las Vegas, Nevada, United States",
+        "message": "亲爱的深深！今天是我们认识的1918天啦！你的声音总是出现在我青春的各个角落！在喜欢你的第六年我终于见到你了！你怎么能一次又一次的肯定我给我鼓励！我真的好幸运能遇到你！谢谢你的存在！我爱你"
       }
     },
     {
@@ -3030,17 +3084,35 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          104.08013487632374,
-          30.657797407426887
+          -46.645870298634435,
+          -23.553468592573115
         ]
       },
       "properties": {
-        "fakeId": 169,
-        "displayName": "我和老婆是生米",
-        "country": "People's Republic of China",
-        "city": "Sichuan",
-        "locationString": "Chengdu, Sichuan, People's Republic of China",
-        "message": "感谢深深出现在我和我老婆的生命里，你给我们带来了很多欢乐和共同的回忆，你俨然已经成为我们家的一份子了，我们会永远陪着你，支持你，爱你！"
+        "fakeId": 176,
+        "displayName": "shengmiho",
+        "country": "Brazil",
+        "city": "São Paulo",
+        "locationString": "São Paulo, São Paulo, Brazil",
+        "message": "Thank you Zhou Shen for always reminding us to love ourselves. I hope you don't forget to take care of yourself too. I'll always support you! Love from Brazil❤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7674309187143,
+          -36.848324592573114
+        ]
+      },
+      "properties": {
+        "fakeId": 168,
+        "displayName": "Lulu",
+        "country": "New Zealand",
+        "city": "Auckland",
+        "locationString": "Auckland, Auckland, New Zealand",
+        "message": "祝周深出道11周年快乐！！生米十一岁生日快乐！！要天天开开心心呀！也希望有一天深深能来新西兰看看❤️"
       }
     },
     {
@@ -3066,17 +3138,35 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          174.7674309187143,
-          -36.848324592573114
+          101.69064175653534,
+          3.1520110476566376
         ]
       },
       "properties": {
-        "fakeId": 168,
-        "displayName": "Lulu",
-        "country": "New Zealand",
-        "city": "Auckland",
-        "locationString": "Auckland, Auckland, New Zealand",
-        "message": "祝周深出道11周年快乐！！生米十一岁生日快乐！！要天天开开心心呀！也希望有一天深深能来新西兰看看❤️"
+        "fakeId": 173,
+        "displayName": "夜夢",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur",
+        "locationString": "Kuala Lumpur, Malaysia",
+        "message": "I wish there was a word stronger than love, but for the lack thereof, we love you. 谢谢你来我的家与我见面，希望我们给了你一个美好的回忆，下次再来！！！我们一定，一定会再好好见面的！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.08013487632374,
+          30.657797407426887
+        ]
+      },
+      "properties": {
+        "fakeId": 169,
+        "displayName": "我和老婆是生米",
+        "country": "People's Republic of China",
+        "city": "Sichuan",
+        "locationString": "Chengdu, Sichuan, People's Republic of China",
+        "message": "感谢深深出现在我和我老婆的生命里，你给我们带来了很多欢乐和共同的回忆，你俨然已经成为我们家的一份子了，我们会永远陪着你，支持你，爱你！"
       }
     }
   ]
