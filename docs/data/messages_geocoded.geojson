@@ -1032,6 +1032,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -93.61377453819276,
+          42.025567407426884
+        ]
+      },
+      "properties": {
+        "fakeId": 166,
+        "displayName": "Sophia",
+        "country": "United States",
+        "city": "Iowa",
+        "locationString": "Ames, Iowa, United States",
+        "message": "隔着半个地球和13个小时的时差也天天念着你，爱着你，想着你，听着你的歌的生米 宝贝要信守承诺好好爱自己，好好照顾好自己哦！下次世巡再见！希望能再次相聚！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -93.62264580036225,
           41.583668407426885
         ]
@@ -2969,6 +2987,24 @@
         "city": "Newfoundland and Labrador",
         "locationString": "St. John's, Newfoundland and Labrador, Canada",
         "message": "TO深深：幸而听到你，幸而遇见你，幸而看见你。此生最大的幸运是有你相伴。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6954559433171,
+          3.1503674074268857
+        ]
+      },
+      "properties": {
+        "fakeId": 167,
+        "displayName": "抚梦",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur",
+        "locationString": "Kuala Lumpur, Malaysia",
+        "message": "深深，我想说你是我们在人生道路上或者是人生日记里收到的一份很特别的礼物。谢谢你的出现给我们带来温暖，也谢谢你一直以来的坚持，幸苦啦宝贝，永远的爱你。我们肯定会陪你慢慢的变老，从乌黑秀发到苍苍白发，我们都会伴你左右。愿你平安喜乐，顺顺利利！"
       }
     }
   ]
