@@ -2670,6 +2670,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -123.15493249096457,
+          49.32699440742688
+        ]
+      },
+      "properties": {
+        "fakeId": 157,
+        "displayName": "米米米米米米",
+        "country": "Canada",
+        "city": "British Columbia",
+        "locationString": "West Vancouver, British Columbia, Canada",
+        "message": "深深一定要好好的，大家都要好好的！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.16230817216906,
+          49.32863804765663
+        ]
+      },
+      "properties": {
+        "fakeId": 161,
+        "displayName": "记忆商店_米",
+        "country": "Canada",
+        "city": "British Columbia",
+        "locationString": "West Vancouver, British Columbia, Canada",
+        "message": "谢谢周深出现在我的生命中，从2018年的声入人心，到达拉崩吧，到花开忘忧，再到联合国。从深空间，到C929，到9.29hz，到世界巡演。最后到现在的深深的，11年之路，每一步都不容易，谢谢周深，谢谢生米"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.97770476019632,
           49.244315047656634
         ]
@@ -2915,42 +2951,6 @@
         "city": "Pennsylvania",
         "locationString": "Pittsburgh, Pennsylvania, United States",
         "message": "愿周深能一直快乐歌唱，平安幸福。"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.74828689586468,
-          45.170470047656636
-        ]
-      },
-      "properties": {
-        "fakeId": 161,
-        "displayName": "记忆商店_米",
-        "country": "Canada",
-        "city": "Nova Scotia",
-        "locationString": "Canada Creek, Nova Scotia, Canada",
-        "message": "谢谢周深出现在我的生命中，从2018年的声入人心，到达拉崩吧，到花开忘忧，再到联合国。从深空间，到C929，到9.29hz，到世界巡演。最后到现在的深深的，11年之路，每一步都不容易，谢谢周深，谢谢生米"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.74146862666908,
-          45.168826407426884
-        ]
-      },
-      "properties": {
-        "fakeId": 157,
-        "displayName": "米米米米米米",
-        "country": "Canada",
-        "city": "Nova Scotia",
-        "locationString": "Canada Creek, Nova Scotia, Canada",
-        "message": "深深一定要好好的，大家都要好好的！"
       }
     },
     {
