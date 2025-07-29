@@ -834,6 +834,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -79.37499907791205,
+          43.63294861260317
+        ]
+      },
+      "properties": {
+        "fakeId": 184,
+        "displayName": "生米",
+        "country": "Canada",
+        "city": "Ontario",
+        "locationString": "Toronto, Ontario, Canada",
+        "message": "谢谢你带来的温暖和欢乐，我会是永远都在的生米"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -79.36912180681243,
           43.64513146697404
         ]
@@ -2465,6 +2483,24 @@
         "city": "California",
         "locationString": "San Francisco, California, United States",
         "message": "Hi 周深，我们《想你了》！能有幸到Vegas看两场9.29Hz演唱会是我们人生中最珍贵时刻！太美好和幸福了！！谢谢你来！把不可能并成可能！圆了我““这辈子一定要带女儿去看一次周深演唱会”的愿望。 期盼“深深的”世巡！我们在旧金山等你！快《来啊》！！爱你深深宝贝！❤️❤️"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41310287079743,
+          37.7927777664335
+        ]
+      },
+      "properties": {
+        "fakeId": 185,
+        "displayName": "盧女士婆婆",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Francisco, California, United States",
+        "message": "親愛的周深：我摯愛的歌手音樂藝術家，祝你出道11年快樂！祝你事業如日中天！步步高升！永遠幸福快樂！健康長壽百二嵗！記得好好照顧自己啊！  我每天都在關注你和聽你的歌！你的忠實歌迷粉絲 ！"
       }
     },
     {

@@ -17226,6 +17226,105 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.37499907791205,
+            43.63294861260317
+          ],
+          [
+            -115.1775902,
+            36.1039821
+          ]
+        ]
+      },
+      "properties": {
+        "id": "194-25LV",
+        "displayName": "生米",
+        "origin": {
+          "coordinates": [
+            -79.37499907791205,
+            43.63294861260317
+          ]
+        },
+        "destination": {
+          "cityId": "25LV",
+          "coordinates": [
+            -115.1775902,
+            36.1039821
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.37499907791205,
+            43.63294861260317
+          ],
+          [
+            -79.4153189,
+            43.6349022
+          ]
+        ]
+      },
+      "properties": {
+        "id": "194-25TOR",
+        "displayName": "生米",
+        "origin": {
+          "coordinates": [
+            -79.37499907791205,
+            43.63294861260317
+          ]
+        },
+        "destination": {
+          "cityId": "25TOR",
+          "coordinates": [
+            -79.4153189,
+            43.6349022
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.41310287079743,
+            37.7927777664335
+          ],
+          [
+            -115.1775902,
+            36.1039821
+          ]
+        ]
+      },
+      "properties": {
+        "id": "195-25LV",
+        "displayName": "盧女士婆婆",
+        "origin": {
+          "coordinates": [
+            -122.41310287079743,
+            37.7927777664335
+          ]
+        },
+        "destination": {
+          "cityId": "25LV",
+          "coordinates": [
+            -115.1775902,
+            36.1039821
+          ]
+        }
+      }
     }
   ]
 }
