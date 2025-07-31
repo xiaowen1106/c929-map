@@ -17325,6 +17325,105 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            102.10984812496675,
+            2.349687407426886
+          ],
+          [
+            101.6908643,
+            3.0538145
+          ]
+        ]
+      },
+      "properties": {
+        "id": "196-25KL",
+        "displayName": "cammy",
+        "origin": {
+          "coordinates": [
+            102.10984812496675,
+            2.349687407426886
+          ]
+        },
+        "destination": {
+          "cityId": "25KL",
+          "coordinates": [
+            101.6908643,
+            3.0538145
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            102.10984812496675,
+            2.349687407426886
+          ],
+          [
+            104.249847,
+            30.596862
+          ]
+        ]
+      },
+      "properties": {
+        "id": "196-24CD",
+        "displayName": "cammy",
+        "origin": {
+          "coordinates": [
+            102.10984812496675,
+            2.349687407426886
+          ]
+        },
+        "destination": {
+          "cityId": "24CD",
+          "coordinates": [
+            104.249847,
+            30.596862
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            102.10984812496675,
+            2.349687407426886
+          ],
+          [
+            108.366217,
+            22.817227
+          ]
+        ]
+      },
+      "properties": {
+        "id": "196-24NN",
+        "displayName": "cammy",
+        "origin": {
+          "coordinates": [
+            102.10984812496675,
+            2.349687407426886
+          ]
+        },
+        "destination": {
+          "cityId": "24NN",
+          "coordinates": [
+            108.366217,
+            22.817227
+          ]
+        }
+      }
     }
   ]
 }

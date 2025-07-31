@@ -3318,6 +3318,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          102.10984812496675,
+          2.349687407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 186,
+        "displayName": "cammy",
+        "country": "Malaysia",
+        "city": "Malacca",
+        "locationString": "Masjid Tanah, Malacca, Malaysia",
+        "message": "感谢你选择了唱歌成为歌手，让我听到如此美好的声音！！感谢你一次又一次的把我拉起，陪我度过那些日子！风雨同周深情不移！期待再次见面！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7674309187143,
           -36.848324592573114
         ]
