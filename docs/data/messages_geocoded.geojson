@@ -3264,6 +3264,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          118.70248877350028,
+          39.99707140742688
+        ]
+      },
+      "properties": {
+        "fakeId": 187,
+        "displayName": "被天使救赎的生命",
+        "country": "中华人民共和国",
+        "city": "河北",
+        "locationString": "Qian'an City, Hebei Province, China",
+        "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           104.08013487632374,
           30.657797407426887
         ]
