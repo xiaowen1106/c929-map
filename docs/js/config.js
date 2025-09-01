@@ -19,7 +19,7 @@ const getMapboxToken = () => {
 
 export const config = {
     // Version number
-    version: 'v1.0.10',
+    version: 'v1.0.11',
     
     // Load Mapbox token based on current URL
     mapboxToken: getMapboxToken(),

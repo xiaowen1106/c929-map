@@ -17985,6 +17985,72 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            103.80927043836286,
+            1.3502874074268858
+          ],
+          [
+            101.6908643,
+            3.0538145
+          ]
+        ]
+      },
+      "properties": {
+        "id": "202-25KL",
+        "displayName": "呗啾星回复就会去做实验",
+        "origin": {
+          "coordinates": [
+            103.80927043836286,
+            1.3502874074268858
+          ]
+        },
+        "destination": {
+          "cityId": "25KL",
+          "coordinates": [
+            101.6908643,
+            3.0538145
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            103.80927043836286,
+            1.3502874074268858
+          ],
+          [
+            120.578369,
+            31.29377
+          ]
+        ]
+      },
+      "properties": {
+        "id": "202-24SZ",
+        "displayName": "呗啾星回复就会去做实验",
+        "origin": {
+          "coordinates": [
+            103.80927043836286,
+            1.3502874074268858
+          ]
+        },
+        "destination": {
+          "cityId": "24SZ",
+          "coordinates": [
+            120.578369,
+            31.29377
+          ]
+        }
+      }
     }
   ]
 }

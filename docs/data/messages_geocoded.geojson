@@ -3426,6 +3426,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          103.80927043836286,
+          1.3502874074268858
+        ]
+      },
+      "properties": {
+        "fakeId": 192,
+        "displayName": "呗啾星回复就会去做实验",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "谢谢你成为了歌手周深！谢谢你的歌声为我的生活带来了无数的欢乐和慰藉！去见你6次啦，我相信以后会见更多面的！好好照顾好自己呀！新世巡来看一看小坡吧！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7674309187143,
           -36.848324592573114
         ]
