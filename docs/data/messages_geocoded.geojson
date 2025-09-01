@@ -3372,6 +3372,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.12569155261316559,
+          51.505971407426884
+        ]
+      },
+      "properties": {
+        "fakeId": 197,
+        "displayName": "Estela",
+        "country": "United Kingdom",
+        "city": "England",
+        "locationString": "London, Greater London, England, United Kingdom",
+        "message": "祝深深每次巡演都票房大卖，顺顺利利！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.2430698342791655,
           53.478160407426884
         ]
@@ -3390,17 +3408,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          118.70248877350028,
-          39.99707140742688
+          13.345850539104985,
+          50.91567540742688
         ]
       },
       "properties": {
-        "fakeId": 187,
-        "displayName": "被天使救赎的生命",
-        "country": "中华人民共和国",
-        "city": "河北",
-        "locationString": "Qian'an City, Hebei Province, China",
-        "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
+        "fakeId": 196,
+        "displayName": "璃茉",
+        "country": "Germany",
+        "city": "Saxony",
+        "locationString": "Freiberg, Saxe centrale, Saxony, Germany",
+        "message": "深米身体健康，愿深所愿皆成"
       }
     },
     {
@@ -3426,17 +3444,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.69064175653534,
-          3.1520110476566376
+          118.70248877350028,
+          39.99707140742688
         ]
       },
       "properties": {
-        "fakeId": 173,
-        "displayName": "夜夢",
-        "country": "Malaysia",
-        "city": "Kuala Lumpur",
-        "locationString": "Kuala Lumpur, Malaysia",
-        "message": "I wish there was a word stronger than love, but for the lack thereof, we love you. 谢谢你来我的家与我见面，希望我们给了你一个美好的回忆，下次再来！！！我们一定，一定会再好好见面的！"
+        "fakeId": 187,
+        "displayName": "被天使救赎的生命",
+        "country": "中华人民共和国",
+        "city": "河北",
+        "locationString": "Qian'an City, Hebei Province, China",
+        "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
       }
     },
     {
@@ -3455,6 +3473,24 @@
         "city": "Kuala Lumpur",
         "locationString": "Kuala Lumpur, Malaysia",
         "message": "深深，我想说你是我们在人生道路上或者是人生日记里收到的一份很特别的礼物。谢谢你的出现给我们带来温暖，也谢谢你一直以来的坚持，幸苦啦宝贝，永远的爱你。我们肯定会陪你慢慢的变老，从乌黑秀发到苍苍白发，我们都会伴你左右。愿你平安喜乐，顺顺利利！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.69064175653534,
+          3.1520110476566376
+        ]
+      },
+      "properties": {
+        "fakeId": 173,
+        "displayName": "夜夢",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur",
+        "locationString": "Kuala Lumpur, Malaysia",
+        "message": "I wish there was a word stronger than love, but for the lack thereof, we love you. 谢谢你来我的家与我见面，希望我们给了你一个美好的回忆，下次再来！！！我们一定，一定会再好好见面的！"
       }
     },
     {
