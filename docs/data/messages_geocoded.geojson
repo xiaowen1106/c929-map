@@ -798,6 +798,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -79.40610342424105,
+          43.655574864775645
+        ]
+      },
+      "properties": {
+        "fakeId": 194,
+        "displayName": "信望爱",
+        "country": "Canada",
+        "city": "Ontario",
+        "locationString": "Toronto, Ontario, Canada",
+        "message": "深深的爱你深深宝贝，你一直唱我一直听。祝愿深深宝贝认识创造你，赐你天籁之声和智慧能力的上帝，愿你被上帝认识拣选成为祂的儿女，平安喜乐健康！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -79.3990186656631,
           43.642124758246865
         ]
@@ -2256,6 +2274,168 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.03379695082543,
+          37.31963604765664
+        ]
+      },
+      "properties": {
+        "fakeId": 192,
+        "displayName": "穗穗",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Cupertino, California, United States",
+        "message": "每一首歌都写着我们的心声，谢谢你。祝未来的每一天都充满爱与能量。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.02165369706995,
+          37.26281640742688
+        ]
+      },
+      "properties": {
+        "fakeId": 189,
+        "displayName": "海米借过一下",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Saratoga, California, United States",
+        "message": "深深宝贝，无论是180岁还是200年后，你一直唱，我们一直听！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.94334621498322,
+          37.286542407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 190,
+        "displayName": "Lulu貓",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Campbell, California, United States",
+        "message": "我和先生自從有幸看你在拉斯維加斯演唱會會後就深深地入坑啦！雖然我們都比你大，但這還是我們人生第一次這麼認真一心一意地喜歡一位歌手喔！所以沒有牆頭！很感謝世上有你這樣正能量，有才華，乾淨，認真（下刪500字）的歌手！我先生中文不好但也可以感受到你歌聲的力量。我現在每天上下班一有時間就是聽你的歌因為給我很大的正能量！我們希望你好好愛自己，好好吃飯，好好做你自己喜歡的事，繼續保持初心，喜歡你的人一定一直在！我們也相信一定有機會再見你！我們會努力爭取回國看你演唱會（前提是先要搶到票）。 知道你上次來美國時候倒時差很辛苦，身體也抱恙真的心痛。但覺得很amazing 你還是唱得很好！很多話想說但又不知從何說起。我們只想說謝謝你！謝謝你給這個世界多了色彩和陽光！我以渺小愛你同行的旅程~加油哦！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.89218689543841,
+          37.3290599658716
+        ]
+      },
+      "properties": {
+        "fakeId": 88,
+        "displayName": "Juliex",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "You are one of the most uplifting inspirations in the world. Your pursuit of excellence, belief in love and values, and incredible work ethic have deeply encouraged me to grow and stay grateful. Over the past four years, my mom and I faced the hardest time of our lives. Your voice and music brought us strength, healing, and hope. Thank you from the bottom of my heart for being 光亮 in our darkest moments. Hope to see your tour in Northern California next year!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.88907723211335,
+          37.33482840742688
+        ]
+      },
+      "properties": {
+        "fakeId": 29,
+        "displayName": "Jill",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "祝深深天天开心快乐！我们一直都在，等你来开演唱会！💙💙💙"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.89512296239673,
+          37.336472047656635
+        ]
+      },
+      "properties": {
+        "fakeId": 38,
+        "displayName": "Mandy Cheng",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "你努力收集散落的光芒\n小心翼翼的轉化和珍藏\n未知的前路雖令人徬徨\n謝謝你成為閃耀的星光"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.89668955345685,
+          37.34375839905236
+        ]
+      },
+      "properties": {
+        "fakeId": 95,
+        "displayName": "shuhua",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "I’ve known you since your first album was released in 2017. I followed your 9.29 HZ concert tour in 2024—from London, Las Vegas, and Seattle to New York—each stop left a special memory. Your stage charisma reflects your vocal talent, humble personality, and so much more. I'm looking forward to your next world tour. Wishing you wellness and happiness always."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.87747722104369,
+          37.33335046697404
+        ]
+      },
+      "properties": {
+        "fakeId": 193,
+        "displayName": "米米深",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "深深宝贝好好照顾自己，期待你再次来海外巡演。下次一定要来湾区哦！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.96036890279144,
+          37.350981407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 138,
+        "displayName": "Felizaurora",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Santa Clara, California, United States",
+        "message": "亲爱的深深谢谢你漂洋过海来看我，唱歌给我们听。当你美妙的歌声回响在演唱大厅里的时候，一切的等待都是值得的。 为我们以后更多的相见努力！愿深深你在音乐的世界里可以永远自由翱翔，熠熠生辉！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.11271934540497,
           37.378291407426886
         ]
@@ -2285,132 +2465,6 @@
         "city": "California",
         "locationString": "Palo Alto, California, United States",
         "message": "Dear Shen, I love you simply because you are you. No reason is needed. I wish you peace, health, freedom, and joy. May all your efforts be rewarded, and may your heart’s desires come true."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.96036890279144,
-          37.350981407426886
-        ]
-      },
-      "properties": {
-        "fakeId": 138,
-        "displayName": "Felizaurora",
-        "country": "United States",
-        "city": "California",
-        "locationString": "Santa Clara, California, United States",
-        "message": "亲爱的深深谢谢你漂洋过海来看我，唱歌给我们听。当你美妙的歌声回响在演唱大厅里的时候，一切的等待都是值得的。 为我们以后更多的相见努力！愿深深你在音乐的世界里可以永远自由翱翔，熠熠生辉！"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.89668955345685,
-          37.34375839905236
-        ]
-      },
-      "properties": {
-        "fakeId": 95,
-        "displayName": "shuhua",
-        "country": "United States",
-        "city": "California",
-        "locationString": "San Jose, California, United States",
-        "message": "I’ve known you since your first album was released in 2017. I followed your 9.29 HZ concert tour in 2024—from London, Las Vegas, and Seattle to New York—each stop left a special memory. Your stage charisma reflects your vocal talent, humble personality, and so much more. I'm looking forward to your next world tour. Wishing you wellness and happiness always."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.89512296239673,
-          37.336472047656635
-        ]
-      },
-      "properties": {
-        "fakeId": 38,
-        "displayName": "Mandy Cheng",
-        "country": "United States",
-        "city": "California",
-        "locationString": "San Jose, California, United States",
-        "message": "你努力收集散落的光芒\n小心翼翼的轉化和珍藏\n未知的前路雖令人徬徨\n謝謝你成為閃耀的星光"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.88907723211335,
-          37.33482840742688
-        ]
-      },
-      "properties": {
-        "fakeId": 29,
-        "displayName": "Jill",
-        "country": "United States",
-        "city": "California",
-        "locationString": "San Jose, California, United States",
-        "message": "祝深深天天开心快乐！我们一直都在，等你来开演唱会！💙💙💙"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.89218689543841,
-          37.3290599658716
-        ]
-      },
-      "properties": {
-        "fakeId": 88,
-        "displayName": "Juliex",
-        "country": "United States",
-        "city": "California",
-        "locationString": "San Jose, California, United States",
-        "message": "You are one of the most uplifting inspirations in the world. Your pursuit of excellence, belief in love and values, and incredible work ethic have deeply encouraged me to grow and stay grateful. Over the past four years, my mom and I faced the hardest time of our lives. Your voice and music brought us strength, healing, and hope. Thank you from the bottom of my heart for being 光亮 in our darkest moments. Hope to see your tour in Northern California next year!"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.94334621498322,
-          37.286542407426886
-        ]
-      },
-      "properties": {
-        "fakeId": 190,
-        "displayName": "Lulu貓",
-        "country": "United States",
-        "city": "California",
-        "locationString": "Campbell, California, United States",
-        "message": "我和先生自從有幸看你在拉斯維加斯演唱會會後就深深地入坑啦！雖然我們都比你大，但這還是我們人生第一次這麼認真一心一意地喜歡一位歌手喔！所以沒有牆頭！很感謝世上有你這樣正能量，有才華，乾淨，認真（下刪500字）的歌手！我先生中文不好但也可以感受到你歌聲的力量。我現在每天上下班一有時間就是聽你的歌因為給我很大的正能量！我們希望你好好愛自己，好好吃飯，好好做你自己喜歡的事，繼續保持初心，喜歡你的人一定一直在！我們也相信一定有機會再見你！我們會努力爭取回國看你演唱會（前提是先要搶到票）。 知道你上次來美國時候倒時差很辛苦，身體也抱恙真的心痛。但覺得很amazing 你還是唱得很好！很多話想說但又不知從何說起。我們只想說謝謝你！謝謝你給這個世界多了色彩和陽光！我以渺小愛你同行的旅程~加油哦！"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.02165369706995,
-          37.26281640742688
-        ]
-      },
-      "properties": {
-        "fakeId": 189,
-        "displayName": "海米借过一下",
-        "country": "United States",
-        "city": "California",
-        "locationString": "Saratoga, California, United States",
-        "message": "深深宝贝，无论是180岁还是200年后，你一直唱，我们一直听！"
       }
     },
     {
@@ -3431,7 +3485,7 @@
         ]
       },
       "properties": {
-        "fakeId": 192,
+        "fakeId": 195,
         "displayName": "呗啾星回复就会去做实验",
         "country": "",
         "city": "",
