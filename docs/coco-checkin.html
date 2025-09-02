@@ -185,7 +185,7 @@
         function handleFileSelect(file) {
             if (file.type.startsWith('image/')) {
                 // Check file size first
-                if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                if (file.size > 1 * 1024 * 1024) { // 1MB limit
                     showToast('warning', 'File Too Large', 'Image is too large. Please select a smaller image or we will compress it for you.');
                     // Compress the image
                     compressImage(file);
@@ -201,9 +201,9 @@
             const img = new Image();
             
             img.onload = function() {
-                // Calculate new dimensions (max 1200x1200)
+                // Calculate new dimensions (max 500x500)
                 let { width, height } = img;
-                const maxSize = 1200;
+                const maxSize = 500;
                 
                 if (width > height) {
                     if (width > maxSize) {
@@ -377,8 +377,8 @@
                     throw new Error('Image is required');
                 }
 
-                // Check file size (5MB limit)
-                const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+                // Check file size (1MB limit)
+                const maxSize = 1 * 1024 * 1024; // 1MB in bytes
                 if (picture.size > maxSize) {
                     showError('image-error', `Image file is too large (${(picture.size / 1024 / 1024).toFixed(1)}MB). Maximum size is 5MB.`);
                     throw new Error('Image file too large');
