@@ -3552,6 +3552,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          115.85948441568588,
+          -31.952591592573114
+        ]
+      },
+      "properties": {
+        "fakeId": 199,
+        "displayName": "淡冶",
+        "country": "Australia",
+        "city": "Western Australia",
+        "locationString": "Perth, Western Australia, Australia",
+        "message": "深深你努力唱歌，我努力赚钱，你努力来珀斯开演唱会，我努力去你开演唱会的地方看你。可能你会觉得珀斯这个小地方粉丝不够多，但你这么棒，会越来越多的！我一定会等到你觉得这里能开演唱会的一天！毕竟呼吸狂奔，相爱支撑，命才成为生！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7674309187143,
           -36.848324592573114
         ]
