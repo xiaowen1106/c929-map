@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const layerId = item.getAttribute('data-layer');
         
         // Set initial state based on layer default visibility
-        if (layerId === 'flying-tracking') {
-            // Flying tracking layer is hidden by default, so start inactive
+        if (layerId === 'flying-tracking' || layerId === 'coco-checkin') {
+            // Flying tracking and coco-checkin layers are hidden by default, so start inactive
             item.classList.add('inactive');
             item.classList.remove('active');
         } else {

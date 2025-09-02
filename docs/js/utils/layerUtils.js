@@ -198,6 +198,10 @@ export async function loadLayer(layer, map) {
             
             map.addLayer(unclusteredLayerConfig);
             
+            // Set coco-checkin layers to be hidden by default
+            map.setLayoutProperty(layer.id, 'visibility', 'none');
+            map.setLayoutProperty('coco-checkin-unclustered', 'visibility', 'none');
+            
             return; // Exit early since we handled the coco-checkin layer specially
         } else if (layer.id === 'concerts') {
             // For concerts, load from GeoJSON file and initialize data manager
