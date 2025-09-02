@@ -3570,6 +3570,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          151.20841582603492,
+          -33.870058592573116
+        ]
+      },
+      "properties": {
+        "fakeId": 200,
+        "displayName": "Yuhan",
+        "country": "Australia",
+        "city": "New South Wales",
+        "locationString": "Sydney, New South Wales, Australia",
+        "message": "深深要照顾好自己！爱你"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           174.7674309187143,
           -36.848324592573114
         ]
