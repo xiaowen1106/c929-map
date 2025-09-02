@@ -269,15 +269,19 @@ export function showCocoCheckinPopup(id, coordinates) {
         actionButton.onclick = () => window.closeCocoCheckinPopup();
     } else {
         // Create menu icon for desktop
-        actionButton = document.createElement('button');
-        actionButton.className = 'menu-icon';
-        actionButton.title = 'View all checkins';
-        actionButton.onclick = () => window.openCheckinsPanel();
+        // actionButton = document.createElement('button');
+        // actionButton.className = 'menu-icon';
+        // actionButton.title = 'View all checkins';
+        // actionButton.onclick = () => window.openCheckinsPanel();
         
-        for (let i = 0; i < 3; i++) {
-            const span = document.createElement('span');
-            actionButton.appendChild(span);
-        }
+        // for (let i = 0; i < 3; i++) {
+        //     const span = document.createElement('span');
+        //     actionButton.appendChild(span);
+        // }
+        
+        // Create a placeholder div to avoid appendChild error
+        actionButton = document.createElement('div');
+        actionButton.style.display = 'none';
     }
     
     const separator = document.createElement('div');
