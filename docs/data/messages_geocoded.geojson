@@ -3516,6 +3516,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          103.80446219536098,
+          1.3519310476566375
+        ]
+      },
+      "properties": {
+        "fakeId": 198,
+        "displayName": "敏",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "宝贝，我爱你哟！要好好照顾自己别累坏了。希望我们都会越来越好。很期待下次能再和你见面。9.29hz 真的令人难忘。（我只爱你，没墙头）"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           103.80927043836286,
           1.3502874074268858
         ]

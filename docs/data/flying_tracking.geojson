@@ -18579,6 +18579,39 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            103.80446219536098,
+            1.3519310476566375
+          ],
+          [
+            101.6908643,
+            3.0538145
+          ]
+        ]
+      },
+      "properties": {
+        "id": "208-25KL",
+        "displayName": "敏",
+        "origin": {
+          "coordinates": [
+            103.80446219536098,
+            1.3519310476566375
+          ]
+        },
+        "destination": {
+          "cityId": "25KL",
+          "coordinates": [
+            101.6908643,
+            3.0538145
+          ]
+        }
+      }
     }
   ]
 }
