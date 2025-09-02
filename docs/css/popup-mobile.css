@@ -222,6 +222,64 @@
     }
 }
 
+/* Custom Coco Checkin Popup Mobile Styles */
+@media (max-width: 600px) {
+    .custom-coco-checkin-popup {
+        min-width: 0;
+        max-width: 98vw;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 12px 12px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .coco-checkin-popup-header {
+        padding: 16px 8px 12px 8px;
+    }
+    
+    .coco-checkin-popup-main {
+        padding: 0 2vw 0 2vw;
+    }
+    
+    .coco-checkin-content-container {
+        min-width: 120px;
+        height: 100%;
+        max-width: 98vw;
+        margin-top: -12px;
+        max-height: 60vh !important;
+        overflow-y: auto !important;
+    }
+    
+    .coco-checkin-content-header {
+        padding: 16px 16px 12px 16px;
+    }
+    
+    .coco-checkin-content-title {
+        font-size: 13px;
+    }
+    
+    .coco-checkin-content-location {
+        font-size: 13px;
+    }
+    
+    .coco-checkin-image-content {
+        padding: 6px 16px 16px 16px;
+    }
+    
+    .coco-checkin-nav-arrow {
+        width: 24px;
+        height: 48px;
+        font-size: 2.8rem;
+        z-index: 10;
+    }
+}
+
 /* Custom Activity Popup Mobile Styles */
 @media (max-width: 600px) {
     .custom-activity-popup {

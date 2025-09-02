@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.map.setLayoutProperty('fan-wishes-unclustered', 'visibility', visibility);
                 }
             }
+            if (layerId === 'coco-checkin') {
+                if (window.map && window.map.getLayer('coco-checkin-unclustered')) {
+                    window.map.setLayoutProperty('coco-checkin-unclustered', 'visibility', visibility);
+                }
+            }
             if (layerId === 'fans-activities') {
                 if (window.map && window.map.getLayer('fans-activities')) {
                     window.map.setLayoutProperty('fans-activities', 'visibility', visibility);

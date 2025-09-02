@@ -15,7 +15,9 @@ class Preloader {
             'img/star_normal.png',      // 45x45px (366B) - already optimized
             'img/star_highlighted.png', // 45x45px (393B) - already optimized
             'img/MiJie.png',            // 128x128px (10KB) - resized from 2084x2084px
-            'img/MiJie_Highlight.png'  // 128x128px (12KB) - resized from 2084x2084px
+            'img/MiJie_Highlight.png', // 128x128px (12KB) - resized from 2084x2084px
+            'img/heart_normal.png',     // Heart icon for coco-checkin
+            'img/heart_highlighted.png' // Highlighted heart icon for coco-checkin
         ];
         
         this.criticalDataFiles = [
@@ -26,7 +28,8 @@ class Preloader {
             'data/messages_geocoded.geojson',
             'data/929_venues.geojson',
             'data/bonus.geojson',
-            'data/city_markers.geojson'
+            'data/city_markers.geojson',
+            'coco-checkin' // Special case for API data
         ];
         
         this.concertDataFiles = [
@@ -77,7 +80,14 @@ class Preloader {
     preloadCriticalData() {
         const dataPromises = this.criticalDataFiles.map(async url => {
             try {
-                const response = await fetch(`${baseUrl}/${url}`);
+                let response;
+                if (url === 'coco-checkin') {
+                    // Special handling for coco-checkin API
+                    response = await fetch('https://nrg6r1ttfc.execute-api.us-east-1.amazonaws.com/dev/coco-checkin/geojson');
+                } else {
+                    response = await fetch(`${baseUrl}/${url}`);
+                }
+                
                 if (response.ok) {
                     this.loadedResources.add(url);
                     const data = await response.json();

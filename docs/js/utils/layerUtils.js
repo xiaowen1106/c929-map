@@ -3,6 +3,7 @@ import { loadFanWishesDataDirect, setFanWishesData, fanWishesUnclusteredLayer } 
 import { loadFansActivitiesData, setFansActivitiesData } from '../layers/fansActivitiesLayer.js';
 import { loadBonusData, setBonusData } from '../layers/bonusLayer.js';
 import { loadCityMarkersData } from '../layers/fansActivitiesLayer.js';
+import { loadCocoCheckinDataDirect, setCocoCheckinData, cocoCheckinUnclusteredLayer } from '../layers/cocoCheckinLayer.js';
 
 // Generic layer loading function
 export async function loadLayer(layer, map) {
@@ -148,6 +149,56 @@ export async function loadLayer(layer, map) {
             map.addLayer(layerConfig);
             
             return; // Exit early since we handled the city markers layer specially
+        } else if (layer.id === 'coco-checkin') {
+            // For coco-checkin, load GeoJSON data with clustering
+            if (preloadedData) {
+                data = preloadedData;
+                setCocoCheckinData(data.features);
+            } else {
+                await loadCocoCheckinDataDirect();
+                data = {
+                    type: 'FeatureCollection',
+                    features: window.cocoCheckinData || []
+                };
+                // Store all coco-checkins for navigation
+                setCocoCheckinData(data.features);
+            }
+            
+            // Add clustered source
+            const sourceId = `${layer.id}-source`;
+            if (!map.getSource(sourceId)) {
+                map.addSource(sourceId, {
+                    type: 'geojson',
+                    data: data,
+                    cluster: true,
+                    clusterMaxZoom: 8,  // Very aggressive - clustering stops at zoom level 8
+                    clusterRadius: 30,   // Very small clusters that break apart quickly
+                    clusterMinPoints: 3, // Cluster even 3 nearby points
+                    maxzoom: 18
+                });
+            }
+            
+            // Add cluster layer
+            const clusterLayerConfig = {
+                ...layer,
+                source: sourceId
+            };
+            delete clusterLayerConfig.source;
+            clusterLayerConfig.source = sourceId;
+            
+            map.addLayer(clusterLayerConfig);
+            
+            // Add unclustered layer
+            const unclusteredLayerConfig = {
+                ...cocoCheckinUnclusteredLayer,
+                source: sourceId
+            };
+            delete unclusteredLayerConfig.source;
+            unclusteredLayerConfig.source = sourceId;
+            
+            map.addLayer(unclusteredLayerConfig);
+            
+            return; // Exit early since we handled the coco-checkin layer specially
         } else if (layer.id === 'concerts') {
             // For concerts, load from GeoJSON file and initialize data manager
             const response = await fetch(layer.source);

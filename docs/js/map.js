@@ -6,6 +6,7 @@ import { loadFlyingTrackingData, showFlightTrackingLayer, hideFlightTrackingLaye
 import { fansActivitiesLayer, loadMiJieIcons, loadFansActivitiesFillData } from './layers/fansActivitiesLayer.js';
 import { bonusLayer, loadBonusIcon, loadBonusData } from './layers/bonusLayer.js';
 import { cityMarkersLayer } from './layers/fansActivitiesLayer.js';
+import { cocoCheckinLayer, loadHeartIcons } from './layers/cocoCheckinLayer.js';
 import { loadLayer } from './utils/layerUtils.js';
 import { handleMapClick, handleZoomHomeClick } from './utils/eventHandlers.js';
 
@@ -270,6 +271,9 @@ map.on('style.load', async () => {
     // Load bonus icon
     await loadBonusIcon(map);
     
+            // Load heart icons for coco-checkin
+            await loadHeartIcons(map);
+    
     // Load layers in specific order: flight first, then others
     try {
         // 1. Load flying tracking layer first (before any other layers)
@@ -287,10 +291,13 @@ map.on('style.load', async () => {
         // 5. Load fan wishes layer
         await loadLayer(fanWishesLayer, map);
         
-        // 6. Load bonus layer
+        // 6. Load coco-checkin layer
+        await loadLayer(cocoCheckinLayer, map);
+        
+        // 7. Load bonus layer
         await loadLayer(bonusLayer, map);
         
-        // 7. Load concerts layer last
+        // 8. Load concerts layer last
         await loadLayer(concertsLayer, map);
         
         // Don't start the globe animation immediately - it will be called from the loading screen

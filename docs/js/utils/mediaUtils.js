@@ -11,7 +11,12 @@ export function getYouTubeThumbnail(videoId, quality = 'standard') {
 export function getImageUrl(imagePath) {
     if (!imagePath) return '';
     
-    // Use the baseUrl (local or GitHub Pages) for all images
+    // If imagePath is already a full URL, return it as-is
+    if (imagePath.startsWith('https://')) {
+        return imagePath;
+    }
+    
+    // Use the baseUrl (local or GitHub Pages) for relative image paths
     return `${baseUrl}/${imagePath}`;
 }
 

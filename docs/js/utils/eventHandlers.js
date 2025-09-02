@@ -1,5 +1,6 @@
 import { handleFansActivityClick } from '../layers/fansActivitiesLayer.js';
 import { showFanWishPopup } from '../layers/fanWishesLayer.js';
+import { showCocoCheckinPopup } from '../layers/cocoCheckinLayer.js';
 import { filterFlightTracksByConcert, resetFlightTracks } from '../layers/flyingTrackingLayer.js';
 import { handleCityMarkerClick } from '../layers/fansActivitiesLayer.js';
 import { showDetailPanel } from '../panels/index.js';
@@ -16,6 +17,8 @@ export function handleMapClick(e, map) {
         return feature.layer && (
             feature.layer.id === 'fan-wishes' ||
             feature.layer.id === 'fan-wishes-unclustered' ||
+            feature.layer.id === 'coco-checkin' ||
+            feature.layer.id === 'coco-checkin-unclustered' ||
             feature.layer.id === 'concerts' ||
             feature.layer.id === 'flying-tracking' ||
             feature.layer.id === 'fans-activities' ||
@@ -66,12 +69,43 @@ export function handleMapClick(e, map) {
         return;
     }
     
+    // Handle coco-checkin cluster clicks
+    if (feature.layer.id === 'coco-checkin' && properties.cluster) {
+        // Close fans activities panel if it's open
+        if (window.closeFansActivitiesPanel) {
+            window.closeFansActivitiesPanel();
+        }
+        
+        // Close messages panel if it's open
+        if (window.closeMessagesPanel) {
+            window.closeMessagesPanel();
+        }
+        
+        const sourceId = 'coco-checkin-source';
+        const source = map.getSource(sourceId);
+        
+        // Get cluster expansion zoom
+        source.getClusterExpansionZoom(properties.cluster_id, (err, zoom) => {
+            if (err) return;
+            
+            // Fly to the cluster with more aggressive zoom
+            map.easeTo({
+                center: coordinates,
+                zoom: Math.min(zoom + 3, 16), // Add 3 zoom levels for very aggressive expansion
+                duration: 500
+            });
+        });
+        return;
+    }
+    
     // Determine feature type based on properties
     let featureType = 'unknown';
     if (properties.fakeId && properties.displayName && properties.category) {
         featureType = 'fan_activity';
     } else if (properties.fakeId && properties.displayName) {
         featureType = 'fan_wish';
+    } else if (properties.id && properties.username && properties.picture_url) {
+        featureType = 'coco_checkin';
     } else if (properties.title && properties.id && properties.id.startsWith('SS')) {
         featureType = 'bonus';
     } else if (properties.title) {
@@ -95,6 +129,12 @@ export function handleMapClick(e, map) {
     // For fan wishes, check if there are multiple messages at this location
     if (featureType === 'fan_wish') {
         handleFanWishClick(coordinates, properties);
+        return;
+    }
+    
+    // For coco-checkin, show popup directly
+    if (featureType === 'coco_checkin') {
+        handleCocoCheckinClick(coordinates, properties);
         return;
     }
     
@@ -228,6 +268,57 @@ function handleFanWishClick(coordinates, properties) {
         showFanWishPopup(properties.fakeId, coordinates);
     } else {
         console.error('No fakeId found in properties:', properties);
+    }
+}
+
+// Handle coco-checkin click events
+function handleCocoCheckinClick(coordinates, properties) {
+    // Close fans activities panel if it's open
+    if (window.closeFansActivitiesPanel) {
+        window.closeFansActivitiesPanel();
+    }
+    
+    // Close messages panel if it's open
+    if (window.closeMessagesPanel) {
+        window.closeMessagesPanel();
+    }
+    
+    // Check if we're on mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    // Get current zoom level and ensure we don't zoom out
+    const currentZoom = window.map.getZoom();
+    const targetZoom = Math.max(currentZoom, 8);
+    
+    // On mobile, center the point in the top 70% of the screen (accounting for 30% bottom sheet)
+    if (isMobile) {
+        const mapContainer = window.map.getContainer();
+        const mapHeight = mapContainer.offsetHeight;
+        const mapCenterY = mapHeight * 0.35; // Center of the top 70% area (35% from top edge)
+        
+        // Fly to the location with offset to center in the top 70%
+        window.map.flyTo({
+            center: coordinates,
+            zoom: targetZoom, // Use current zoom level or minimum of 8
+            duration: 1000,
+            easing: (t) => t * (2 - t), // Ease out function for smooth animation
+            offset: [0, mapCenterY - mapHeight / 2] // Offset to center in the top 70%
+        });
+    } else {
+        // On desktop, just fly to the location without offset
+        window.map.flyTo({
+            center: coordinates,
+            zoom: targetZoom, // Use current zoom level or minimum of 8
+            duration: 1000,
+            easing: (t) => t * (2 - t) // Ease out function for smooth animation
+        });
+    }
+    
+    // Use id directly for checkin identification
+    if (properties.id) {
+        showCocoCheckinPopup(properties.id, coordinates);
+    } else {
+        console.error('No id found in properties:', properties);
     }
 }
 
