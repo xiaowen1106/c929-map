@@ -149,7 +149,7 @@
     }
     .sidebar:not(.collapsed) {
         max-width: 400px;
-        width: 250px;
+        width: 280px;
     }
     .sidebar.collapsed {
         max-width: 0;
