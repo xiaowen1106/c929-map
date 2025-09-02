@@ -7,191 +7,16 @@
     <title>Coco Check-in - ShenMi.World</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            overflow-y: auto;
-            min-height: 100vh;
-        }
-        
-        .checkin-container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
-            max-height: calc(100vh - 100px);
-        }
-
-        .checkin-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .checkin-header h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-
-        .checkin-header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-            font-size: 1.1em;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e1e5e9;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-
-        .location-group {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .location-input {
-            flex: 1;
-        }
-
-        .loop-btn {
-            padding: 12px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .loop-btn:hover {
-            background: #0056b3;
-        }
-
-        .loop-btn:disabled {
-            background: #6c757d;
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
-        .image-upload-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .image-upload-container input[type="file"] {
-            display: none;
-        }
-
-        .upload-btn {
-            padding: 12px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .upload-btn:hover {
-            background: #0056b3;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .submit-btn:hover {
-            background: #218838;
-        }
-
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-link a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-
-        .preview-image {
-            max-width: 100%;
-            max-height: 200px;
-            margin-top: 15px;
-            border-radius: 8px;
-            display: none;
-        }
-        
-        .location-warning {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 6px;
-            padding: 10px;
-            margin-top: 8px;
-            font-size: 0.9em;
-            color: #856404;
-            font-weight: 500;
-            display: none;
-        }
-        
-        .location-warning.show {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="css/coco-checkin.css">
 </head>
 <body>
     <header class="main-header" id="main-header">
         <img src="img/ShenMi.World.logo.png" alt="Logo" class="header-logo" id="header-logo" />
         <span class="header-title">ShenMi.World</span>
     </header>
+
+    <!-- Toast container for notifications -->
+    <div class="toast-container" id="toast-container"></div>
 
     <div class="checkin-container">
         <div class="checkin-header">
@@ -203,6 +28,7 @@
             <div class="form-group">
                 <label for="username">可爸/可妈 *</label>
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <div id="username-error" class="error-message"></div>
             </div>
 
             <div class="form-group">
@@ -221,9 +47,7 @@
                     <button type="button" class="loop-btn" id="loop-btn">🔍 Search</button>
                 </div>
                 <div id="place-name" class="place-name" style="display: none; margin-top: 8px; font-size: 0.9em; color: #666; font-style: italic;"></div>
-                <div id="location-warning" class="location-warning">
-                    ⚠️ Please search for a location to get coordinates and place name.
-                </div>
+                <div id="location-error" class="error-message"></div>
                 <!-- Hidden inputs for coordinates and location string -->
                 <input type="hidden" id="latitude" name="latitude">
                 <input type="hidden" id="longitude" name="longitude">
@@ -237,6 +61,7 @@
                     <button type="button" class="upload-btn" id="upload-btn">📷 选择照片</button>
                 </div>
                 <img id="preview-image" class="preview-image" alt="Preview">
+                <div id="image-error" class="error-message"></div>
             </div>
 
             <button type="submit" class="submit-btn">打卡！</button>
@@ -248,26 +73,77 @@
     </div>
 
     <script>
+        // Toast notification system
+        function showToast(type, title, message, duration = 5000) {
+            const toastContainer = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            
+            toast.innerHTML = `
+                <div class="toast-header">
+                    <span class="toast-title">${title}</span>
+                    <button class="toast-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
+                </div>
+                <div class="toast-message">${message}</div>
+            `;
+            
+            toastContainer.appendChild(toast);
+            
+            // Trigger animation
+            setTimeout(() => toast.classList.add('show'), 100);
+            
+            // Auto-remove after duration
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.classList.remove('show');
+                    setTimeout(() => {
+                        if (toast.parentElement) {
+                            toast.remove();
+                        }
+                    }, 300);
+                }
+            }, duration);
+        }
+
+        // Error display functions
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+        }
+
+        function hideError(elementId) {
+            const errorElement = document.getElementById(elementId);
+            if (errorElement) {
+                errorElement.classList.remove('show');
+            }
+        }
+
+        function hideAllErrors() {
+            hideError('username-error');
+            hideError('location-error');
+            hideError('image-error');
+        }
+
         // Set today's date as default
         document.getElementById('checkin-date').valueAsDate = new Date();
         
-        // Function to check and display location warning status
+        // Function to check and display location status
         function checkLocationStatus() {
             const latitude = document.getElementById('latitude').value.trim();
             const longitude = document.getElementById('longitude').value.trim();
             const locationStr = document.getElementById('location_str').value.trim();
             const placeNameDiv = document.getElementById('place-name');
-            const locationWarning = document.getElementById('location-warning');
             
             if (latitude && longitude && locationStr) {
-                // Location is set, hide warning and show place name
-                locationWarning.style.display = 'none';
+                // Location is set, show place name
                 if (placeNameDiv.textContent) {
                     placeNameDiv.style.display = 'block';
                 }
             } else {
-                // Location is not set, show warning
-                locationWarning.style.display = 'block';
+                // Location is not set, hide place name
                 placeNameDiv.style.display = 'none';
             }
         }
@@ -289,6 +165,8 @@
             
             // Update warning status
             checkLocationStatus();
+            // Hide any location errors
+            hideError('location-error');
         });
 
         uploadBtn.addEventListener('click', () => fileInput.click());
@@ -296,6 +174,8 @@
         fileInput.addEventListener('change', (e) => {
             if (e.target.files.length > 0) {
                 handleFileSelect(e.target.files[0]);
+                // Hide any image errors when a new file is selected
+                hideError('image-error');
             }
         });
 
@@ -317,9 +197,12 @@
             const searchQuery = locationInput.value.trim();
             
             if (!searchQuery) {
-                alert('Please enter a location to search for.');
+                showToast('warning', 'Location Required', 'Please enter a location to search for.');
                 return;
             }
+            
+            // Hide any previous errors
+            hideError('location-error');
             
             // Show loading state
             const originalText = searchButton.innerHTML;
@@ -353,12 +236,15 @@
                     
                     // Update warning status
                     checkLocationStatus();
+                    
+                    // Show success toast
+                    showToast('success', 'Location Found!', `Successfully found coordinates for: ${placeName}`);
                 } else {
-                    alert('No location found for your search. Please try a different search term.');
+                    showToast('warning', 'No Results', 'No location found for your search. Please try a different search term.');
                 }
             } catch (error) {
                 console.error('Geocoding error:', error);
-                alert('Error searching for location. Please try again or enter coordinates manually.');
+                showToast('error', 'Search Error', 'Error searching for location. Please try again or enter coordinates manually.');
             } finally {
                 // Restore button state
                 searchButton.innerHTML = originalText;
@@ -369,6 +255,9 @@
         // Form submission
         document.getElementById('checkin-form').addEventListener('submit', async (e) => {
             e.preventDefault();
+            
+            // Hide all previous errors
+            hideAllErrors();
             
             const submitButton = e.target.querySelector('.submit-btn');
             const originalText = submitButton.innerHTML;
@@ -385,12 +274,14 @@
                 
                 // Validate username
                 if (!username) {
-                    throw new Error('Please enter your username.');
+                    showError('username-error', 'Please enter your username.');
+                    throw new Error('Username is required');
                 }
                 
                 // Validate location input
                 if (!locationString) {
-                    throw new Error('Please enter a location.');
+                    showError('location-error', 'Please enter a location.');
+                    throw new Error('Location is required');
                 }
                 
                 // Get coordinates and location string from hidden inputs
@@ -400,21 +291,25 @@
                 
                 // Validate that all required location fields are filled
                 if (!document.getElementById('latitude').value.trim() || !document.getElementById('longitude').value.trim()) {
-                    throw new Error('Please use the search function to get coordinates for your location.');
+                    showError('location-error', 'Please use the search function to get coordinates for your location.');
+                    throw new Error('Coordinates are required');
                 }
                 
                 if (!locationStr.trim()) {
-                    throw new Error('Please use the search function to get the location name.');
+                    showError('location-error', 'Please use the search function to get the location name.');
+                    throw new Error('Location name is required');
                 }
                 
                 // Validate coordinates are valid numbers
                 if (isNaN(latitude) || isNaN(longitude)) {
-                    throw new Error('Invalid coordinates. Please use the search function to get coordinates for your location.');
+                    showError('location-error', 'Invalid coordinates. Please use the search function to get coordinates for your location.');
+                    throw new Error('Invalid coordinates');
                 }
                 
                 // Validate image
                 if (!picture) {
-                    throw new Error('Please select an image to upload.');
+                    showError('image-error', 'Please select an image to upload.');
+                    throw new Error('Image is required');
                 }
                 
                 // Convert picture to base64
@@ -446,7 +341,7 @@
                 console.log('Check-in response:', result);
                 
                 // Show success message
-                alert('Check-in submitted successfully! Thank you for sharing your Coco adventure! 🐱');
+                showToast('success', 'Check-in Successful!', 'Thank you for sharing your Coco adventure! 🐱');
                 
                 // Reset form
                 e.target.reset();
@@ -463,7 +358,10 @@
                 
             } catch (error) {
                 console.error('Submission error:', error);
-                alert(`Error: ${error.message}`);
+                // Don't show toast for validation errors, they're already displayed inline
+                if (!error.message.includes('required') && !error.message.includes('Invalid coordinates')) {
+                    showToast('error', 'Submission Error', `An error occurred: ${error.message}`);
+                }
             } finally {
                 // Restore button state
                 submitButton.innerHTML = originalText;
