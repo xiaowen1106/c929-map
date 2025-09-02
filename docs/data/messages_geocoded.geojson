@@ -3462,17 +3462,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          101.6954559433171,
-          3.1503674074268857
+          100.46284645557583,
+          5.364019407426886
         ]
       },
       "properties": {
-        "fakeId": 167,
-        "displayName": "抚梦",
+        "fakeId": 201,
+        "displayName": "小璇",
         "country": "Malaysia",
-        "city": "Kuala Lumpur",
-        "locationString": "Kuala Lumpur, Malaysia",
-        "message": "深深，我想说你是我们在人生道路上或者是人生日记里收到的一份很特别的礼物。谢谢你的出现给我们带来温暖，也谢谢你一直以来的坚持，幸苦啦宝贝，永远的爱你。我们肯定会陪你慢慢的变老，从乌黑秀发到苍苍白发，我们都会伴你左右。愿你平安喜乐，顺顺利利！"
+        "city": "Penang",
+        "locationString": "Bukit Mertajam, Penang, Malaysia",
+        "message": "谢谢你成为了歌手周深！！遇见你是我这辈子做的最对的决定!!\n我是来自马来西亚的生米, 粉了6年,一直是个安静的地下党。2024年9.29hz世界巡回演唱会吉隆坡站,我没能去, 但演唱会前一个星期,我刚好在那座城市（吉隆坡）和家人一起旅行, 看到街头的应援屏,真的好开心,像命运的小惊喜。\n照顾好自己哦!!别太累了!好好休息!!\n谢谢你,用一首首歌温柔地陪着我成长, 即使隔着山海,也觉得你一直在。\n谢谢你让我学会先爱自己,在去爱别人。\n我们一定会见面!!!!"
       }
     },
     {
@@ -3491,6 +3491,24 @@
         "city": "Kuala Lumpur",
         "locationString": "Kuala Lumpur, Malaysia",
         "message": "I wish there was a word stronger than love, but for the lack thereof, we love you. 谢谢你来我的家与我见面，希望我们给了你一个美好的回忆，下次再来！！！我们一定，一定会再好好见面的！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.6954559433171,
+          3.1503674074268857
+        ]
+      },
+      "properties": {
+        "fakeId": 167,
+        "displayName": "抚梦",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur",
+        "locationString": "Kuala Lumpur, Malaysia",
+        "message": "深深，我想说你是我们在人生道路上或者是人生日记里收到的一份很特别的礼物。谢谢你的出现给我们带来温暖，也谢谢你一直以来的坚持，幸苦啦宝贝，永远的爱你。我们肯定会陪你慢慢的变老，从乌黑秀发到苍苍白发，我们都会伴你左右。愿你平安喜乐，顺顺利利！"
       }
     },
     {
