@@ -1986,6 +1986,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -122.33745739328495,
+          47.61084439905236
+        ]
+      },
+      "properties": {
+        "fakeId": 206,
+        "displayName": "Jerri",
+        "country": "United States",
+        "city": "Washington",
+        "locationString": "Seattle, Washington, United States",
+        "message": "小深，请照顾好自己"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -122.33561006255135,
           47.603558047656634
         ]
@@ -2364,35 +2382,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.89218689543841,
-          37.3290599658716
+          -121.90468568990411,
+          37.33034375824686
         ]
       },
       "properties": {
-        "fakeId": 88,
-        "displayName": "Juliex",
+        "fakeId": 209,
+        "displayName": "Rachel",
         "country": "United States",
         "city": "California",
         "locationString": "San Jose, California, United States",
-        "message": "You are one of the most uplifting inspirations in the world. Your pursuit of excellence, belief in love and values, and incredible work ethic have deeply encouraged me to grow and stay grateful. Over the past four years, my mom and I faced the hardest time of our lives. Your voice and music brought us strength, healing, and hope. Thank you from the bottom of my heart for being 光亮 in our darkest moments. Hope to see your tour in Northern California next year!"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.88907723211335,
-          37.33482840742688
-        ]
-      },
-      "properties": {
-        "fakeId": 29,
-        "displayName": "Jill",
-        "country": "United States",
-        "city": "California",
-        "locationString": "San Jose, California, United States",
-        "message": "祝深深天天开心快乐！我们一直都在，等你来开演唱会！💙💙💙"
+        "message": "All the best to Shen Shen! I'll always support you :D"
       }
     },
     {
@@ -2418,17 +2418,35 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.89668955345685,
-          37.34375839905236
+          -121.88907723211335,
+          37.33482840742688
         ]
       },
       "properties": {
-        "fakeId": 95,
-        "displayName": "shuhua",
+        "fakeId": 29,
+        "displayName": "Jill",
         "country": "United States",
         "city": "California",
         "locationString": "San Jose, California, United States",
-        "message": "I’ve known you since your first album was released in 2017. I followed your 9.29 HZ concert tour in 2024—from London, Las Vegas, and Seattle to New York—each stop left a special memory. Your stage charisma reflects your vocal talent, humble personality, and so much more. I'm looking forward to your next world tour. Wishing you wellness and happiness always."
+        "message": "祝深深天天开心快乐！我们一直都在，等你来开演唱会！💙💙💙"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.89218689543841,
+          37.3290599658716
+        ]
+      },
+      "properties": {
+        "fakeId": 88,
+        "displayName": "Juliex",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "You are one of the most uplifting inspirations in the world. Your pursuit of excellence, belief in love and values, and incredible work ethic have deeply encouraged me to grow and stay grateful. Over the past four years, my mom and I faced the hardest time of our lives. Your voice and music brought us strength, healing, and hope. Thank you from the bottom of my heart for being 光亮 in our darkest moments. Hope to see your tour in Northern California next year!"
       }
     },
     {
@@ -2447,6 +2465,24 @@
         "city": "California",
         "locationString": "San Jose, California, United States",
         "message": "深深宝贝好好照顾自己，期待你再次来海外巡演。下次一定要来湾区哦！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.89668955345685,
+          37.34375839905236
+        ]
+      },
+      "properties": {
+        "fakeId": 95,
+        "displayName": "shuhua",
+        "country": "United States",
+        "city": "California",
+        "locationString": "San Jose, California, United States",
+        "message": "I’ve known you since your first album was released in 2017. I followed your 9.29 HZ concert tour in 2024—from London, Las Vegas, and Seattle to New York—each stop left a special memory. Your stage charisma reflects your vocal talent, humble personality, and so much more. I'm looking forward to your next world tour. Wishing you wellness and happiness always."
       }
     },
     {
@@ -3480,6 +3516,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          121.47063038796102,
+          31.230947407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 205,
+        "displayName": "MintChocolate_Serena",
+        "country": "People's Republic of China",
+        "city": "Shanghai",
+        "locationString": "Shanghai, People's Republic of China",
+        "message": "希望可以深深可以长久地在舞台上唱下去，希望有一天可以去现场听深深唱歌。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           118.70248877350028,
           39.99707140742688
         ]
@@ -3509,6 +3563,24 @@
         "city": "Penang",
         "locationString": "Bukit Mertajam, Penang, Malaysia",
         "message": "谢谢你成为了歌手周深！！遇见你是我这辈子做的最对的决定!!\n我是来自马来西亚的生米, 粉了6年,一直是个安静的地下党。2024年9.29hz世界巡回演唱会吉隆坡站,我没能去, 但演唱会前一个星期,我刚好在那座城市（吉隆坡）和家人一起旅行, 看到街头的应援屏,真的好开心,像命运的小惊喜。\n照顾好自己哦!!别太累了!好好休息!!\n谢谢你,用一首首歌温柔地陪着我成长, 即使隔着山海,也觉得你一直在。\n谢谢你让我学会先爱自己,在去爱别人。\n我们一定会见面!!!!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.38329250055436,
+          5.386418407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 208,
+        "displayName": "卡布叻_深深爱着你",
+        "country": "Malaysia",
+        "city": "Penang",
+        "locationString": "Perai, Penang, Malaysia",
+        "message": "深深，谢谢你的歌声陪伴着我每一天💙你一直唱，我们一直在💙"
       }
     },
     {
@@ -3563,6 +3635,24 @@
         "city": "Malacca",
         "locationString": "Masjid Tanah, Malacca, Malaysia",
         "message": "感谢你选择了唱歌成为歌手，让我听到如此美好的声音！！感谢你一次又一次的把我拉起，陪我度过那些日子！风雨同周深情不移！期待再次见面！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.25134799449272,
+          2.195114407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 207,
+        "displayName": "吖奕叻_",
+        "country": "Malaysia",
+        "city": "Malacca",
+        "locationString": "Malacca, Malacca, Malaysia",
+        "message": "期待再次见面！！！"
       }
     },
     {
