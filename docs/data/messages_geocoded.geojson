@@ -276,6 +276,42 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -73.98104462011227,
+          40.71868075226828
+        ]
+      },
+      "properties": {
+        "fakeId": 203,
+        "displayName": "Elaine",
+        "country": "United States",
+        "city": "New York",
+        "locationString": "New York City, New York, United States",
+        "message": "感谢深深来纽约和我们见面呀！我们都要迎着光亮一路前行！要幸福啊！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99947055498238,
+          40.726288766433505
+        ]
+      },
+      "properties": {
+        "fakeId": 112,
+        "displayName": "E6海米",
+        "country": "United States",
+        "city": "New York",
+        "locationString": "New York City, New York, United States",
+        "message": "Dear Shenshen，对你纵有千言万语不知从何说起，这次你终于开启了世巡，我们真的等到了你。还记得一年前在联合国喊出的心愿，竟这么快成真，令人喜极而泣。我们曾漂洋过海来看你，如今你也漂洋过海来看我们，我跟随你的脚步追了北美的拉斯维加斯，纽约，多伦多场次，如今又在回国看“深深的”路上。To be continued\n看到你一路“升级打怪”越来越好，我们都很欣慰，希望能为你做些小事，以萤萤之光为你照亮你广袤天空的一角。\n随着人生阅历增加，我也经历了一些外界的杂音。因为你，我没有迷失自己。我真正感同身受了你唱过的和说过的那些意味深长的话，也更珍惜和敬佩你。做自己不容易，爱自己不简单，坚持善良与热爱并不软弱，遇到同频的人要格外珍惜来之不易的缘分。\n请你相信，无论在你看得到或者看不到的地方，无论以什么方式，我都在用一颗最真挚最坚定的心，毫无保留地热爱你、支持你。你是我们的小太阳，我们是光芒的折射，永远支追随你，因你而闪耀，与你共灿烂。不管你走多远都陪着你。期待下一次的重逢。在那之前，一定都要好好照顾自己，勇敢的做自己。\n我以渺小爱你。Thank you for coming, thank you for resonation."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -74.00765017845062,
           40.7056519658716
         ]
@@ -305,24 +341,6 @@
         "city": "New York",
         "locationString": "New York City, New York, United States",
         "message": "记得你第一趟来联合国，下车时我有幸亲口对你说:｢周深加油! 生米以你为荣! ｣ 我们会一直为你加油，也始终以你为荣! 谢谢你来北美看我们，让我能够好几场享受你用生命演绎的歌声、与我们双向奔赴的爱，太美好了! 我们在北美等你，你一定要常常来! 祝福你喜乐平安、健康顺利、唱更多的歌、有更棒的舞台、越来越好!"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.99947055498238,
-          40.726288766433505
-        ]
-      },
-      "properties": {
-        "fakeId": 112,
-        "displayName": "E6海米",
-        "country": "United States",
-        "city": "New York",
-        "locationString": "New York City, New York, United States",
-        "message": "Dear Shenshen，对你纵有千言万语不知从何说起，这次你终于开启了世巡，我们真的等到了你。还记得一年前在联合国喊出的心愿，竟这么快成真，令人喜极而泣。我们曾漂洋过海来看你，如今你也漂洋过海来看我们，我跟随你的脚步追了北美的拉斯维加斯，纽约，多伦多场次，如今又在回国看“深深的”路上。To be continued\n看到你一路“升级打怪”越来越好，我们都很欣慰，希望能为你做些小事，以萤萤之光为你照亮你广袤天空的一角。\n随着人生阅历增加，我也经历了一些外界的杂音。因为你，我没有迷失自己。我真正感同身受了你唱过的和说过的那些意味深长的话，也更珍惜和敬佩你。做自己不容易，爱自己不简单，坚持善良与热爱并不软弱，遇到同频的人要格外珍惜来之不易的缘分。\n请你相信，无论在你看得到或者看不到的地方，无论以什么方式，我都在用一颗最真挚最坚定的心，毫无保留地热爱你、支持你。你是我们的小太阳，我们是光芒的折射，永远支追随你，因你而闪耀，与你共灿烂。不管你走多远都陪着你。期待下一次的重逢。在那之前，一定都要好好照顾自己，勇敢的做自己。\n我以渺小爱你。Thank you for coming, thank you for resonation."
       }
     },
     {
@@ -881,6 +899,24 @@
         "city": "Ontario",
         "locationString": "Toronto, Ontario, Canada",
         "message": "深深，谢谢你来多伦多，跟我们度过一个难忘的白色情人节！欢迎你再来！我们都很爱你！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.35741470211158,
+          43.65386975226828
+        ]
+      },
+      "properties": {
+        "fakeId": 204,
+        "displayName": "生米呀",
+        "country": "Canada",
+        "city": "Ontario",
+        "locationString": "Toronto, Ontario, Canada",
+        "message": "宝贝，等你再来！你最棒！"
       }
     },
     {
@@ -3563,6 +3599,24 @@
         "city": "",
         "locationString": "Singapore",
         "message": "谢谢你成为了歌手周深！谢谢你的歌声为我的生活带来了无数的欢乐和慰藉！去见你6次啦，我相信以后会见更多面的！好好照顾好自己呀！新世巡来看一看小坡吧！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.81234392767561,
+          1.3549048587079937
+        ]
+      },
+      "properties": {
+        "fakeId": 202,
+        "displayName": "满脑子都是嫑嫑",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "周深宝贝：感谢你成为你，感谢你让我成为自己！今年就要高中毕业啦～毕业之后一定要好好和你见面，一起度过好多个夜晚！！照顾好自己也记得好好爱自己，就像你对我们说的那样！我们努力相见吧～爱你！"
       }
     },
     {
