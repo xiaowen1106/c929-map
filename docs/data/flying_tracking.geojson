@@ -19767,6 +19767,138 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.31003284563137,
+            24.991787407426887
+          ],
+          [
+            144.9759888,
+            -37.8216161
+          ]
+        ]
+      },
+      "properties": {
+        "id": "234-25MEL",
+        "displayName": "許凱西",
+        "origin": {
+          "coordinates": [
+            121.31003284563137,
+            24.991787407426887
+          ]
+        },
+        "destination": {
+          "cityId": "25MEL",
+          "coordinates": [
+            144.9759888,
+            -37.8216161
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.31003284563137,
+            24.991787407426887
+          ],
+          [
+            151.1969394,
+            -33.8748582
+          ]
+        ]
+      },
+      "properties": {
+        "id": "234-25SYD",
+        "displayName": "許凱西",
+        "origin": {
+          "coordinates": [
+            121.31003284563137,
+            24.991787407426887
+          ]
+        },
+        "destination": {
+          "cityId": "25SYD",
+          "coordinates": [
+            151.1969394,
+            -33.8748582
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.31003284563137,
+            24.991787407426887
+          ],
+          [
+            116.396606,
+            39.992739
+          ]
+        ]
+      },
+      "properties": {
+        "id": "234-24BJ",
+        "displayName": "許凱西",
+        "origin": {
+          "coordinates": [
+            121.31003284563137,
+            24.991787407426887
+          ]
+        },
+        "destination": {
+          "cityId": "24BJ",
+          "coordinates": [
+            116.396606,
+            39.992739
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.31003284563137,
+            24.991787407426887
+          ],
+          [
+            120.578369,
+            31.29377
+          ]
+        ]
+      },
+      "properties": {
+        "id": "234-24SZ",
+        "displayName": "許凱西",
+        "origin": {
+          "coordinates": [
+            121.31003284563137,
+            24.991787407426887
+          ]
+        },
+        "destination": {
+          "cityId": "24SZ",
+          "coordinates": [
+            120.578369,
+            31.29377
+          ]
+        }
+      }
     }
   ]
 }
