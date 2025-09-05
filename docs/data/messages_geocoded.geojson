@@ -3552,6 +3552,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          114.16386529085484,
+          22.278027407426887
+        ]
+      },
+      "properties": {
+        "fakeId": 220,
+        "displayName": "周念安",
+        "country": "",
+        "city": "",
+        "locationString": "Hong Kong",
+        "message": "ZhouShen I wish you healthy, safe and happy, Sheng Mi will always accompany you, Zhou Shen come to Hong Kong to hold a concert, Hong Kong Sheng Mi is waiting for you to come.I LOVE you, Zhou Shen."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           121.47063038796102,
           31.230947407426886
         ]
@@ -3606,6 +3624,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          100.37846426455111,
+          5.388062047656637
+        ]
+      },
+      "properties": {
+        "fakeId": 217,
+        "displayName": "星魚",
+        "country": "Malaysia",
+        "city": "Penang",
+        "locationString": "Perai, Penang, Malaysia",
+        "message": "謝謝寶貝一直以來的陪伴，陪你唱到180歲！！！！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           100.38329250055436,
           5.386418407426886
         ]
@@ -3635,6 +3671,24 @@
         "city": "Penang",
         "locationString": "Bukit Mertajam, Penang, Malaysia",
         "message": "谢谢你成为了歌手周深！！遇见你是我这辈子做的最对的决定!!\n我是来自马来西亚的生米, 粉了6年,一直是个安静的地下党。2024年9.29hz世界巡回演唱会吉隆坡站,我没能去, 但演唱会前一个星期,我刚好在那座城市（吉隆坡）和家人一起旅行, 看到街头的应援屏,真的好开心,像命运的小惊喜。\n照顾好自己哦!!别太累了!好好休息!!\n谢谢你,用一首首歌温柔地陪着我成长, 即使隔着山海,也觉得你一直在。\n谢谢你让我学会先爱自己,在去爱别人。\n我们一定会见面!!!!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.08527102732143,
+          4.5955194074268855
+        ]
+      },
+      "properties": {
+        "fakeId": 219,
+        "displayName": "小章鱼",
+        "country": "Malaysia",
+        "city": "Perak",
+        "locationString": "Ipoh, Perak, Malaysia",
+        "message": "周深我爱你，谢谢你来我家吉隆坡看我们，七夕我也来到你家看你了，看你小时候长大的地方 陪你回家，谢谢你一直陪伴我们 实现所有的承诺，我们下次见💙"
       }
     },
     {
@@ -3743,6 +3797,42 @@
         "city": "Malacca",
         "locationString": "Malacca, Malacca, Malaysia",
         "message": "期待再次见面！！！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.74975751805975,
+          1.5008584074268858
+        ]
+      },
+      "properties": {
+        "fakeId": 216,
+        "displayName": "菜菜子_GIGI",
+        "country": "Malaysia",
+        "city": "Johor",
+        "locationString": "Johor Bahru, Johor, Malaysia",
+        "message": "感谢深深来到马来西亚开演唱会！！在我们下次见面之前都要好好地照顾好自己哟～～期待下次再相见！！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80321626639152,
+          1.359217399052364
+        ]
+      },
+      "properties": {
+        "fakeId": 218,
+        "displayName": "光影出现了星星",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "我现在在新加坡读书 不知道深深的什么时候才可以到新加坡啊啊啊啊\n希望早一点去现场，距离上次去深深的青岛站已经68天了，好想深深，现在一个人在留学，感觉孤独都是深深的歌陪着我，最近也快到9.29啦\n那就祝深深生日快乐！！！！！！\n深深一直唱！我们一直在！！"
       }
     },
     {
