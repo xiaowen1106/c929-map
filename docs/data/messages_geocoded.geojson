@@ -3541,9 +3541,9 @@
       "properties": {
         "fakeId": 169,
         "displayName": "我和老婆是生米",
-        "country": "People's Republic of China",
+        "country": "China",
         "city": "Sichuan",
-        "locationString": "Chengdu, Sichuan, People's Republic of China",
+        "locationString": "Chengdu, Sichuan, China",
         "message": "感谢深深出现在我和我老婆的生命里，你给我们带来了很多欢乐和共同的回忆，你俨然已经成为我们家的一份子了，我们会永远陪着你，支持你，爱你！"
       }
     },
@@ -3552,35 +3552,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          114.16386529085484,
-          22.278027407426887
+          112.40102085753429,
+          38.43714340742688
         ]
       },
       "properties": {
-        "fakeId": 220,
-        "displayName": "周念安",
-        "country": "",
-        "city": "",
-        "locationString": "Hong Kong",
-        "message": "ZhouShen I wish you healthy, safe and happy, Sheng Mi will always accompany you, Zhou Shen come to Hong Kong to hold a concert, Hong Kong Sheng Mi is waiting for you to come.I LOVE you, Zhou Shen."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.47063038796102,
-          31.230947407426886
-        ]
-      },
-      "properties": {
-        "fakeId": 205,
-        "displayName": "MintChocolate_Serena",
-        "country": "People's Republic of China",
-        "city": "Shanghai",
-        "locationString": "Shanghai, People's Republic of China",
-        "message": "希望可以深深可以长久地在舞台上唱下去，希望有一天可以去现场听深深唱歌。"
+        "fakeId": 224,
+        "displayName": "FeiZdbb",
+        "country": "China",
+        "city": "Shanxi",
+        "locationString": "Shanxi, China",
+        "message": "生米一直在"
       }
     },
     {
@@ -3599,6 +3581,78 @@
         "city": "河北",
         "locationString": "Qian'an City, Hebei Province, China",
         "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.47063038796102,
+          31.230947407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 205,
+        "displayName": "MintChocolate_Serena",
+        "country": "China",
+        "city": "Shanghai",
+        "locationString": "Shanghai, China",
+        "message": "希望可以深深可以长久地在舞台上唱下去，希望有一天可以去现场听深深唱歌。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.93007571698283,
+          28.558592407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 221,
+        "displayName": "二次元来的外星孩子",
+        "country": "China",
+        "city": "Jiangxi",
+        "locationString": "Nanchang, Jiangxi, China",
+        "message": "Happy everyday and everything goes smoothly！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.54087341046267,
+          25.043414407426887
+        ]
+      },
+      "properties": {
+        "fakeId": 226,
+        "displayName": "可欧鱼米",
+        "country": "Taiwan",
+        "city": "Taipei",
+        "locationString": "Taipei, Taipei, Taiwan",
+        "message": "我是一粒在台湾读书的马来西亚米，喜欢周深已经有2千多天啦💙回想当初身边人听到周深都说不知道是谁的时候，再看到现在的生米和喜欢他的人都遍布全球各地，甚至在每场演唱会都在翻倍地在大军压境的时候，真的为深深现在的一切感到骄傲～周深你是我人生中最值得学习的榜样！只要你在，我一定也在，爱你！！！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16386529085484,
+          22.278027407426887
+        ]
+      },
+      "properties": {
+        "fakeId": 220,
+        "displayName": "周念安",
+        "country": "",
+        "city": "",
+        "locationString": "Hong Kong",
+        "message": "ZhouShen I wish you healthy, safe and happy, Sheng Mi will always accompany you, Zhou Shen come to Hong Kong to hold a concert, Hong Kong Sheng Mi is waiting for you to come.I LOVE you, Zhou Shen."
       }
     },
     {
@@ -3678,6 +3732,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          101.0804486098156,
+          4.597163047656637
+        ]
+      },
+      "properties": {
+        "fakeId": 223,
+        "displayName": "鲤鱼叻",
+        "country": "Malaysia",
+        "city": "Perak",
+        "locationString": "Ipoh, Perak, Malaysia",
+        "message": "This year is the 5th year that I have become a 生米,feel so happy &amp; grateful that I managed to go to your 9.29Hz concert in Kuala Lumpur in April. Can't wait to go to your concert again!"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           101.08527102732143,
           4.5955194074268855
         ]
@@ -3732,24 +3804,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          102.25932649997375,
-          2.5986330476566377
-        ]
-      },
-      "properties": {
-        "fakeId": 215,
-        "displayName": "Hui Yi",
-        "country": "Malaysia",
-        "city": "Negeri Sembilan",
-        "locationString": "Johol, Negeri Sembilan, Malaysia",
-        "message": "希望周深健健康康，当个快快乐乐的小猫"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           102.26413835221592,
           2.5969894074268858
         ]
@@ -3797,6 +3851,24 @@
         "city": "Malacca",
         "locationString": "Malacca, Malacca, Malaysia",
         "message": "期待再次见面！！！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.66332053766854,
+          1.5356434074268859
+        ]
+      },
+      "properties": {
+        "fakeId": 215,
+        "displayName": "Hui Yi",
+        "country": "Malaysia",
+        "city": "Johor Bahru",
+        "locationString": "Skudai, Johor Bahru, Johor, Malaysia",
+        "message": "希望周深健健康康，当个快快乐乐的小猫"
       }
     },
     {
@@ -3894,6 +3966,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          103.81849606858998,
+          1.3488094669740378
+        ]
+      },
+      "properties": {
+        "fakeId": 222,
+        "displayName": "渺小的深琳",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "我在新加坡很想你，虽然没办法去到你的国家看你，但从站姐们拍的视频依然感到你对尽力对待每一场演唱会的用心，你为我们做的每一步！感激有你，心有所所栖❤️"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           103.80679728520848,
           1.3445189658716004
         ]
@@ -3905,6 +3995,24 @@
         "city": "",
         "locationString": "Singapore",
         "message": "祝小深健健康康顺顺利利！你唱我们一直在！！希望世巡可以来到新加坡呀！（非常幸运在「深深的」贵阳场收到了生日祝福 非常非常幸福圆满😭😭 小深一直说是我们生米带他去到一个个不敢想象的地方 其实也是小深给了我们勇气走到一个个我们自己也不敢想象的地方😭😭贵阳是第一次一个人去看演唱会 第一次去一个人生地不熟的地方说不害怕是假的 但落地之后发现整个城市都被米子包围 就像见到了家人的那种亲切感 也瞬间不害怕了😭😭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7968568415888,
+          1.3458027582468584
+        ]
+      },
+      "properties": {
+        "fakeId": 225,
+        "displayName": "在外漂泊的生米",
+        "country": "",
+        "city": "",
+        "locationString": "Singapore",
+        "message": "9.29Hz演唱会承载了我很多美好的回忆！\n希望深深越来越好！\n深深你要好好照顾好自已，不要太累了！\n下次我们都要健健康康的见面呀！"
       }
     },
     {
