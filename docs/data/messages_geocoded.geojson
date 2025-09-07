@@ -1500,17 +1500,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.05134905514358,
-          51.042893466974036
+          -106.66018741014166,
+          52.12708540742688
         ]
       },
       "properties": {
-        "fakeId": 137,
-        "displayName": "我心飞翔",
+        "fakeId": 228,
+        "displayName": "Sonockyyy",
         "country": "Canada",
-        "city": "Alberta",
-        "locationString": "Calgary, Alberta, Canada",
-        "message": "非常幸运，因《花开忘忧》而认识周深，唱入人心的歌声，惊为天人。后来看了你更多的舞台、采访和综艺节目，开心地发现周深你是一位极具人格魅力的宝藏歌手！很荣幸成为你的生米！㊗️福音乐王子周深健康平安！开心顺遂！幸福美满！好运常伴！长长久久的在舞台上唱歌！请继续做你想做的事情，无论你做什么，都会永远支持守护！我以渺小爱你同行的旅程，我以渺小爱你不朽的灵魂！❤️❤️"
+        "city": "Saskatchewan",
+        "locationString": "Saskatoon, Saskatchewan, Canada",
+        "message": "山谷有灯，寻光相认"
       }
     },
     {
@@ -1518,53 +1518,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.06113182271736,
-          51.04898885870799
+          -113.49169576005697,
+          53.54181540742688
         ]
       },
       "properties": {
-        "fakeId": 113,
-        "displayName": "為深深來的",
+        "fakeId": 4,
+        "displayName": "提词器米",
         "country": "Canada",
         "city": "Alberta",
-        "locationString": "Calgary, Alberta, Canada",
-        "message": "祝願深深健康快樂！幸福平安！開開心心做自己喜歡的事！我是媽媽粉，不可能看到深深唱到八十歲，但不同年代的生米會一直在！"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -114.06601910212233,
-          51.04437140742688
-        ]
-      },
-      "properties": {
-        "fakeId": 11,
-        "displayName": "听海",
-        "country": "Canada",
-        "city": "Alberta",
-        "locationString": "Calgary, Alberta, Canada",
-        "message": "希望深深永远健康开心，在音乐的海洋里畅游无忧！心之所向、皆能如愿！"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -114.07366488338455,
-          51.04601504765663
-        ]
-      },
-      "properties": {
-        "fakeId": 51,
-        "displayName": "北美海米",
-        "country": "Canada",
-        "city": "Alberta",
-        "locationString": "Calgary, Alberta, Canada",
-        "message": "祝周深宝贝谈一场轰轰烈烈的恋爱，生活幸福美满，一生快乐唱歌！你一直唱，我一直听。听你唱歌一辈子！"
+        "locationString": "Edmonton, Alberta, Canada",
+        "message": "陪你唱到180岁"
       }
     },
     {
@@ -1590,6 +1554,78 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -114.07366488338455,
+          51.04601504765663
+        ]
+      },
+      "properties": {
+        "fakeId": 51,
+        "displayName": "北美海米",
+        "country": "Canada",
+        "city": "Alberta",
+        "locationString": "Calgary, Alberta, Canada",
+        "message": "祝周深宝贝谈一场轰轰烈烈的恋爱，生活幸福美满，一生快乐唱歌！你一直唱，我一直听。听你唱歌一辈子！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06601910212233,
+          51.04437140742688
+        ]
+      },
+      "properties": {
+        "fakeId": 11,
+        "displayName": "听海",
+        "country": "Canada",
+        "city": "Alberta",
+        "locationString": "Calgary, Alberta, Canada",
+        "message": "希望深深永远健康开心，在音乐的海洋里畅游无忧！心之所向、皆能如愿！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.06113182271736,
+          51.04898885870799
+        ]
+      },
+      "properties": {
+        "fakeId": 113,
+        "displayName": "為深深來的",
+        "country": "Canada",
+        "city": "Alberta",
+        "locationString": "Calgary, Alberta, Canada",
+        "message": "祝願深深健康快樂！幸福平安！開開心心做自己喜歡的事！我是媽媽粉，不可能看到深深唱到八十歲，但不同年代的生米會一直在！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.05134905514358,
+          51.042893466974036
+        ]
+      },
+      "properties": {
+        "fakeId": 137,
+        "displayName": "我心飞翔",
+        "country": "Canada",
+        "city": "Alberta",
+        "locationString": "Calgary, Alberta, Canada",
+        "message": "非常幸运，因《花开忘忧》而认识周深，唱入人心的歌声，惊为天人。后来看了你更多的舞台、采访和综艺节目，开心地发现周深你是一位极具人格魅力的宝藏歌手！很荣幸成为你的生米！㊗️福音乐王子周深健康平安！开心顺遂！幸福美满！好运常伴！长长久久的在舞台上唱歌！请继续做你想做的事情，无论你做什么，都会永远支持守护！我以渺小爱你同行的旅程，我以渺小爱你不朽的灵魂！❤️❤️"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -114.06995176277178,
           51.0386029658716
         ]
@@ -1601,24 +1637,6 @@
         "city": "Alberta",
         "locationString": "Calgary, Alberta, Canada",
         "message": "深深宝贝，我是加拿大卡尔加里的一颗海米。我是湖南人，跟你半个老乡，我也是属猴，我也是161cm， 感觉跟你好多共同点哦，哈哈。天天都在听你的歌，觉得跟你很亲近。你的声音一直陪伴着我，度过很多美好的伤心的烦躁的痛苦的时光。希望你早点与一个特别好的女孩结缘，生几个大宝贝，天天都开开心心，健健康康！"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -113.49169576005697,
-          53.54181540742688
-        ]
-      },
-      "properties": {
-        "fakeId": 4,
-        "displayName": "提词器米",
-        "country": "Canada",
-        "city": "Alberta",
-        "locationString": "Edmonton, Alberta, Canada",
-        "message": "陪你唱到180岁"
       }
     },
     {
@@ -3552,17 +3570,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          112.40102085753429,
-          38.43714340742688
+          109.42446970489317,
+          24.326403407426888
         ]
       },
       "properties": {
-        "fakeId": 224,
-        "displayName": "FeiZdbb",
-        "country": "China",
-        "city": "Shanxi",
-        "locationString": "Shanxi, China",
-        "message": "生米一直在"
+        "fakeId": 229,
+        "displayName": "深的叻",
+        "country": "People's Republic of China",
+        "city": "Guangxi",
+        "locationString": "Liuzhou, Guangxi, China",
+        "message": "深深！希望你能在舞台上一直唱歌，我们一直在！也希望你能好好的爱自己，在我们见面之前！"
       }
     },
     {
@@ -3570,35 +3588,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          118.70248877350028,
-          39.99707140742688
+          114.16386529085484,
+          22.278027407426887
         ]
       },
       "properties": {
-        "fakeId": 187,
-        "displayName": "被天使救赎的生命",
-        "country": "中华人民共和国",
-        "city": "河北",
-        "locationString": "Qian'an City, Hebei Province, China",
-        "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.47063038796102,
-          31.230947407426886
-        ]
-      },
-      "properties": {
-        "fakeId": 205,
-        "displayName": "MintChocolate_Serena",
-        "country": "China",
-        "city": "Shanghai",
-        "locationString": "Shanghai, China",
-        "message": "希望可以深深可以长久地在舞台上唱下去，希望有一天可以去现场听深深唱歌。"
+        "fakeId": 220,
+        "displayName": "周念安",
+        "country": "",
+        "city": "",
+        "locationString": "Hong Kong",
+        "message": "ZhouShen I wish you healthy, safe and happy, Sheng Mi will always accompany you, Zhou Shen come to Hong Kong to hold a concert, Hong Kong Sheng Mi is waiting for you to come.I LOVE you, Zhou Shen."
       }
     },
     {
@@ -3624,6 +3624,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          121.47063038796102,
+          31.230947407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 205,
+        "displayName": "MintChocolate_Serena",
+        "country": "China",
+        "city": "Shanghai",
+        "locationString": "Shanghai, China",
+        "message": "希望可以深深可以长久地在舞台上唱下去，希望有一天可以去现场听深深唱歌。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           121.54087341046267,
           25.043414407426887
         ]
@@ -3642,17 +3660,53 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          114.16386529085484,
-          22.278027407426887
+          118.70248877350028,
+          39.99707140742688
         ]
       },
       "properties": {
-        "fakeId": 220,
-        "displayName": "周念安",
-        "country": "",
-        "city": "",
-        "locationString": "Hong Kong",
-        "message": "ZhouShen I wish you healthy, safe and happy, Sheng Mi will always accompany you, Zhou Shen come to Hong Kong to hold a concert, Hong Kong Sheng Mi is waiting for you to come.I LOVE you, Zhou Shen."
+        "fakeId": 187,
+        "displayName": "被天使救赎的生命",
+        "country": "中华人民共和国",
+        "city": "河北",
+        "locationString": "Qian'an City, Hebei Province, China",
+        "message": "深深，虽然最近两年我不能见你了，但是谢谢你，谢谢你把我从自杀倾向当中拉起，谢谢你让我觉得这个世界还没有那么糟……心态好转，师生关系在变好，学习成绩进步了，学习的动力也更大了，这些都是你给我的礼物，是我之前从来都不敢想象的，谢谢……"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.40102085753429,
+          38.43714340742688
+        ]
+      },
+      "properties": {
+        "fakeId": 224,
+        "displayName": "FeiZdbb",
+        "country": "China",
+        "city": "Shanxi",
+        "locationString": "Shanxi, China",
+        "message": "生米一直在"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.694410530015,
+          35.687656407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 230,
+        "displayName": "留子的大西瓜",
+        "country": "Japan",
+        "city": "Tokyo Prefecture",
+        "locationString": "Tokyo, Tokyo Prefecture, Japan",
+        "message": "是日米也是台米，不管在哪都深深的喜歡深深"
       }
     },
     {
@@ -4049,6 +4103,24 @@
         "city": "New South Wales",
         "locationString": "Sydney, New South Wales, Australia",
         "message": "深深要照顾好自己！爱你"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.63670882391023,
+          -43.534844592573116
+        ]
+      },
+      "properties": {
+        "fakeId": 227,
+        "displayName": "贴贴",
+        "country": "New Zealand",
+        "city": "Canterbury",
+        "locationString": "Christchurch, Canterbury, New Zealand",
+        "message": "坐等下一轮世巡！"
       }
     },
     {
