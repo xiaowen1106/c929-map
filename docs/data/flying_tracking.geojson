@@ -20625,6 +20625,105 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.79932973952218,
+            49.027981407426886
+          ],
+          [
+            -253.394208,
+            26.616136
+          ]
+        ]
+      },
+      "properties": {
+        "id": "247-24GY",
+        "displayName": "生米",
+        "origin": {
+          "coordinates": [
+            -122.79932973952218,
+            49.027981407426886
+          ]
+        },
+        "destination": {
+          "cityId": "24GY",
+          "coordinates": [
+            106.605792,
+            26.616136
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.79932973952218,
+            49.027981407426886
+          ],
+          [
+            -239.766612,
+            30.229779
+          ]
+        ]
+      },
+      "properties": {
+        "id": "247-24HZ",
+        "displayName": "生米",
+        "origin": {
+          "coordinates": [
+            -122.79932973952218,
+            49.027981407426886
+          ]
+        },
+        "destination": {
+          "cityId": "24HZ",
+          "coordinates": [
+            120.233388,
+            30.229779
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.79932973952218,
+            49.027981407426886
+          ],
+          [
+            -236.53645,
+            41.743291
+          ]
+        ]
+      },
+      "properties": {
+        "id": "247-24SY",
+        "displayName": "生米",
+        "origin": {
+          "coordinates": [
+            -122.79932973952218,
+            49.027981407426886
+          ]
+        },
+        "destination": {
+          "cityId": "24SY",
+          "coordinates": [
+            123.46355,
+            41.743291
+          ]
+        }
+      }
     }
   ]
 }
