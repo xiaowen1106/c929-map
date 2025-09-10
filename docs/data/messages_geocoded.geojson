@@ -3552,6 +3552,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          18.071405638908985,
+          59.32300840742688
+        ]
+      },
+      "properties": {
+        "fakeId": 233,
+        "displayName": "生米",
+        "country": "Sweden",
+        "city": "Stockholm",
+        "locationString": "Stockholm, Stockholm, Sweden",
+        "message": "健康快乐最重要！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           69.28032837539128,
           41.311007407426885
         ]
