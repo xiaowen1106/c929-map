@@ -3048,17 +3048,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.64564224757123,
-          34.094781407426886
+          -117.82487732104919,
+          33.683288407426886
         ]
       },
       "properties": {
-        "fakeId": 57,
-        "displayName": "在周深心里的生米",
+        "fakeId": 234,
+        "displayName": "追星星的Amber",
         "country": "United States",
         "city": "California",
-        "locationString": "Upland, California, United States",
-        "message": "深深，一定要照顾好自己！！！天天开心！希望你能继续的唱下去！我会永远陪你！"
+        "locationString": "Irvine, California, United States",
+        "message": "深深,我们永远爱你! 陪你再唱600年!你是生命长河中最亮的那颗星星!"
       }
     },
     {
@@ -3077,6 +3077,24 @@
         "city": "California",
         "locationString": "Lake Forest, California, United States",
         "message": "深深，你好啊！很开心终于在今年的拉斯维加斯演唱会见到了你，这会是我非常难忘的一段记忆！祝你和你爱的人永远幸福快乐、平安健康！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.64564224757123,
+          34.094781407426886
+        ]
+      },
+      "properties": {
+        "fakeId": 57,
+        "displayName": "在周深心里的生米",
+        "country": "United States",
+        "city": "California",
+        "locationString": "Upland, California, United States",
+        "message": "深深，一定要照顾好自己！！！天天开心！希望你能继续的唱下去！我会永远陪你！"
       }
     },
     {

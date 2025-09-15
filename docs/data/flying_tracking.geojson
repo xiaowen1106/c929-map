@@ -20823,6 +20823,39 @@
           ]
         }
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -117.82487732104919,
+            33.683288407426886
+          ],
+          [
+            -115.1775902,
+            36.1039821
+          ]
+        ]
+      },
+      "properties": {
+        "id": "251-25LV",
+        "displayName": "追星星的Amber",
+        "origin": {
+          "coordinates": [
+            -117.82487732104919,
+            33.683288407426886
+          ]
+        },
+        "destination": {
+          "cityId": "25LV",
+          "coordinates": [
+            -115.1775902,
+            36.1039821
+          ]
+        }
+      }
     }
   ]
 }
