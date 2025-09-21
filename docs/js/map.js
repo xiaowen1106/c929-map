@@ -279,7 +279,7 @@ map.on('style.load', async () => {
         await loadFansActivitiesFillData(map);
         
         // 3. Load city markers layer (MiJie icons for cities)
-        await loadLayer(cityMarkersLayer, map);
+        // await loadLayer(cityMarkersLayer, map);
         
         // 4. Load fans activities symbol layer (MiJie icons)
         await loadLayer(fansActivitiesLayer, map);

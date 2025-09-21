@@ -28,21 +28,18 @@ export async function loadLayer(layer, map) {
                 setFanWishesData(data.features);
             }
             
-            // Add clustered source
+            // Add source without clustering
             const sourceId = `${layer.id}-source`;
             if (!map.getSource(sourceId)) {
                 map.addSource(sourceId, {
                     type: 'geojson',
                     data: data,
-                    cluster: true,
-                    clusterMaxZoom: 8,  // Very aggressive - clustering stops at zoom level 10
-                    clusterRadius: 30,   // Very small clusters that break apart quickly
-                    clusterMinPoints: 3, // Cluster even 2 nearby points
+                    cluster: false,  // Disable clustering to show all individual points
                     maxzoom: 18
                 });
             }
             
-            // Add cluster layer
+            // Add fan wishes layer
             const clusterLayerConfig = {
                 ...layer,
                 source: sourceId
